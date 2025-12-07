@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+*:hover,
+*:active,
+*:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}

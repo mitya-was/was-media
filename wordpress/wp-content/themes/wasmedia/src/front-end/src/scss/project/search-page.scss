@@ -1,0 +1,11 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
+  .form-inline {
+    max-width: 600px;
+    width: 80%;
+  }
+}

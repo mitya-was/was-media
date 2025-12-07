@@ -1,0 +1,10 @@
+</div>
+
+<div class="svg-container"></div>
+
+<% htmlWebpackPlugin.options.externalFiles.scripts.forEach(function(script){ %>
+  <script defer type='text/javascript' src='<%= script %>'></script>
+<% }); %>
+
+</body>
+</html>

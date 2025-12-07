@@ -1,0 +1,14 @@
+{% extends 'was-base.twig' %}
+
+{% block content %}
+    <section class="pro_main layout_main">
+        <div class="row justify-content-center">
+            <header class="col page-header" style="max-width: 350px; margin-left: auto;margin-right: auto;">
+                <p>
+                    {{ function('__', 'This content is password protected. To view it please enter your password below:') }}
+                </p>
+                {{ function('get_the_password_form_custom') }}
+            </header>
+        </div>
+    </section>
+{% endblock %}

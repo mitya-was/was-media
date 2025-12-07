@@ -1,0 +1,7 @@
+.panel.left .zoom + .zoom {
+  margin-top: 10px;
+}
+
+.panel.bottom .zoom + .zoom {
+  margin-left: 10px;
+}

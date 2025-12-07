@@ -1,0 +1,140 @@
+{% extends 'was-base.twig' %}
+{% import 'macros/was-macros.twig' as macros %}
+
+{% block content %}
+    <article class="article-main">
+        <section class="article-cover">
+            <div class="layout_main">
+                <div class="row no-gutters">
+                    {% set order_count = function('make_order_counter', order_count) %}
+                    {% set post_options = {
+                        'post' : post,
+                        'content_part' : 'content',
+                        'template_part' : 'single',
+                        'cover' : false,
+                        'tags' : 'header',
+                        'heading' : heading,
+                        'class_format' : order_count ~ ' invert_text_color format-wide'
+                    } %}
+
+                    {{ function('timber_content_parts_resolver', post_options) }}
+                </div>
+            </div>
+        </section>
+
+        <section class="article-content editor">
+            <div class="editor_txt">
+                <div class="layout_main">
+                    <div class="editor_default editor_offset">
+                        {{ function('twentyseventeen_edit_link') }}
+                        <h2 class="article-lead h4">
+                            {{ function('was_get_entry', 'lead', 'single', post) }}
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="editor_txt">
+                <div class="layout_main">
+                    <div class="editor_default editor_offset">
+                        {{ podcast_text }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="editor_elastic">
+                <div class="layout_main">
+                    <div class="editor_default editor_offset">
+                        {{ macros.get_podcast({'podcasts' : [podcasts]}) }}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article_meta">
+            <div class="layout_main">
+
+                <div class="article_meta_media editor_offset editor_default row no-gutters">
+                    {% include 'template-parts/was-social-shares.twig' %}
+                </div>
+
+                <div class="article_meta_tags editor_offset editor_default">
+                    <nav class="navbar navbar-main tags-navbar">
+                        {{ function('twentyseventeen_entry_footer') }}
+                    </nav>
+                </div>
+
+                {% if related_materials is iterable and related_materials|length > 0 %}
+                    <div class="article_meta_related">
+                        <p class="h3 display-3 siteHeader-header">
+                            {{ function('pll__', 'Читайте также') }}:
+                        </p>
+                        <div class="editor_offset editor_img-lg">
+                            <div class="row">
+                                {% set order_count = 0 %}
+
+                                {% for post in related_materials %}
+                                    {% set invert_title = function('is_article_options', 'invert_text_color', post) ? 'invert_text_color' : '' %}
+                                    {% set post_options = {
+                                        'post' : post,
+                                        'content_part' : 'content',
+                                        'class_format' : order_count ~ ' ' ~ invert_title
+                                    } %}
+
+                                    {{ function('timber_content_parts_resolver', post_options) }}
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+
+            </div>
+        </section>
+    </article>
+
+    {% if function('comments_open') %}
+        <section id="comment" class="article_comment">
+            <div class="editor_txt">
+                <div class="layout_main">
+                    <div class="editor_img-lg editor_offset">
+                        {{ function('comments_template') }}
+                    </div>
+                    <div class="comments-fixer"></div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+
+    {% if top_popular_posts is iterable and top_popular_posts|length > 0 %}
+        <section class="article_bounch">
+            <div class="layout_main">
+                <div class="h2 display-3 siteHeader-header">
+                    {{ function('pll__', 'Популярное') }}:
+                </div>
+            </div>
+            <div class="editor_squize">
+                <div class="swiper-container slider slider-carousel" data-component="slider" data-config="carousel">
+                    <div class="swiper-wrapper">
+
+                        {% for post in top_popular_posts %}
+                            <div class="swiper-slide">
+                                {% set invert_title = function('is_article_options', 'invert_text_color', post) ? 'invert_text_color' : '' %}
+                                {% set post_options = {
+                                    'post' : post,
+                                    'content_part' : 'content',
+                                    'template_part' : 'bottom',
+                                    'class_format' : order_count ~ ' ' ~ invert_title ~ ' ' ~ 'format-wide'
+                                } %}
+
+                                {{ function('timber_content_parts_resolver', post_options) }}
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+
+{% endblock %}

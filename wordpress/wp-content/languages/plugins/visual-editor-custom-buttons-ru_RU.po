@@ -1,0 +1,29 @@
+# Translation of Plugins - Visual Editor Custom Buttons - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Visual Editor Custom Buttons - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-05-31 13:11:25+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.0-alpha.4\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Visual Editor Custom Buttons - Stable (latest release)\n"
+
+#. Author of the plugin
+msgid "Ola Eborn"
+msgstr "Ola Eborn"
+
+#. Description of the plugin
+msgid "Create custom buttons in Wordpress Visual Editor."
+msgstr "Создавайте собственные кнопки в визуальном редакторе WordPress."
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "http://eborninteractive.se"
+msgstr "http://eborninteractive.se"
+
+#. Plugin Name of the plugin
+msgid "Visual Editor Custom Buttons"
+msgstr "Visual Editor Custom Buttons"

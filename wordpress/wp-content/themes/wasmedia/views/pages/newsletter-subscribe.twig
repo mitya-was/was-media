@@ -1,0 +1,39 @@
+<article id="newsletter-subscribe" {{ function('post_class', 'pro_main layout_main format-wide') }}>
+    <div class="row">
+        <header class="col page-header" style="display: {{ (display_none_style) ? 'block' : 'none' }}">
+            <h1 class="page-title display-3" data-newsletter="title">
+                {{ function('pll__', 'Спасибо за подписку!') }}
+            </h1>
+            <p data-newsletter="lead">
+                {{ function('pll__', 'Вас ждет одно письмо в неделю с самыми актуальными материалами') }}
+            </p>
+        </header>
+
+        <section class="col text-center">
+            <div class="newsletter-tool" data-newsletter="form"
+                 style="display: {{ (display_none_style) ? 'none' : 'block' }}">
+                {% include'template-parts/was-newsletter-form.twig' %}
+            </div>
+
+            <a class="btn btn-xl btn-primary" data-newsletter="link"
+               href="/{{ function('pll_current_language') }}/"
+               style="{{ (display_none_style) ? '' : 'display: none;' }}">
+                {{ function('pll__', 'Перейти на главную') }}
+            </a>
+
+            {% if recent_posts is iterable and recent_posts|length > 0 %}
+                <div class="substrate">
+
+                    {% for recent in recent_posts %}
+                        <img class="substrate-image wp-post-image"
+                        src="{{ function('wp_get_attachment_image_url', function('get_post_thumbnail_id', recent['ID']), 'full') }}"
+                        srcset="{{ function('wp_get_attachment_image_srcset', function('get_post_thumbnail_id', recent['ID']), 'full') }}"
+                        sizes="{{ function('wp_get_attachment_image_sizes', function('get_post_thumbnail_id', recent['ID']), 'full') }}">
+                    {% endfor %}
+
+                </div>
+            {% endif %}
+
+        </section>
+    </div>
+</article>

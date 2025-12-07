@@ -1,0 +1,77 @@
+version: '3.8'
+
+services:
+  was_mysql80:
+    image: mysql:8.0
+    container_name: was_mysql80
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-was}
+      MYSQL_USER: ${MYSQL_USER:-was}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-devpassword}
+    ports:
+      - "3309:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - was_network
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+  was_redis:
+    image: redis:7-alpine
+    container_name: was_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - was_network
+
+  was_wp:
+    image: wordpress:php8.1-apache
+    container_name: was_wp
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+    env_file:
+      - .env
+    environment:
+      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST:-was_mysql80:3306}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-was}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:-was}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-devpassword}
+    depends_on:
+      - was_mysql80
+      - was_redis
+    networks:
+      - was_network
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory: 8G
+        reservations:
+          cpus: '2.0'
+          memory: 4G
+
+volumes:
+  mysql_data:
+  redis_data:
+
+networks:
+  was_network:
+    driver: bridge
+

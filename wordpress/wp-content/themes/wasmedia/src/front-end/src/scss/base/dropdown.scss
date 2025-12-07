@@ -1,0 +1,27 @@
+.drop {
+  z-index: $zindex-tooltip;
+}
+
+.drop-editor-ouput {
+  .drop-inner {
+    display: block;
+    color: $white;
+    padding: 5px 5px 0 8px;
+    width: 100%;
+    min-width: 100px;
+    max-width: 150px;
+    overflow: hidden;
+    font-size: $font-size-sm;
+    line-height: 1.4;
+
+    @include media-breakpoint-up(sm) {
+      font-size: $font-size-base;
+      padding: 10px 10px 0 10px;
+      max-width: 280px;
+    }
+  }
+}
+
+.drop-element.drop-theme-arrows-bounce-dark .drop-content {
+  padding: 0;
+}

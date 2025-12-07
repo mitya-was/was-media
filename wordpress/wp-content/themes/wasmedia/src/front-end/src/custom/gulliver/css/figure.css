@@ -1,0 +1,30 @@
+.all {
+  transition: all .2s linear;
+}
+
+.figure {
+  transition: fill .5s ease-out;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: rgba(255, 255, 255, 0);
+  stroke: rgb(253, 121, 33);
+  cursor: pointer;
+}
+
+.figure:hover {
+  fill: rgba(255, 255, 255, .5);
+  stroke: rgba(255, 255, 255, 1);
+}
+
+.figure.success,
+.figure.success:hover {
+  fill: rgba(30, 220, 120, .5);
+  stroke: rgba(30, 220, 120, 1);
+}
+
+.figure.fail,
+.figure.fail:hover {
+  fill: rgba(255, 0, 0, .5);
+  stroke: rgba(255, 0, 0, 1);
+}

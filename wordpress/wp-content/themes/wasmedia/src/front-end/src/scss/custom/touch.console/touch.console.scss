@@ -1,0 +1,47 @@
+.touch-console {
+  position: fixed;
+  z-index: 1050;
+  transform: translate3d(0, 0, 0);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  background: #101010;
+  color: #00ffbf;
+  padding: .5em;
+
+  &-input,
+  &-output {
+    display: block;
+    width: 100%;
+    padding: .5em;
+  }
+
+  &-input {
+    background: transparent;
+    border: 0;
+    color: #00ffbf;
+  }
+
+  &-input:hover,
+  &-input:active,
+  &-input:focus {
+    outline: 0;
+  }
+
+  &-input::selection {
+    background: #00ffbf;
+    color: #101010;
+  }
+
+  &-output {
+    margin-top: .5em;
+    border: 1px solid #00ffbf;
+    max-height: 50vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+  }
+
+}

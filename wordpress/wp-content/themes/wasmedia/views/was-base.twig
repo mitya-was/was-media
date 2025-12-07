@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="no-js" {{ site.language_attributes }}>
+
+{% include 'was-html-head.twig' %}
+
+<body {{ function('body_class') }} data-template="was-base.twig">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW68X9ZG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+{% block banner %}
+{% endblock %}
+<div class="wrapper">
+
+    {% include 'template-parts/was-header.twig' %}
+    {% include 'template-parts/was-navigation-mobile.twig' %}
+
+    <div id="was-search">{{ function('get_search_form') }}</div>
+
+    <main id="main" class="site-main" role="main">
+
+        {% block content %}
+        {% endblock %}
+
+        <div id="asideShares" class="media-aside overlay z-overlay-bottom">
+            <div class="layout_main">
+                <div class="row">
+                    <p class="h2">
+                        {{ function('pll__', 'Поделись историей') }}
+                    </p>
+
+                    {% include 'template-parts/was-social-shares.twig' %}
+
+                    {% if function('is_single') and function('comments_open') %}
+                        <a href="#comment" class="media-icons social-gotocomments btn btn-secondary btn-lg btn-block"
+                           role="button" aria-pressed="true" data-component="overlay" data-target="asideShares"
+                           data-toggle="close" data-options="anchor">
+                            {{ function(
+                                'twentyseventeen_get_svg',
+                                {
+                                    'icon' : 'messanger',
+                                    'class' : 'icon-xs'
+                                }
+                            ) }}
+                            {{ function('pll__', 'Комментировать') }}
+                        </a>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="siteFooter" role="contentinfo">
+        {% include 'was-html-footer.twig' %}
+    </footer>
+    <div id="all-tags">
+        {% include 'template-parts/was-tags-navigation.twig' %}
+    </div>
+</div>
+
+{{ function('wp_footer') }}
+
+<div class="dialog cookie-dialog hide">
+    <div class="layout_main">
+        <div class="row">
+            <div class="cookie-dialog-wrapper">
+                <div class="cookie-dialog-text">
+                    {{ function('pll__', 'Оставаясь на нашем сайте, вы соглашаетесь с нашей политикой использования') }}
+                    <a href="{{ function('getLocalPage', '36283') }}">cookies</a>.
+                </div>
+                <button type="button" class="btn btn-brand cookie-dialog-close" aria-label="close dialog">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{#<script>#}
+{#    (function (w, d, s, l, i) {#}
+{#        w[l] = w[l] || [];#}
+{#        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});#}
+{#        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';#}
+{#        j.async = true;#}
+{#        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;#}
+{#        f.parentNode.insertBefore(j, f);#}
+{#    })(window, document, 'script', 'dataLayer', 'GTM-W38HJ9S');#}
+{#</script>#}
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPDXDL6"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+{#<script type="text/javascript">#}
+{#    <!--//--><![CDATA[//><!--#}
+{#    var pp_gemius_identifier = 'nA6V9AAXUeQ4trv3az6uY3Xoj5zZh4O4.8mZnUwZXd7.P7';function gemius_pending(i) { window[i] = window[i] || function() {var x = window[i+'_pdata'] = window[i+'_pdata'] || []; x[x.length]=arguments;};};gemius_pending('gemius_hit'); gemius_pending('gemius_event'); gemius_pending('pp_gemius_hit'); gemius_pending('pp_gemius_event');(function(d,t) {try {var gt=d.createElement(t),s=d.getElementsByTagName(t)[0],l='http'+((location.protocol=='https:')?'s':''); gt.setAttribute('async','async');gt.setAttribute('defer','defer'); gt.src=l+'://gaua.hit.gemius.pl/xgemius.js'; s.parentNode.insertBefore(gt,s);} catch (e) {}})(document,'script');#}
+{#    //--><!]]>#}
+{#</script>#}
+
+</body>
+</html>

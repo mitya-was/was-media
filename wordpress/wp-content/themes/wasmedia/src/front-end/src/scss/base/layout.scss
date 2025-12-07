@@ -1,0 +1,104 @@
+// Mixin offsets
+//
+// Common styles for small and large grid offsets
+
+@mixin make-grid-columns($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+
+      @each $modifier in (pull, push) {
+        @for $i from 0 through $columns {
+          .#{$modifier}#{$infix}-#{$i} {
+            @include make-col-modifier($modifier, $i, $columns);
+          }
+        }
+      }
+
+      // `$columns - 1` because offsetting by the width of an entire row isn't possible
+      @for $i from 0 through ($columns - 1) {
+        @if not($infix == '' and $i == 0) {
+          // Avoid emitting useless .offset-xs-0
+          .offset#{$infix}-#{$i} {
+            @include make-col-modifier(offset, $i, $columns);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Main layout
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+@if $enable-grid-classes {
+  .layout_main {
+    @include make-container();
+    @include make-container-max-widths();
+  }
+}
+
+.layout_fixed {
+  @include media-breakpoint-up(xl) {
+    .layout_main {
+      width: $grid-xl;
+    }
+  }
+}
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+/* @if $enable-grid-classes {
+  .layout_main-fluid {
+    @include make-container();
+  }
+} */
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+@if $enable-grid-classes {
+  .row {
+    @include make-row();
+  }
+
+  // Remove the negative margin from default .row, then the horizontal padding
+  // from all immediate children columns (to prevent runaway style inheritance).
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col,
+    > [class*='col-'] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@if $enable-grid-classes {
+  .col {
+    @include make-col-ready();
+  }
+}
+
+/* .flex-column {
+  flex-direction: column;
+} */
+
+/* @if $enable-grid-classes {
+  @include make-grid-columns();
+} */

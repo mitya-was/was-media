@@ -1,0 +1,328 @@
+.siteHeader {
+  flex: 0;
+  padding: 20px 0;
+
+  @include media-breakpoint-up(lg) {
+    .nav-link {
+      .btn {
+        position: relative;
+        top: -3px;
+      }
+
+      &.btn-youtube {
+        position: relative;
+        padding: 8px;
+        left: -5px;
+        top: 10px;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    padding: $spacer - 0.1 0;
+
+    .wasLogo {
+      font-size: 2rem;
+    }
+
+    .nav-link {
+      padding: 0;
+      color: $white;
+
+      &.color-brand {
+        color: $brand-primary;
+      }
+    }
+  }
+
+  > .layout_main {
+    width: 100%;
+    max-width: 1800px;
+  }
+
+  .slider-carousel .entry-content .h-entry {
+    max-width: 150px;
+  }
+
+  &.fixed-top {
+    @include media-breakpoint-up(lg) {
+      background-color: $white;
+      z-index: $zindex-fixed;
+      position: sticky;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
+
+%fixed-top-transition {
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.mobile {
+  .siteHeader {
+    padding: 15px 0 15px 0;
+
+    .nav-link {
+      &.btn-youtube {
+        top: -6px;
+      }
+    }
+
+    .wasLogo {
+      position: relative;
+      top: 5px;
+      font-size: 2.3rem;
+    }
+  }
+
+  .navbar-main {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+
+  .nav-link {
+    padding-top: 0;
+    padding-bottom: 0;
+    ine-height: 1.2;
+  }
+
+  .icon-search {
+    @include size($spacer * 2);
+  }
+}
+
+.headerLogo {
+  order: 1;
+  @include make-col(8.5);
+  display: flex;
+  align-items: flex-start;
+
+  .media-icons {
+    margin-top: 2px;
+    margin-left: 0.8rem;
+  }
+
+  .depoLogo {
+    display: none;
+  }
+
+  .siteLogo_lnk {
+    @include media-breakpoint-down(md) {
+      color: $brand-primary;
+    }
+  }
+}
+
+.media-follow {
+  display: flex;
+}
+
+.navbar-mob {
+  padding: 0;
+}
+
+.headerNav {
+  order: 3;
+
+  .dropdown-arrow {
+    @include media-breakpoint-down(md) {
+      margin-top: 10px;
+    }
+  }
+}
+
+.headerNav-txt {
+  color: $white;
+  margin-bottom: -5px;
+}
+
+.headerTool {
+  color: $brand-primary;
+  text-align: right;
+  padding-top: 5px;
+  @include make-col(6.5);
+  order: 2;
+
+  @include media-breakpoint-down(md) {
+    .lang-link {
+      display: none;
+    }
+  }
+}
+
+.headerSlider {
+  @include make-col(15);
+  text-align: center;
+
+  .post-preview .imgPreview {
+    height: 334px;
+  }
+}
+
+.siteHeader-header {
+  margin-top: $spacer * 1.5;
+  //color: $brand-primary;
+}
+
+@include media-breakpoint-up(lg) {
+  .headerLogo {
+    @include make-col(1);
+    align-self: center;
+
+    .depoLogo {
+      display: block;
+    }
+  }
+
+  .headerNav {
+    @include make-col(11.8);
+    order: 2;
+
+    .navbar {
+      justify-content: center;
+    }
+
+    .drop-target {
+      align-self: center;
+    }
+  }
+
+  .headerTool {
+    align-self: center;
+    padding-top: 0;
+    @include make-col(2.2);
+
+    .search-i {
+      position: relative;
+      right: 50px;
+    }
+  }
+}
+
+.navbarSearch {
+  .icon-search,
+  .lang-link {
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+  }
+}
+
+.mobNavbarShare {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: $zindex-navbar + 1;
+  color: $brand-primary;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+.navbar-main {
+  @include media-breakpoint-down(md) {
+    padding-left: 0;
+    padding-right: 0;
+
+    .navbar-nav {
+      align-items: flex-start;
+    }
+
+    .btn-alt {
+      background-color: $gray;
+      letter-spacing: initial;
+      color: $white;
+
+      &:hover {
+        background-color: $brand-primary;
+        color: black;
+      }
+    }
+  }
+}
+
+.lang-switcher {
+  font-size: $font-size-xl;
+  padding: 0;
+  list-style: none;
+  text-transform: $font-transform;
+  font-weight: bold;
+  margin: 0;
+
+  .lang-item {
+    display: inline-block;
+    margin: 0 5px;
+    color: $brand-primary;
+    @include media-breakpoint-up(lg) {
+      color: $gray;
+      font-size: $font-size-xxl;
+      border-bottom: 2px solid transparent;
+      transition: $transition-base;
+    }
+  }
+
+  .current-language {
+    color: $brand-primary;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+}
+
+.lang-link {
+  font-size: inherit;
+  padding: $spacer / 2.2;
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 0;
+    padding-right: $spacer / 2;
+
+    &:hover {
+      background: none;
+    }
+    background: none;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+
+    .lang-item {
+      border-bottom-color: $gray;
+    }
+
+    .current-language {
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+.mobNavbar {
+  position: absolute;
+  z-index: $zindex-navbar;
+  width: 100%;
+  color: $brand-primary;
+  padding: 10px 0;
+
+  @include media-breakpoint-up(lg) {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .wasLogo {
+    font-size: 2rem;
+    top: 10px;
+    left: 10px;
+    width: 45px;
+    text-align: left;
+    position: absolute;
+    cursor: pointer;
+    font-family: $headings-font-family;
+  }
+}
+
+.nav.drop-content {
+  flex-direction: column;
+}

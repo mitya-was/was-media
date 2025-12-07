@@ -1,0 +1,23 @@
+/* Template Styles */
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  // Go easy on the eyes and use something other than `#000` for text
+  color: $body-color;
+  // By default, `<body>` has no `background-color` so we set one as a best practice.
+  background-color: $body-bg;
+}
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+  max-width: $content_max_width;
+  margin: 0 auto;
+}
+
+.amp-wp-enforced-sizes {
+  /** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+  max-width: 100%;
+  margin: 0 auto;
+}

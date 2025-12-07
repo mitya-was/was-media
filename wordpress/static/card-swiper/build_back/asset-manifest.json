@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.248e68a2.chunk.css",
+    "main.js": "/static/js/main.45360d1c.chunk.js",
+    "main.js.map": "/static/js/main.45360d1c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e08ec2cb.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e08ec2cb.js.map",
+    "static/js/2.7e8ade7f.chunk.js": "/static/js/2.7e8ade7f.chunk.js",
+    "static/js/2.7e8ade7f.chunk.js.map": "/static/js/2.7e8ade7f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.8edd3c9e6bfe830f43a7ae3b8c642f92.js": "/precache-manifest.8edd3c9e6bfe830f43a7ae3b8c642f92.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.248e68a2.chunk.css.map": "/static/css/main.248e68a2.chunk.css.map",
+    "static/media/main.scss": "/static/media/ParaType - DIN Condensed.1b8df5fe.otf",
+    "static/media/deck-sound.wav": "/static/media/deck-sound.2cd1dc97.wav",
+    "static/media/error-sound.wav": "/static/media/error-sound.60f09ea6.wav",
+    "static/media/over-time-sound.wav": "/static/media/over-time-sound.67d9d4ea.wav",
+    "static/media/success-sound.mp3": "/static/media/success-sound.80d37618.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e08ec2cb.js",
+    "static/js/2.7e8ade7f.chunk.js",
+    "static/css/main.248e68a2.chunk.css",
+    "static/js/main.45360d1c.chunk.js"
+  ]
+}

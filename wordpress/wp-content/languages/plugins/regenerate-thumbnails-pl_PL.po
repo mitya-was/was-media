@@ -1,0 +1,315 @@
+# Translation of Plugins - Regenerate Thumbnails - Stable (latest release) in Polish
+# This file is distributed under the same license as the Plugins - Regenerate Thumbnails - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-29 11:52:07+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: pl\n"
+"Project-Id-Version: Plugins - Regenerate Thumbnails - Stable (latest release)\n"
+
+#. translators: Used for listing old sizes of currently registered thumbnails
+#: includes/class-regeneratethumbnails-regenerator.php:696
+msgid "%s (old)"
+msgstr "%s (stary)"
+
+#: includes/class-regeneratethumbnails-regenerator.php:622
+msgid "Attachment %d"
+msgstr "Załącznik %d"
+
+#: includes/class-regeneratethumbnails-regenerator.php:584
+msgid "Unable to load the metadata for this attachment."
+msgstr "Nie można wczytać metadanych dla tego załącznika."
+
+#: includes/class-regeneratethumbnails-regenerator.php:568
+msgid "The current image editor cannot process this file type."
+msgstr "Bieżący edytor obrazków nie może przetworzyć tego rodzaju pliku."
+
+#. translators: The relative upload path to the attachment.
+#: includes/class-regeneratethumbnails-regenerator.php:150
+msgid "The fullsize image file cannot be found in your uploads directory at <code>%s</code>. Without it, new thumbnail images can't be generated."
+msgstr "Pełnowymiarowy obrazek nie został odnaleziony w twoim katalogu z mediami pod adresem <code>%s</code>. Bez niego, nowe miniaturki nie będą mogły zostać utworzone."
+
+#: includes/class-regeneratethumbnails-regenerator.php:93
+msgid "This attachment is a site icon and therefore the thumbnails shouldn't be touched."
+msgstr "Plik jest ikonką witryny. W związku z tym jej miniaturki nie powinny być zmieniane."
+
+#: includes/class-regeneratethumbnails-regenerator.php:82
+msgid "This item is not an attachment."
+msgstr "Ten element nie jest załącznikiem."
+
+#: includes/class-regeneratethumbnails-regenerator.php:71
+msgid "No attachment exists with that ID."
+msgstr "Nie istnieje załącznik o tym identyfikatorze."
+
+#: includes/class-regeneratethumbnails-rest-controller.php:262
+msgid "The page number requested is larger than the number of pages available."
+msgstr "Liczba żądanych stron jest większa niż liczba dostępnych stron."
+
+#: includes/class-regeneratethumbnails-rest-controller.php:64
+msgid "Posts to process per loop. This is to control memory usage and you likely don't need to adjust this."
+msgstr "Liczba wpisów do przetworzenia na jeden krok pętli. Jest to potrzebne do kontrolowania ilości użytej pamięci i najprawdopodobniej nie potrzebujesz tego zmieniać."
+
+#: includes/class-regeneratethumbnails-rest-controller.php:58
+msgid "Specific post IDs to update rather than any posts that use this attachment."
+msgstr "Konkretne identyfikatory wpisów do aktualizacji a nie jakiekolwiek wpisy które używają tego załącznika."
+
+#: includes/class-regeneratethumbnails-rest-controller.php:52
+msgid "The types of posts to update. Defaults to all public post types."
+msgstr "Rodzaje wpisów do aktualizacji. Domyślnie są to wszystkie publiczne rodzaje wpisów."
+
+#: includes/class-regeneratethumbnails-rest-controller.php:47
+msgid "Whether to update the image tags in any posts that make use of this attachment."
+msgstr "Czy aktualizować tagi obrazka we wszystkich wpisach, które korzystają z tego załącznika?"
+
+#: includes/class-regeneratethumbnails-rest-controller.php:42
+msgid "Whether to delete any old, now unregistered thumbnail files."
+msgstr "Czy usunąć wszystkie stare, od teraz nie zarejestrowane miniaturki plików?"
+
+#: includes/class-regeneratethumbnails-rest-controller.php:37
+msgid "Whether to only regenerate missing thumbnails. It's faster with this enabled."
+msgstr "Czy odnowić tylko brakujące miniaturki? Włącz żeby było szybciej."
+
+#: regenerate-thumbnails.php:495
+msgctxt "bulk actions dropdown"
+msgid "Regenerate Thumbnails"
+msgstr "Odnów miniaturki"
+
+#: regenerate-thumbnails.php:433 regenerate-thumbnails.php:449
+#: regenerate-thumbnails.php:473
+msgid "Regenerate the thumbnails for this single image"
+msgstr "Odnów miniaturki dla wybranego obrazka"
+
+#: regenerate-thumbnails.php:360
+msgid "This tool won't be able to do anything because your server doesn't support image editing which means that WordPress can't create thumbnail images. Please ask your host to install the Imagick or GD PHP extensions."
+msgstr "Wtyczka nie może działać poprawnie ponieważ twój serwer nie obsługuje edycji obrazków. Z tego powodu WordPress nie może stworzyć miniaturek. Skontaktuj się z hostingodawcą aby instalował rozszerzenie Imagick lub PHP GD."
+
+#: regenerate-thumbnails.php:331
+msgid "This tool requires that JavaScript be enabled to work."
+msgstr "To narzędzie do poprawnego działania wymaga włączonej obsługi JavaScript."
+
+#: regenerate-thumbnails.php:321
+msgid "This plugin requires WordPress 4.7 or newer. You are on version %1$s. Please <a href=\"%2$s\">upgrade</a>."
+msgstr "Wtyczka wymaga WordPressa w wersji 4.7 lub nowszej. Twoja wersja to %1$s. Proszę <a href=\"%2$s\">zaktualizuj</a>."
+
+#: regenerate-thumbnails.php:294
+msgid "Regenerate Thumbnails For The %d Selected Attachments"
+msgstr "Odnów miniaturki dla %d wybranych załączników"
+
+#: regenerate-thumbnails.php:282
+msgid "Unable to fetch a list of attachment IDs to process from the WordPress REST API. You can check your browser's console for details."
+msgstr "Nie udało się pobrać listy identyfikatorów załączników do przetworzenia przez REST API WordPressa. Sprawdź konsole przeglądarki po więcej szczegółów."
+
+#: regenerate-thumbnails.php:281
+msgid "{count} seconds"
+msgstr "{count} sekund"
+
+#: regenerate-thumbnails.php:280
+msgid "{count} minutes"
+msgstr "{count} minut"
+
+#: regenerate-thumbnails.php:279
+msgid "{count} hours"
+msgstr "{count} godzin"
+
+#: regenerate-thumbnails.php:278
+msgid "All done in {duration}."
+msgstr "Ukończono w {czas trwania}."
+
+#: regenerate-thumbnails.php:277
+msgid "Skipped Attachment ID {id}: {reason}"
+msgstr "Pominięto załącznik o identyfikatorze {id}: {reason}"
+
+#: regenerate-thumbnails.php:276
+msgid "Skipped Attachment ID {id} ({name}): {reason}"
+msgstr "Pominięto załącznik o identyfikatorze {id} ({name}): {reason}"
+
+#: regenerate-thumbnails.php:275
+msgid "Regenerated {name}"
+msgstr "Odnowiono {name}"
+
+#: regenerate-thumbnails.php:274
+msgid "Resume"
+msgstr "Wznów"
+
+#: regenerate-thumbnails.php:273
+msgid "Pause"
+msgstr "Zatrzymaj"
+
+#: regenerate-thumbnails.php:272
+msgid "Regeneration Log"
+msgstr "Dziennik odnawiania"
+
+#: regenerate-thumbnails.php:271
+msgid "Errors Encountered"
+msgstr "Napotkane błędy"
+
+#: regenerate-thumbnails.php:268
+msgid "The attachment says it also has these thumbnail sizes but they are no longer in use by WordPress. You can probably safely have this plugin delete them, especially if you have this plugin update any posts that make use of this attachment."
+msgstr "Załącznik posiada również te rozmiary miniaturek, ale nie są one już używane przez WordPressa. Prawdopodobnie można bezpiecznie pozwolić, aby ta wtyczka je usunęła, zwłaszcza jeśli ta wtyczka aktualizuje jakiekolwiek posty korzystające z tego załącznika."
+
+#: regenerate-thumbnails.php:267
+msgid "These are the currently registered thumbnail sizes, whether they exist for this attachment, and their filenames:"
+msgstr "Lista zarejestrowanych rozmiarów miniaturek, niezależnie od tego czy istnieją dla tego załącznika lub nazwy pliku:"
+
+#: regenerate-thumbnails.php:266
+msgid "There was an error regenerating this attachment. The error was: <em>{message}</em>"
+msgstr "Wystąpił błąd podczas ponownego generowania tego załącznika. Błąd: <em>{message}</em>"
+
+#: regenerate-thumbnails.php:265
+msgid "Error Regenerating"
+msgstr "Błąd odnawiania"
+
+#: regenerate-thumbnails.php:264
+msgid "Done! Click here to go back."
+msgstr "Gotowe! Kliknij tutaj, aby wrócić."
+
+#: regenerate-thumbnails.php:263
+msgid "Regenerating…"
+msgstr "Odnawianie..."
+
+#: regenerate-thumbnails.php:262
+msgid "Update the content of posts that use this attachment to use the new sizes."
+msgstr "Zaktualizuj treść wpisów korzystających z tego załącznika, aby dostosować ją do nowych rozmiarów."
+
+#: regenerate-thumbnails.php:261
+msgid "Preview"
+msgstr "Podgląd"
+
+#: regenerate-thumbnails.php:260
+msgid "<code>{filename}</code> {width}×{height} pixels"
+msgstr "<code>{filename}</code> {width}×{height} pikseli"
+
+#: regenerate-thumbnails.php:259
+msgid "<strong>ERROR:</strong> {error}"
+msgstr "<strong>BŁĄD:</strong> {error}"
+
+#. translators: single image sdmin page title
+#: regenerate-thumbnails.php:258
+msgid "Regenerate Thumbnails: {name} — WordPress"
+msgstr "Odnów miniaturki: {name} — WordPress"
+
+#: regenerate-thumbnails.php:256 regenerate-thumbnails.php:433
+#: regenerate-thumbnails.php:449 regenerate-thumbnails.php:473
+msgctxt "action for a single image"
+msgid "Regenerate Thumbnails"
+msgstr "Odnów miniaturki"
+
+#: regenerate-thumbnails.php:253
+msgid "Another alternative is to use the <a href=\"{url-photon}\">Photon</a> functionality that comes with the <a href=\"{url-jetpack}\">Jetpack</a> plugin. It generates thumbnails on-demand using WordPress.com's infrastructure. <em>Disclaimer: The author of this plugin, Regenerate Thumbnails, is an employee of the company behind WordPress.com and Jetpack but I would recommend it even if I wasn't.</em>"
+msgstr "Inną alternatywą jest użycie funkcjonalności <a href=\"{url-photon}\">Photon</a>, która jest dołączona do wtyczki <a href=\"{url-jetpack}\">Jetpack</a>. Generuje ona miniatury na żądanie, korzystając z infrastruktury WordPress.com. <em>Zastrzeżenie: Autor wtyczki „Odnów miniaturki”, był pracownikiem firmy stojącej za WordPress.com i Jetpack, ale i tak poleciłby ją nawet gdyby nie był pracownikiem tej firmy.</em>"
+
+#: regenerate-thumbnails.php:252
+msgid "If you have <a href=\"{url-cli}\">command-line</a> access to your site's server, consider using <a href=\"{url-wpcli}\">WP-CLI</a> instead of this tool. It has a built-in <a href=\"{url-wpcli-regenerate}\">regenerate command</a> that works similarly to this tool but should be significantly faster since it has the advantage of being a command-line tool."
+msgstr "Jeśli masz dostęp <a href=\"{url-cli}\">z wiersza poleceń</a> do serwera swojej witryny, rozważ użycie <a href=\"{url-wpcli}\">WP-CLI</a> zamiast tego narzędzia. Ma ono wbudowane <a href=\"{url-wpcli-regenerate}\">polecenie regenerate</a>, które działa podobnie do tego narzędzia, ale powinno być znacznie szybsze, ponieważ ma tę zaletę, że jest narzędziem wiersza poleceń."
+
+#: regenerate-thumbnails.php:251
+msgid "Alternatives"
+msgstr "Alternatywy"
+
+#: regenerate-thumbnails.php:250
+msgid "These are all of the thumbnail sizes that are currently registered:"
+msgstr "Oto wszystkie rozmiary miniatur, które są obecnie zarejestrowane:"
+
+#: regenerate-thumbnails.php:249
+msgid "Thumbnail Sizes"
+msgstr "Rozmiary miniaturek"
+
+#: regenerate-thumbnails.php:248
+msgid "Regenerate Thumbnails For The {attachmentCount} Featured Images Only"
+msgstr "Odnów miniaturki tylko dla {attachmentCount} obrazków wyróżniających"
+
+#: regenerate-thumbnails.php:247
+msgid "Regenerate Thumbnails For Featured Images Only"
+msgstr "Odnów miniaturki tylko dla obrazków wyróżniających"
+
+#: regenerate-thumbnails.php:246
+msgid "Regenerate Thumbnails For All {attachmentCount} Attachments"
+msgstr "Odnów miniaturki dla wszystkich {attachmentCount} załączników"
+
+#: regenerate-thumbnails.php:245
+msgid "Regenerate Thumbnails For All Attachments"
+msgstr "Odnów miniaturki dla wszystkich załączników"
+
+#: regenerate-thumbnails.php:244
+msgid "Update the content of posts to use the new sizes."
+msgstr "Zaktualizuj treść wpisów, aby dostosować ją do nowych rozmiarów."
+
+#. translators: %s: Media library URL
+#: regenerate-thumbnails.php:241
+msgid "To process a specific image, visit your media library and click the &quot;Regenerate Thumbnails&quot; link or button. To process multiple specific images, make sure you're in the <a href=\"%s\">list view</a> and then use the Bulk Actions dropdown after selecting one or more images."
+msgstr "Aby przetworzyć konkretny obrazek, odwiedź bibliotekę mediów i kliknij łącze lub przycisk „Odnów miniaturki”. Aby przetworzyć wiele konkretnych obrazków, upewnij się, że jesteś w <a href=\"%s\">widoku listy</a>, a następnie wybierz z rozwijanej listy „Działanie masowe” po wcześniejszym zaznaczeniu jednego lub więcej obrazków."
+
+#. translators: %s: Media options URL
+#: regenerate-thumbnails.php:236
+msgid "When you change WordPress themes or change the sizes of your thumbnails at <a href=\"%s\">Settings → Media</a>, images that you have previously uploaded to you media library will be missing thumbnail files for those new image sizes. This tool will allow you to create those missing thumbnail files for all images."
+msgstr "Gdy zmienisz motyw WordPress lub zmienisz rozmiary miniatur w <a href=\"%s\">Ustawienia → Media</a>, obrazki, które wcześniej przesłałeś do swojej biblioteki multimediów, będą pozbawione plików miniatur dla tych nowych rozmiarów obrazków. To narzędzie pozwoli ci utworzyć brakujące pliki miniaturek dla wszystkich obrazków."
+
+#: regenerate-thumbnails.php:231
+msgid "proportionally resized to fit inside dimensions"
+msgstr "proporcjonalnie zmienione, aby dopasować do wymiarów wewnętrznych"
+
+#: regenerate-thumbnails.php:230
+msgid "cropped to fit"
+msgstr "przycięto, aby dopasować"
+
+#: regenerate-thumbnails.php:229
+msgid "<strong>{label}:</strong> {width}×{height} pixels (thumbnail would be larger than original)"
+msgstr "<strong>{label}:</strong> {szerokość}×{wysokość} pikseli (miniatura byłaby większa niż oryginał)"
+
+#: regenerate-thumbnails.php:228
+msgid "<strong>{label}:</strong> {width}×{height} pixels <code>{filename}</code>"
+msgstr "<strong>{label}:</strong> {width}×{height} pikseli <code>{filename}</code>"
+
+#: regenerate-thumbnails.php:227
+msgid "<strong>{label}:</strong> {width}×{height} pixels ({cropMethod}) <code>{filename}</code>"
+msgstr "<strong>{label}:</strong> {width}×{height} pikseli ({cropMethod}) <code>{filename}</code>"
+
+#: regenerate-thumbnails.php:226
+msgid "<strong>{label}:</strong> {width}×{height} pixels ({cropMethod})"
+msgstr "<strong>{label}:</strong> {width}×{height} pikseli ({cropMethod})"
+
+#: regenerate-thumbnails.php:225
+msgid "Delete thumbnail files for old unregistered sizes in order to free up server space. This may result in broken images in your posts and pages."
+msgstr "Usuń pliki miniaturek dla starych, niezarejestrowanych rozmiarów obrazków, aby zwolnić miejsce na serwerze. Może to spowodować uszkodzone obrazków w twoich wpisach i na twoich stronach."
+
+#: regenerate-thumbnails.php:224
+msgid "Skip regenerating existing correctly sized thumbnails (faster)."
+msgstr "Pomiń ponowne generowanie istniejących miniaturek o prawidłowym rozmiarze (szybciej)."
+
+#: regenerate-thumbnails.php:223 regenerate-thumbnails.php:334
+msgid "Loading…"
+msgstr "Wczytywanie…"
+
+#: regenerate-thumbnails.php:166
+msgctxt "admin menu entry title"
+msgid "Regenerate Thumbnails"
+msgstr "Odnawianie miniaturek"
+
+#: regenerate-thumbnails.php:165 regenerate-thumbnails.php:317
+msgctxt "admin page title"
+msgid "Regenerate Thumbnails"
+msgstr "Odnawianie miniaturek"
+
+#. Author URI of the plugin
+msgid "https://alex.blog/"
+msgstr "https://alex.blog/"
+
+#. Author of the plugin
+msgid "Alex Mills (Viper007Bond)"
+msgstr "Alex Mills (Viper007Bond)"
+
+#. Description of the plugin
+msgid "Regenerate the thumbnails for one or more of your image uploads. Useful when changing their sizes or your theme."
+msgstr "Wygeneruj ponownie miniaturki dla jednego lub więcej przesłanych obrazków. Przydatne przy zmianie ich rozmiarów lub motywu."
+
+#. Plugin URI of the plugin
+msgid "https://alex.blog/wordpress-plugins/regenerate-thumbnails/"
+msgstr "https://alex.blog/wordpress-plugins/regenerate-thumbnails/"
+
+#. Plugin Name of the plugin
+msgid "Regenerate Thumbnails"
+msgstr "Odnawianie miniaturek"

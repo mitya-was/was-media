@@ -1,0 +1,27 @@
+.wp-post-image {
+  @include img-fluid();
+  object-fit: cover;
+  object-position: center center;
+}
+
+// Figures
+//
+.figure {
+  // Ensures the caption's text aligns with the image.
+  margin-bottom: 0;
+  padding-bottom: $spacer;
+}
+
+//.figure-img {
+//	margin-bottom: $spacer*2;
+//	line-height: $figure-line-height;
+//}
+
+figcaption,
+.figcaption {
+  font-size: $figure-caption-font-size;
+  color: $figure-caption-color;
+  margin-top: $spacer/3;
+  margin-bottom: 0;
+  //padding-bottom: $spacer;
+}

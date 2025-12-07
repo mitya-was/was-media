@@ -1,0 +1,42 @@
+.wasLogo {
+  color: $brand-primary;
+  font-size: $logo-size;
+  line-height: 0.8;
+  letter-spacing: $headings-letter-spacing;
+  font-family: $headings-font-family;
+}
+
+.depoLogo {
+  font-size: $depositphotos-logo-size;
+}
+
+.siteLogo_lnk {
+  text-decoration: none;
+  text-transform: $font-transform;
+  display: block;
+  font-family: $headings-font-family;
+}
+
+/* Site Icon */
+.icon {
+  height: 1.5em;
+  width: 1.5em;
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: middle;
+  overflow: visible;
+
+  &.icon-md {
+    width: 2em;
+    height: 2em;
+  }
+  &.icon-sm {
+    width: 1.3em;
+    height: 1.3em;
+  }
+}
+
+.custom-fb-style {
+  background-image: none;
+  background-color: transparent;
+}

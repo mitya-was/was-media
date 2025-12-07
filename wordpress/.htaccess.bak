@@ -1,0 +1,30 @@
+
+# BEGIN WP Cloudflare Super Page Cache
+# Директивы (строки) между `BEGIN WP Cloudflare Super Page Cache` и `END WP Cloudflare Super Page Cache`
+# созданы автоматически и подлежат изменению только через фильтры WordPress.
+# Сделанные вручную изменения между этими маркерами будут перезаписаны.
+<IfModule mod_expires.c>
+ExpiresActive on
+ExpiresByType application/xml "access plus 0 seconds"
+ExpiresByType text/xsl "access plus 0 seconds"
+</IfModule>
+<FilesMatch "\.(xml|xsl)$">
+<IfModule mod_headers.c>
+Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+</IfModule>
+</FilesMatch>
+<FilesMatch "robots\.txt">
+<IfModule mod_headers.c>
+Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+</IfModule>
+</FilesMatch>
+<IfModule mod_rewrite.c>
+RewriteCond %{REQUEST_URI} ^(.*)?/wp-content/wp-cloudflare-super-page-cache/was.media/debug.log(.*)$
+RewriteRule ^(.*)$ - [F]
+</IfModule>
+<FilesMatch "wp-cron.php">
+<IfModule mod_headers.c>
+Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+</IfModule>
+</FilesMatch>
+# END WP Cloudflare Super Page Cache

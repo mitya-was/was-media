@@ -1,0 +1,80 @@
+//0 Foundation layer
+// --Core variables and mixins
+@import "../../base/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins/";
+@import "../../base/slider";
+@import "../../base/icon";
+@import "../../base/buttons";
+@import "../../../../node_modules/bootstrap/scss/_normalize";
+@import "../../../../node_modules/bootstrap/scss/_reboot";
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  font-size: 18px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  background: $gray-light;
+
+  .swiper-pagination-bullets {
+    &.pagination-bottom {
+      text-align: center;
+      top: auto;
+      bottom: 0;
+    }
+  }
+}
+
+.swiper-slide {
+  position: relative;
+  perspective: 1200px;
+  transition: all 800ms cubic-bezier(0.23, 1, 0.32, 1);
+
+  &:hover {
+    .content-card {
+      transform: rotateX(0deg) rotateY(180deg) scale(1);
+    }
+
+  }
+
+  .content-card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.85);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .cards {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    padding: 10px 27px;
+    box-sizing: border-box;
+  }
+
+  .cards-intro {
+    justify-content: center;
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  .cards-preview {
+    transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+  }
+
+  .cards-preview--img {
+    width: 100%;
+  }
+}

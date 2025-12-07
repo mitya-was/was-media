@@ -1,0 +1,16 @@
+@import '../scss/base/variables';
+
+.dialog {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  z-index: $zindex-popover;
+  padding: 10px 15px;
+  bottom: 0;
+  transform: translateY(200%);
+  transition: transform 0.5s cubic-bezier(0.49, 0.01, 0.36, 1);
+
+  &.active {
+    transform: translateY(0);
+  }
+}

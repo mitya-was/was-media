@@ -1,0 +1,24 @@
+<div id="mobNavbar" class="navbar navbar-mob">
+    <div class="mobNavbar" data-component="fixedTag"
+         data-options='{"targetClass":"site-main", "pinClass":"mobNavbar", "hidemobile":"false"}'>
+    <div class="navbarLogo">
+        <span class="wasLogo badge b-round badge-brand" data-component="overlay"
+              data-target="header" data-toggle="open" on="tap:sidebar.toggle" role="menu">W</span>
+    </div>
+
+        <nav class="navbarSearch" on="tap:social-shares" role="button">
+        {{ languages_switcher }}
+        </nav>
+    </div>
+</div>
+
+<div class="mobNavbarShare badge badge-md b-round badge-brand">
+    {{ function(
+        'twentyseventeen_get_svg',
+        {
+            'icon' : 'like',
+            'class' : 'icon-md',
+            'datas' : 'data-component="overlay" data-target="asideShares" data-toggle="toggle" data-direction="right"'
+        }
+    ) }}
+</div>

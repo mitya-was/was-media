@@ -1,0 +1,95 @@
+# BEGIN WordPress
+# Директивы (строки) между `BEGIN WordPress` и `END WordPress`
+# созданы автоматически и подлежат изменению только через фильтры WordPress.
+# Сделанные вручную изменения между этими маркерами будут перезаписаны.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+
+# BEGIN WP Cloudflare Super Page Cache
+# Директивы (строки) между `BEGIN WP Cloudflare Super Page Cache` и `END WP Cloudflare Super Page Cache`
+# созданы автоматически и подлежат изменению только через фильтры WordPress.
+# Сделанные вручную изменения между этими маркерами будут перезаписаны.
+<IfModule mod_expires.c>
+ExpiresActive on
+ExpiresByType application/xml "access plus 0 seconds"
+ExpiresByType text/xsl "access plus 0 seconds"
+</IfModule>
+<FilesMatch "\.(xml|xsl)$">
+<IfModule mod_headers.c>
+Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+</IfModule>
+</FilesMatch>
+<FilesMatch "robots\.txt">
+<IfModule mod_headers.c>
+Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+</IfModule>
+</FilesMatch>
+<IfModule mod_rewrite.c>
+RewriteCond %{REQUEST_URI} ^(.*)?/wp-content/wp-cloudflare-super-page-cache/was.media/debug.log(.*)$
+RewriteRule ^(.*)$ - [F]
+</IfModule>
+<FilesMatch "wp-cron.php">
+<IfModule mod_headers.c>
+Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+</IfModule>
+</FilesMatch>
+# END WP Cloudflare Super Page Cache
+
+# BEGIN Security Headers
+<IfModule mod_headers.c>
+    # Базовые заголовки безопасности
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Permissions Policy (ограничение функций браузера)
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=()"
+    
+    # Content-Security-Policy (постепенное внедрение)
+    # Раскомментировать после тестирования в стейджинге
+    # Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https://was.imgix.net data: blob:; font-src 'self' data:;"
+</IfModule>
+# END Security Headers
+
+# BEGIN Browser Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # CSS and JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    
+    # Fonts
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+</IfModule>
+# END Browser Caching
+
+# BEGIN Gzip Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml application/rss+xml
+</IfModule>
+# END Gzip Compression

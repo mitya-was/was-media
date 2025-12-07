@@ -1,0 +1,48 @@
+<header id="header" class="siteHeader overlay o-1 fixed-top" role="banner">
+  <div class="layout_main">
+    <div class="row">
+
+      <div class="col headerLogo">
+
+        <h1 class="siteLogo h1">
+          <a class="siteLogo_lnk wasLogo" on="tap:sidebar.toggle" href="/" data-component="overlay" data-target="header"
+             data-toggle="close" rel="home">WAS</a>
+        </h1>
+
+        <div class="hidden-lg-up media-follow">
+          <a href="https://www.youtube.com/channel/UC1fsAAkA-yJY5eWDgS91TzQ" target="_blank" class="media-icons btn btn-sm btn-youtube">
+            <svg class="icon icon-youtube icon-md" role="img">
+              <use href="#icon-youtube" xlink:href="#icon-youtube"></use>
+            </svg>
+          </a>
+          <%- include social-links.ejs -%>
+        </div>
+      </div>
+
+      <div class="col headerNav">
+        <p class="headerNav-txt hidden-lg-up">популярные темы</p>
+        <nav class="navbar navbar-main navbar-toggleable-md" role="navigation">
+          <%- include nav.ejs -%>
+        </nav>
+      </div>
+
+      <div class="col headerTool">
+        <i class="search-i" data-component="modal" data-target="#was-search"
+           data-theme="modal-primary">
+          <svg class="icon icon-search icon-lg icon-inter" aria-hidden="true" role="img">
+            <use href="#icon-search" xlink:href="#icon-search"></use>
+          </svg>
+        </i>
+
+        <a class="lang-link btn btn-xl btn-invert" hreflang="uk-UK" href="#uk" lang="uk-UK">
+          <ul class="lang-switcher">
+            <li class='lang-item lang-item-11 lang-item-ru current-language'>Ru</li>
+            <li class='lang-item lang-item-305 lang-item-uk '>Ua</li>
+          </ul>
+        </a>
+      </div>
+
+    </div>
+    <%- include newarticles.ejs -%>
+  </div>
+</header>

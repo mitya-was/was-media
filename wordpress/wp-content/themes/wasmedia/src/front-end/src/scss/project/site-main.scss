@@ -1,0 +1,10 @@
+.empty:empty {
+  display: none;
+}
+
+.site-main {
+  h1,
+  p {
+    @extend .empty;
+  }
+}

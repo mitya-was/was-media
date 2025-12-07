@@ -1,0 +1,162 @@
+/* Article */
+
+.amp-wp-article {
+  margin: 0 auto;
+  max-width: $content_max_width;
+  /* overflow-wrap: break-word;
+    word-wrap: break-word; */
+}
+
+/* Article Header */
+.amp-wp-article-header {
+  margin-top: 4.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.amp-wp-title {
+  margin: $spacer * 2.2 0;
+  line-height: 1.05;
+}
+
+.amp-article-lead {
+  font-family: $font-family-base;
+  text-transform: inherit;
+}
+
+.amp-tooltip-content {
+  font-style: italic;
+  color: $gray-darkAlt;
+}
+
+/* Article Meta */
+.amp-wp-meta,
+.views-entry {
+  display: flex;
+}
+
+.time-entry {
+  margin-right: $spacer;
+}
+
+/* .amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+} */
+
+/* .amp-wp-byline amp-img {
+	border: 1px solid orange;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+} */
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+  margin: 0 0 1em;
+}
+
+.amp-wp-article-featured-image amp-img {
+  margin: 0 auto;
+}
+
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+  margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+  margin-bottom: $spacer * 3;
+}
+
+.amp-wp-article-content h3 {
+  margin-top: $headings-margin-top;
+  font-size: 2.3rem;
+}
+
+@media (max-width: 666px) {
+  .amp-wp-article-header,
+  .amp-wp-article-content h3,
+  .amp-wp-article-content p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.amp-wp-article-content > figure {
+  margin-left: -20px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+  margin-left: $spacer * 3;
+}
+
+.amp-wp-article-content amp-img {
+  margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+  margin: 0 0 1em 20px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+  margin: 0 16px 1em 0;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer {
+  letter-spacing: -0.03em;
+  .taglink {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: $font-size-h4;
+    color: $black;
+    margin: 0 $spacer/3;
+  }
+
+  .amp-wp-meta {
+    display: block;
+  }
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+  margin: 1.5em 20px;
+}
+
+.amp-wp-comments-link {
+  text-align: center;
+  margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.taglink {
+  &:before {
+    content: '#';
+    display: inline-block;
+  }
+}
+
+.lightbox {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox h1 {
+  color: white;
+}

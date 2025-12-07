@@ -1,0 +1,84 @@
+html, body,
+.wrapper,
+.row,
+.layout_main {
+  height: 100%;
+}
+
+.wrapper {
+  background: url(/assets/images/maintenance_cover.jpg) no-repeat 32% center;
+  background-size: cover;
+  @include media-breakpoint-up(xl) {
+    background-position: center center;
+  }
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.cont {
+
+  @include media-breakpoint-up(sm) {
+    @include make-col(13);
+    @include make-col-push(2);
+  }
+
+  @include media-breakpoint-up(md) {
+    @include make-col(14);
+    @include make-col-push(0);
+  }
+  @include media-breakpoint-up(lg) {
+    @include make-col-push(1);
+  }
+  @include media-breakpoint-up(lg) {
+    @include make-col(12);
+    @include make-col-push(3);
+  }
+  @include media-breakpoint-up(xl) {
+    @include make-col(13);
+    @include make-col-push(2);
+  }
+  @include media-breakpoint-up(xxl) {
+    @include make-col-push(2);
+  }
+}
+
+.maintenance_intro {
+  color: white;
+  text-transform: $font-transform;
+  padding-top: 5rem;
+  @include media-breakpoint-up(md) {
+    padding-top: 11rem;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h1, a {
+    color: $brand-primary;
+    line-height: 0.8;
+  }
+
+  @include media-breakpoint-down(md) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+  }
+}

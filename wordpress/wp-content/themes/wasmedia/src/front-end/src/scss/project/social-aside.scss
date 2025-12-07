@@ -1,0 +1,30 @@
+.media-aside {
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+  color: $white;
+  text-align: center;
+  background-color: $brand-secondary;
+
+  .media-icons {
+    margin-bottom: $spacer/2;
+  }
+
+  .label {
+    letter-spacing: $letter-spacing-alt;
+    text-transform: $font-transform;
+  }
+
+  .layout_main {
+    max-width: 280px;
+    @include media-breakpoint-up(sm) {
+      max-width: 320px;
+    }
+  }
+  .layout_main,
+  .row {
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+  }
+}

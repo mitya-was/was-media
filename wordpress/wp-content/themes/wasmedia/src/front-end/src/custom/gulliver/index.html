@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Gulliver</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="fb:app_id" content="266741733751086">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&subset=cyrillic,latin">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/preset.css">
+
+
+</head>
+
+<body>
+
+<main class="viewbox">
+  <div class="UI">
+    <div data-component="spinner">
+      <img src="assets/images/spinner.svg" class="spinner" alt="">
+    </div>
+    <div class="modal" data-component="modal">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-xs-4 col-push-sm-1 col-sm-6 col-push-md-2 col-md-8 col-lg-8 col-push-lg-2 col-xl-8 col-push-xl-2">
+            <div class="inner">
+              <div class="answer">
+                <div class="title"></div>
+                <div class="text"></div>
+                <div class="group btn-group group-horizontal group-align-center">
+                  <button class="btn next">Далі</button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div data-component="panelbox">
+      <div class="panel top full-size">
+        <section class="panel-section panel-section-0">
+          <div class="container">
+            <div class="row">
+              <div
+                class="col-xs-4 col-push-sm-1 col-sm-6 col-push-md-2 col-md-8 col-lg-8 col-push-lg-2 col-xl-8 col-push-xl-2">
+                <div class="inner">
+                  <div class="counter"></div>
+                  <div class="dropdown" data-component="dropdown">
+                    <div class="dropdown-body">
+                      <div class="question text"></div>
+                    </div>
+                    <button class="dropdown-trigger btn btn-icon">
+                      <i class="material-icons icon-close">expand_less</i>
+                      <i class="material-icons icon-open">expand_more</i>
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="panel left full-size">
+        <section class="panel-section panel-section-0">
+          <div class="inner">
+            <div class="group btn-group group-vertical zoom-controller">
+              <button class="btn btn-icon zoom zoom-in">
+                <i class="material-icons">zoom_in</i>
+              </button>
+              <button class="btn btn-icon zoom zoom-out">
+                <i class="material-icons">zoom_out</i>
+              </button>
+              <button class="btn btn-icon zoom zoom-default">
+                <i class="material-icons">search</i>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="panel right full-size">
+        <section class="panel-section panel-section-0">
+
+        </section>
+      </div>
+      <div class="panel bottom full-size">
+        <section class="panel-section panel-section-0">
+          <div class="inner">
+            <div class="group btn-group group-horizontal zoom-controller">
+              <button class="btn btn-icon zoom zoom-in">
+                <i class="material-icons">zoom_in</i>
+              </button>
+              <button class="btn btn-icon zoom zoom-out">
+                <i class="material-icons">zoom_out</i>
+              </button>
+              <button class="btn btn-icon zoom zoom-default">
+                <i class="material-icons">search</i>
+              </button>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+
+  </div>
+  <div id="svg"></div>
+</main>
+
+
+<script src="./js/svg.min.js"></script>
+<script src="./js/svg.draggable.js"></script>
+<script src="./js/svg.panzoom.js"></script>
+<script src="./js/application.js?ver=9"></script>
+<script src="./js/ui.js?ver=9"></script>
+<script src="./js/index.js?ver=9"></script>
+
+</body>
+
+</html>

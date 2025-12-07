@@ -1,0 +1,28 @@
+{% import 'macros/was-macros.twig' as macros %}
+
+<div class="{{ variables['elastic_editor_class'] }}">
+    <div class="layout_main">
+        <div class="{{ variables['elastic_layout_class'] }}">
+
+            {% if (variables['elastic_type'] == "podcast") %}
+                {{ macros.get_podcast(variables) }}
+            {% endif %}
+
+            {% if (variables['elastic_type'] == "post") %}
+                {% if variables['is_slider'] %}
+                    <div class="{{ variables['slider_class'] }}" data-component="slider" data-config="elastic">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-wrapper">
+                            {{ macros.get_elastic_post(variables) }}
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="row">
+                        {{ macros.get_elastic_post(variables) }}
+                    </div>
+                {% endif %}
+            {% endif %}
+
+        </div>
+    </div>
+</div>

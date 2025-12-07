@@ -1,0 +1,17 @@
+.ui {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  color: #fff;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+
+}
+
+.zoom-controller {
+  align-self: center;
+}

@@ -1,0 +1,211 @@
+// --Core variables and mixins
+@import 'styles/base/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+//1 Base layer
+@import 'node_modules/bootstrap/scss/_media';
+@import './radio';
+@import './panels';
+//2 Project layer
+
+.btn-info {
+  cursor: pointer;
+  @include button-variant($white, #2ba2ef, #2ba2ef);
+
+  &:disabled {
+    @include button-variant($gray, $grayAlt, $grayAlt);
+  }
+}
+
+.vote-modal-theme {
+  padding-top: 0;
+
+  .tingle-modal-box {
+    background-color: white;
+    @include media-breakpoint-up(lg) {
+      padding: 80px 126px;
+      max-width: 911px;
+    }
+
+    &__content {
+      margin: 0 auto 3rem;
+      max-width: 660px;
+      @include media-breakpoint-down(md) {
+        padding: 0;
+      }
+    }
+  }
+
+  .icon-modal-close {
+    left: -8px;
+    transform: rotate(90deg);
+  }
+
+  .tingle-modal__close {
+    outline: none;
+    text-align: left;
+    width: 100%;
+    max-width: 660px;
+    padding: 0px 1rem;
+    @include media-breakpoint-up(lg) {
+      padding: 0px 3rem;
+    }
+
+    &Icon {
+      display: none;
+    }
+
+    &Label {
+      font-size: 1rem;
+      font-family: $headings-font-family;
+      display: inline-flex;
+      @include button-variant($btn-alt-color, $btn-alt-bg, $btn-alt-border);
+    }
+  }
+
+  .cover {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .post-entry {
+    justify-content: center;
+    color: white;
+  }
+
+  ul {
+    list-style: none;
+    position: relative;
+
+    li {
+      margin-bottom: 1rem;
+
+      &:before {
+        content: '●';
+        position: absolute;
+        left: 0;
+        font-size: 30px;
+        line-height: 0.8;
+        color: $brand-primary;
+      }
+    }
+  }
+
+  .accordion {
+    display: flex;
+    color: $brand-primary;
+    fill: $brand-primary;
+    font-size: $font-size-h2;
+
+    &.active {
+      color: $black;
+      fill: $black;
+    }
+
+    @include media-breakpoint-down(md) {
+      justify-content: space-between;
+    }
+
+    .icon {
+      margin-left: 1rem;
+    }
+  }
+
+  .display-4 {
+    margin-bottom: 3rem;
+  }
+
+  h3,
+  h5 {
+    margin-bottom: 1rem;
+    text-transform: unset;
+  }
+}
+
+.vote2019 {
+  padding: $spacer * 2 0;
+
+  .media {
+    flex-wrap: wrap;
+    padding: $spacer 0;
+    justify-content: center;
+
+    .option-input {
+      margin-bottom: 2rem;
+    }
+
+    &.voted {
+      .option-input {
+        border-color: $black;
+
+        &:disabled {
+          cursor: default;
+        }
+
+        &::before {
+          color: $black;
+        }
+      }
+    }
+
+    &-body {
+      margin-right: 0;
+      @include media-breakpoint-down(xs) {
+        flex: 60%;
+      }
+    }
+  }
+
+  &-control {
+    flex-basis: 1;
+    @include media-breakpoint-down(xs) {
+      margin-left: -65px;
+    }
+
+    button,
+    .fb-login-button {
+      display: block;
+      margin-bottom: $spacer;
+    }
+  }
+
+  h3,
+  h5 {
+    line-height: 1;
+    padding-top: 0;
+    margin-bottom: 1rem;
+    text-transform: unset;
+  }
+}
+
+.vote {
+  &-share-result {
+    margin: 30px 0 60px;
+  }
+
+  &-snippet-preview {
+    width: 100%;
+    max-width: 490px;
+    margin-bottom: 20px;
+  }
+  &-item {
+    position: relative;
+    &-image {
+      @include media-breakpoint-up(md) {
+        position: absolute;
+        right: 0;
+      }
+      overflow: hidden;
+      border-radius: 50%;
+      @include media-breakpoint-down(sm) {
+        @include size(50px);
+      }
+      @include media-breakpoint-down(xs) {
+        display: none;
+      }
+    }
+  }
+}
+
+.hide {
+  display: none !important;
+}

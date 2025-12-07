@@ -1,0 +1,40 @@
+.headerSidebar {
+  padding: 20px 40px 20px 20px;
+  background: $gray-dark;
+  color: white;
+
+  .nav-link {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: $font-size-base * 1.7;
+  }
+
+  .siteLogo {
+    margin-right: 15px;
+  }
+
+  .dropdown-arrow {
+    display: none;
+  }
+
+  .depoLogo {
+    display: none;
+  }
+
+  .social-icons {
+    margin-right: 12px;
+  }
+
+  .search-i {
+    display: none;
+  }
+}
+
+.navbar-main {
+  font-family: $headings-font-family;
+}
+
+.headerNav-txt {
+  margin-bottom: 5px;
+}

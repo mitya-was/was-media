@@ -1,0 +1,20 @@
+//0 Foundation layer
+// --Core variables and mixins
+@import 'base/variables';
+@import 'amp/variables';
+@import './mixins/index';
+//1 Base layer
+@import 'amp/type';
+@import 'amp/template';
+@import 'amp/sidebar';
+@import 'amp/button';
+//2 Project layer
+@import 'amp/header';
+@import 'amp/logo';
+@import 'amp/article';
+@import 'amp/aside';
+@import 'amp/media';
+@import 'amp/footer';
+
+/*
+  @import "amp/helpers"; */

@@ -1,0 +1,13 @@
+.display {
+  display: none;
+}
+
+.display.on {
+  display: block;
+}
+
+.display .title {
+  font-family: "DINPro-CondensedBold";
+  font-size: 2em;
+  text-align: center;
+}

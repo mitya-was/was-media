@@ -1,0 +1,532 @@
+.gameContainer {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+	/* Fix of Webkit flickering */
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	& > div {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		//transform: translateY(0);
+		//transition: $hide-transition, $transition-transform;
+	}
+
+	.hidden {
+		position: absolute;
+		@include bounceOutUp();
+		//@include fadeOutUp($duration: 0.3s,
+		//$count: 1,
+		//$delay: 0s,
+		//$function: ease-out,
+		//$fill: both);
+
+		//transform: translateY(700px);
+	}
+
+	.hide {
+		visibility: hidden;
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+	}
+}
+
+.gameItem_bg {
+	color: $white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	.gameIntro {
+		background-color: $white;
+	}
+
+	.question {
+		max-width: 570px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.gameWrapper {
+	//min-height: 320px;
+	//width: 100%;
+	//z-index: 1;
+	//margin-top: 5%;
+	//margin-bottom: 5%;
+	@include pulse($duration: 0.4s, $count: 1, $delay: 0s, $function: ease-out, $fill: both);
+	//transition: $transition-base;
+	//@include bounceInDown();
+}
+
+.gameOutro {
+	@include bounceInUp();
+	padding-top: $spacer * 2;
+	padding-bottom: $spacer * 2;
+}
+
+.progressGame {
+	&.gameItem_bg {
+		min-height: 320px;
+		@include media-breakpoint-up(sm) {
+			min-height: 480px;
+		}
+		@include media-breakpoint-up(lg) {
+			min-height: 520px;
+		}
+	}
+
+	&.gameItemImgBg {
+		color: $white;
+		min-height: 510px;
+
+		.gameItem {
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-color: rgba(0, 0, 0, 0.25);
+				z-index: -1;
+				@include size(100%);
+			}
+		}
+	}
+}
+
+.gameItemImgBg {
+	.gameLabel {
+		color: $black;
+	}
+
+	//.gameLabel,
+	//.gameControls {
+	//  position: absolute;
+	//  top: 40px;
+	//  left: 50%;
+	//  z-index: 1;
+	//  transform: translateX(-50%);
+	//}
+
+	.gameItem {
+		padding-top: 50px;
+		padding-bottom: 40px;
+	}
+}
+
+.noCovers {
+	&.endPlay,
+	&.initGame {
+		&.gameItem_bg {
+			background: none !important;
+			color: $black;
+		}
+
+		.outroMsg {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.gameItem {
+	-ms-flex: 0 0 auto;
+	overflow: hidden;
+	position: absolute;
+	visibility: hidden;
+	//bottom: -150%;
+	//left: 0;
+	width: 100%;
+	//opacity: 0;
+	z-index: 0;
+	//transform: translateY(50px);
+	//transition: $transition-fade, $transition-transform;
+	//visibility: hidden;
+	transition: $transition-base;
+	//@include bounceOutDown( $duration: 1s,
+	//$count: 1,
+	//$delay: 0s,
+	//$function: ease-in-out,
+	//$fill: both);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-top: 20px;
+	//padding-bottom: 10px;
+	@include fadeOutDown($duration: 0.2s, $count: 1, $delay: 0s, $function: ease-out, $fill: both);
+}
+
+.gameItem__active {
+	//transform: translateY(0);
+	//bottom: 0;
+	//opacity: 1;
+	visibility: visible;
+	position: relative;
+	//visibility: visible;
+	z-index: 1;
+	//@include bounceInUp( $duration: 0.8s,
+	//$count: 1,
+	//$delay: 0s,
+	//$function: ease-in-out,
+	//$fill: both);
+	@include fadeInUp($duration: 0.3s, $count: 1, $delay: 0s, $function: ease-out, $fill: both);
+}
+
+//.question-txt {
+//  max-width: 565px;
+//  margin-left: auto;
+//  margin-right: auto;
+//  text-align: left;
+//  margin-top: $spacer/1.5;
+//}
+
+.notes {
+	background-color: rgba(228, 228, 228, 0.7);
+	padding: 1rem 1.5rem 0.5rem 1.5rem;
+	color: $black;
+	font-size: $font-size-sm;
+	text-align: left;
+}
+
+.question,
+.versions,
+.outroMsg,
+.gameOutro_result_image,
+.notes {
+	margin-bottom: $spacer;
+	max-width: 570px;
+	margin-left: auto;
+	margin-right: auto;
+	transition: $transition-collapse;
+	@include media-breakpoint-down(sm) {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+
+.gameOutro_result_image {
+	width: 100%;
+	@include media-breakpoint-up(md) {
+		max-width: 765px;
+	}
+}
+
+.question-txt {
+	text-align: left;
+	margin-top: $spacer/1.5;
+}
+
+.versions {
+	display: flex;
+	flex-wrap: wrap;
+
+  &-druggable {
+    flex-direction: column;
+
+    .item-control.btn-block {
+      display: inline-block;
+      pointer-events: initial;
+      cursor: grab;
+      position: static;
+
+      > img,
+      > span {
+        position: static;
+        pointer-events: initial;
+        display: block;
+        z-index: 0;
+      }
+    }
+  }
+}
+
+.item-control {
+	margin-top: 0;
+	position: relative;
+
+	&.btn-link {
+		flex: 0 0 52%;
+		margin: 0 auto;
+		text-align: left;
+
+		&:after {
+			conten: '';
+			display: inline-block;
+			background: #000;
+			@include size(50px);
+		}
+	}
+
+	&.btn-block {
+		@include media-breakpoint-up(sm) {
+			flex: 1 0 49%;
+		}
+		margin: 0 0.5% 5px;
+		white-space: pre-line;
+	}
+}
+
+.btn-next {
+	//top: 10px;
+	margin-top: $spacer/2;
+}
+
+.question {
+	margin-bottom: 1%;
+	min-height: 120px;
+
+	.iframeWrapper {
+		margin-bottom: 30px;
+	}
+
+	p {
+		@include media-breakpoint-down(sm) {
+			padding: 0 5px;
+		}
+	}
+}
+
+.gameControls {
+	color: $black;
+	margin-bottom: $spacer/2;
+	order: -1;
+}
+
+.gameLabel {
+	max-width: 565px;
+	//transform: translateY(0);
+	//transition: $transition-transform;
+}
+
+.outroMsg {
+	margin-bottom: $spacer;
+}
+
+.introCover,
+.outerCover {
+	& > div {
+		justify-content: center;
+	}
+}
+
+.introCover {
+	& > .gameIntro {
+		background-color: $gray-dark;
+	}
+
+	.introMsg {
+		@extend .coverTheme;
+	}
+}
+
+//.outerCover {
+.outroMsg {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.coverTheme {
+	position: absolute;
+	color: $white;
+	z-index: 1;
+	width: 100%;
+	//width: 100%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.result-title {
+	@extend .coverTheme;
+	top: 180px;
+	max-width: 500px;
+	padding-left: 10px;
+	padding-right: 10px;
+	@include media-breakpoint-down(sm) {
+		top: 130px;
+		font-size: 1.2rem;
+	}
+}
+
+.question-audio {
+	margin-bottom: $spacer;
+}
+
+.result-counter {
+	@extend .coverTheme;
+	margin-bottom: $spacer;
+	top: 115px;
+	@include media-breakpoint-down(sm) {
+		font-size: 0.8rem;
+		top: 90px;
+	}
+}
+
+.article_meta_media {
+	align-items: self-start;
+
+	&.media_result {
+		display: flex;
+		padding-top: 0;
+		width: 100%;
+		@include lightSpeedIn(
+			$duration: 0.25s,
+			$count: 1,
+			$delay: 0.8s,
+			$function: ease-in,
+			$fill: both
+		);
+		transition: $transition-base;
+
+		&.toggler {
+			visibility: hidden;
+			display: none;
+			@include lightSpeedOut(
+				$duration: 0.25s,
+				$count: 1,
+				$delay: 0s,
+				$function: ease-out,
+				$fill: both
+			);
+		}
+	}
+}
+
+.status {
+	display: block;
+}
+
+.itemRow {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.itemImg {
+	margin-bottom: $spacer;
+}
+
+.gameOutro__lottery {
+	margin: 20px auto;
+	text-align: left;
+	padding-left: $spacer;
+	padding-right: $spacer;
+
+	em {
+		display: block;
+	}
+
+	iframe {
+		width: 100%;
+		min-height: 300px;
+	}
+
+	img,
+	figure {
+		@include img-fluid();
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	.inner_content {
+		padding: 1rem 2rem;
+		margin-bottom: $spacer;
+		background-color: $white;
+		color: $black;
+	}
+
+	.article_meta_media {
+		margin-bottom: 0;
+	}
+}
+
+.fb-login-button {
+	margin-bottom: $spacer * 2;
+	overflow: hidden;
+
+	&.hide,
+	&:empty {
+		display: none;
+		margin-bottom: 0;
+	}
+}
+
+.resultHdr {
+	font-weight: bold;
+}
+
+.resultList {
+	&.active {
+		color: $brand-success;
+	}
+}
+
+.warrning-text {
+	color: $yellow;
+	font-style: italic;
+	font-size: $font-size-sm;
+}
+
+// Only for logged in users
+
+.quiz-paging_admin {
+	display: flex;
+	justify-content: center;
+
+	a {
+		color: $gray-darkAlt;
+		text-decoration: none;
+	}
+}
+
+
+.tingle-modal.quiz-modal {
+	z-index: 10000000;
+	padding: 0;
+	max-width: 100vw;
+	background-color: white;
+	overflow: hidden;
+
+	.tingle-modal-box {
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+	}
+
+	.tingle-modal__close {
+		@media (max-width: 540px) {
+			background-color: #222;
+		}
+	}
+
+	.tingle-modal-box__content {
+		padding-left: 0;
+		padding-right: 0;
+		@media (min-width: 541px) {
+			padding: 0;
+		}
+	}
+
+	.tingle-modal__close {
+		display: none;
+	}
+
+	.tingle-modal-box__content {
+		padding: 0;
+		overflow-y: hidden;
+	}
+
+	.iframe-fullsize{
+		width: 100%;
+		height: 100vh;
+		border: none;
+	}
+}

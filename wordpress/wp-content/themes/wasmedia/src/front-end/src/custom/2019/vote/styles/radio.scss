@@ -1,0 +1,69 @@
+$radio-size: 50px;
+
+.option-input {
+  @include size($radio-size);
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 4px solid $grayAlt;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: $spacer;
+  outline: none;
+  position: relative;
+  z-index: 11;
+  border-radius: 0;
+  transition: all 0.15s ease-out 0s;
+
+  &:hover {
+    border-color: darken($grayAlt, 20%);
+  }
+
+  &:disabled {
+    background-color: $white;
+    border-color: #eee;
+  }
+
+  &:checked {
+    border-color: $brand-primary;
+
+    &::before {
+      @include size($radio-size);
+      font-size: 70px;
+      font-family: $headings-font-family;
+      line-height: 0.3;
+      position: absolute;
+      color: $brand-primary;
+      content: '\2713';
+      display: inline-block;
+      text-align: center;
+    }
+
+    &::after {
+      background-color: $brand-primary;
+      animation: click-wave 0.65s;
+      content: '';
+      display: block;
+      position: relative;
+      z-index: 10;
+    }
+  }
+}
+
+@keyframes click-wave {
+  0% {
+    @include size($radio-size);
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    @include size(100px);
+    margin-left: -30px;
+    margin-top: -30px;
+    opacity: 0;
+  }
+}

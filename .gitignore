@@ -1,0 +1,26 @@
+# Env and secrets
+wordpress/.env
+*.env
+*.env.local
+
+# Database dumps / archives
+*.sql
+*.sql.gz
+database.sql
+checksums.sha256
+*.tar.gz
+
+# Composer/npm deps caches (uncomment if you don't commit them)
+# vendor/
+# node_modules/
+
+wordpress/wp-content/uploads/
+wordpress/wp-content/cache/
+wordpress/wp-content/upgrade/
+wordpress/wp-content/wflogs/
+wordpress/wp-content/wp-cache-config.php
+wordpress/wp-content/debug.log
+wordpress/wp-content/*.log
+node_modules/
+vendor/
+wordpress/wp-content/themes/wasmedia/src/Utils/client-secret.json

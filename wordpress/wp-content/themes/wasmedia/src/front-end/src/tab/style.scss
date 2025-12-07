@@ -1,0 +1,38 @@
+@import '../scss/base/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+
+.navbar-tab {
+  border-color-bottom: transparent;
+
+  .tab-link {
+    color: $brand-primary;
+    margin: 0 $spacer/2;
+    text-decoration: none;
+    border-bottom: 2px dashed $brand-primary;
+    cursor: pointer;
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-xl;
+    }
+
+    &.active {
+      cursor: default;
+      color: $gray;
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  > .active {
+    display: block;
+  }
+}

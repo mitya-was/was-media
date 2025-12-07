@@ -1,0 +1,149 @@
+{% macro get_chronology(variables) %}
+
+    {% for chronology_content in variables['main_aside_chronology'] %}
+        <div class="chrono_i">
+            {{ chronology_content }}
+        </div>
+    {% endfor %}
+
+{% endmacro %}
+
+{% macro get_tooltips(variables) %}
+
+    {% for tooltip in variables['main_tooltips'] %}
+        <div class="nav drop-inner">
+            {{ tooltip }}
+        </div>
+    {% endfor %}
+
+{% endmacro %}
+
+{% macro get_i_frame(variables) %}
+
+    {% for i_frame in variables['main_i_frame'] %}
+        <div class="{{ variables['i_frame_class'] }}">
+            <iframe src="{{ i_frame }}" frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+    {% endfor %}
+
+{% endmacro %}
+
+{% macro get_podcast(variables) %}
+
+    {% for podcast in variables['podcasts'] %}
+        <div class="iframeWrapper i_swide">
+            <iframe src="{{ podcast }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+    {% endfor %}
+
+{% endmacro %}
+
+{% macro get_elastic_post(variables) %}
+
+    {% if variables['posts'] is iterable and variables['posts']|length > 0 %}
+
+            {% set order_count = 0 %}
+
+            {% for post in variables['posts'] %}
+                {% set is_schedule = post.post_status == 'future' %}
+                {% set invert_title = function('is_article_options', 'invert_text_color', post) or (is_schedule) ? 'invert_text_color' : '' %}
+                {% set schedule_class = is_schedule ? 'post-schedule' : '' %}
+                {% set post_options = {
+                    'post' : post,
+                    'content_part' : 'content',
+                    'is_schedule': is_schedule,
+                    'class_format' : order_count ~ ' ' ~ invert_title ~ ' format-elastic' ~ ' ' ~ schedule_class
+                } %}
+
+                {{ function('timber_content_parts_resolver', post_options) }}
+            {% endfor %}
+    {% endif %}
+
+{% endmacro %}
+
+{% macro get_tools_widgets(variables) %}
+    {% for item in variables['accardion_items'] %}
+        <div class="accordion-header lead">{{ function(
+                'twentyseventeen_get_svg',
+                {
+                    'icon' : 'angle-down',
+                    'class' : 'icon-sm accordion-header_arrow'
+                }
+            ) }}{{ item['accordion_item_header'] }}</div>
+        <div class="accordion-content">{{ item['accordion_item_content'] }}</div>
+    {% endfor %}
+{% endmacro %}
+
+{% macro get_gallery(variables) %}
+    {% import _self as macros %}
+
+    {% set image_min_width = variables['is_full_size'] ? '100%' : '36em' %}
+
+    {% for image in variables['gallery'] %}
+        {% set image_width = variables['is_full_size'] ? '100%' : image['sizes'][variables['type_caption_size'] ~ '-width'] ~ 'px' %}
+
+        <figure class="{{ variables['gallery_item_class'] }}">
+            <img width="{{ image['sizes'][variables['type_image_size'] ~ '-width'] }}"
+                 height="{{ image['sizes'][variables['type_image_size'] ~ '-height'] }}"
+                 data-thumb="{{ function('custom_image_getter', image['url'], {"i_thumb_name" : "thumbs"}) }}"
+                 class="wp-post-image"
+                 title="{{ image['title'] }}"
+                 src="{{ function('custom_image_getter', image['url'], {"i_sizes" :
+                     [image['sizes'][variables['type_image_size'] ~ '-width'], "null"]}) }}"
+                 srcset="{{ function('custom_src_set_getter', image['ID'],
+                     {"i_thumb_name" : variables['type_image_size']}) }}"
+                 sizes="(min-width: {{ image_min_width }}) {{ image_width }}, 100vw"
+                 alt="{{ image['alt'] }}"/>
+
+            {% if variables['is_full_size'] %}
+                <div class="layout_main">
+                    <div class="{{ variables['full_size_class'] }}">
+                        {{ macros.get_gallery_item_caption(variables, image) }}
+                    </div>
+                </div>
+            {% else %}
+                {{ macros.get_gallery_item_caption(variables, image) }}
+            {% endif %}
+
+        </figure>
+    {% endfor %}
+
+{% endmacro %}
+
+{% macro get_gallery_item_caption(variables, image) %}
+    {% set image_caption_style = 'max-width:' ~ image['sizes'][variables['type_caption_size'] ~ '-width'] ~ 'px' %}
+
+    {% if image['caption'] %}
+        <figcaption style="{{ image_caption_style }}" class="{{ variables['type_caption_class'] }}">
+            {{ image['caption'] }}
+        </figcaption>
+    {% endif %}
+{% endmacro %}
+
+{% macro get_tags_table(tags) %}
+
+    {% if tags is iterable and tags|length > 0 %}
+
+        <div class="allTags">
+            <div class="row">
+
+                {% for pack_name, tags_pack in tags %}
+                    <div class="col">
+                        <p class="h2 allTags-header">{{ pack_name }}</p>
+
+                        {% for tag in tags_pack %}
+                            <a class="h5 allTags-link" href="{{ function('get_tag_link', tag.term_id) }}">
+                                #{{ tag.name }} ({{ tag.count }})
+                            </a>
+                        {% endfor %}
+
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    {% endif %}
+
+{% endmacro %}

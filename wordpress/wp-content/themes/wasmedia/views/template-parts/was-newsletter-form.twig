@@ -1,0 +1,23 @@
+<div class="post-entry newsletter-entry">
+    <div class="newsletter-title">
+        <h2 class="h1 h-entry">
+            {{ function('pll__', 'Рассылка по делу') }}
+        </h2>
+    </div>
+    <form class="newsletter-form row no-gutters"
+          action="{{ function('site_url') ~ '/mail/check.php?lang=' ~ function('pll_current_language') }}"
+          method="post">
+        <div class="input-group col input-fld">
+            <input type="email" name="EMAIL" class="form-control form-control-lg" id="inlineFormInputGroup"
+                   placeholder="Email" required="required">
+        </div>
+        <div class="input-group col submit-fld">
+            <button type="submit" class="btn btn-block btn-xl btn-brand">
+                {{ function('pll__', 'Подписаться') }}
+            </button>
+            <small class="submit-txt">
+                {{ function('pll__', 'Одно письмо в неделю с самыми актуальными материалами') }}
+            </small>
+        </div>
+    </form>
+</div>

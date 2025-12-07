@@ -1,0 +1,39 @@
+<header id="header" class="siteHeader overlay o-1 fixed-top" role="banner" aria-hidden="true">
+    <div class="layout_main">
+        <div class="row">
+            {% include 'template-parts/was-header-head.twig' %}
+        </div>
+        <div class="row hidden-lg-up" aria-hidden="true">
+
+            {% if carousel_posts is iterable and carousel_posts|length > 0 %}
+                <span class="col h1 siteHeader-header">{{ function('pll__', 'новое на') }} WAS</span>
+                <div class="swiper-container slider slider-carousel col" data-component="slider" data-config="popular">
+                    <div class="swiper-wrapper">
+
+                        {% for post in carousel_posts %}
+                            <div class="swiper-slide swiper-lazy">
+                                {% set order_count = function('make_order_counter', order_count) %}
+                                {% set invert_title = function('is_article_options', 'invert_text_color', post) ? 'invert_text_color' : '' %}
+                                {% set post_options = {
+                                    'post' : post,
+                                    'content_part' : 'content',
+                                    'template_part' : 'top',
+                                    'cover' : true,
+                                    'lazy' : true,
+                                    'thumb' : 'popular-thumbs',
+                                    'tags' : 'article',
+                                    'heading' : 'h5',
+                                    'class_format' : order_count ~ ' ' ~ invert_title ~ ' ' ~ 'format-wide'
+                                } %}
+
+                                {{ function('timber_content_parts_resolver', post_options) }}
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+</header>

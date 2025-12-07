@@ -1,0 +1,16 @@
+p {
+  margin: 0;
+}
+
+p + p {
+  margin-top: 1.5em;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.text {
+  line-height: 1.6;
+}

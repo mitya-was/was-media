@@ -1,0 +1,65 @@
+//0 Foundation layer
+// --Core variables and mixins
+@import 'base/variables';
+@import './mixins/index';
+@import 'base/animate';
+//2 Project layer
+
+.archive,
+.search {
+  .format-micro {
+    min-height: 290px;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: $spacer;
+    }
+
+    &:hover {
+      .post-entry {
+        background-color: lighten($gray-lightest, 1%);
+      }
+    }
+
+    .post-entry {
+      background-color: $gray-lighter;
+      color: $black;
+      height: 100%;
+      top: 0;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10px;
+      text-align: center;
+      transition: $transition-base;
+    }
+
+    .lnk-entry {
+      color: $black;
+
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+.navbar-tab_archive {
+  margin-bottom: 1rem;
+
+  .nav {
+    justify-content: center;
+  }
+}
+
+.tab-content {
+  > .tab-pane {
+    &.active {
+      @include slideInUp(
+        $duration: 0.4s,
+        $count: 1,
+        $delay: 0s,
+        $function: ease-in-out,
+        $fill: both
+      );
+    }
+  }
+}

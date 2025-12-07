@@ -1,0 +1,77 @@
+{% extends 'was-base.twig' %}
+
+{% block content %}
+
+    {% if template %}
+        {% include template %}
+    {% else %}
+        <article id="post-{{ post.ID }}" class="article-main">
+            <section class="article-cover pro_main">
+                <div class="layout_main">
+                    <div class="row no-gutters">
+                        <div class="col format-wide post format-standard">
+                        <header class="col page-header">
+                            {{ function('the_title', '<h1 class="page-title display-3">', '</h1>') }}
+                        </header>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="article-content editor">
+                <div class="editor_txt">
+                    <div class="layout_main">
+                        <div class="editor_default editor_offset">
+                            {{ function('twentyseventeen_edit_link') }}
+                            <h2 class="article-lead h4">
+                                {{ function('was_get_entry', 'lead', 'single', post) }}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                {% if post_layout_parts is iterable and post_layout_parts|length > 0 %}
+
+                    {% for index, layout in post_layout_parts %}
+
+                        {% for part, variables in layout %}
+
+                            {% if part != 'none' %}
+                                {% include 'post-layout-parts/post_' ~ part ~ '.twig' with variables %}
+                            {% else %}
+                                {{ variables }}
+                            {% endif %}
+
+                        {% endfor %}
+
+                    {% endfor %}
+
+                {% else %}
+                    {{ post_layout_parts }}
+                {% endif %}
+
+                {# WIDGETS TOOLS LAYOUT/ Start #}
+
+                {% if post_widgets_tools is iterable and post_widgets_tools|length > 0 %}
+
+                    {% for index, layout in post_widgets_tools %}
+
+                        {% for part, variables in layout %}
+
+                            {% if part != 'none' %}
+                                {% include 'tools-widgets/post_' ~ part ~ '.twig' with variables %}
+                            {% else %}
+                                {{ variables }}
+                            {% endif %}
+
+                        {% endfor %}
+
+                    {% endfor %}
+
+                {% else %}
+                    {{ post_widgets_tools }}
+                {% endif %}
+            </section>
+        </article>
+    {% endif %}
+
+{% endblock %}

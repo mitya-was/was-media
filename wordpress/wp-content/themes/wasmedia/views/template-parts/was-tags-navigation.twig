@@ -1,0 +1,4 @@
+{% import 'macros/was-macros.twig' as macros %}
+{% set tags = function('get_tags_navigation') %}
+
+{{ macros.get_tags_table(tags) }}

@@ -1,0 +1,189 @@
+*[data-component=panelbox] {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.panel {
+  position: absolute;
+  pointer-events: all;
+  will-change: transform;
+  transition: all .25s linear;
+}
+
+.panel-section {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  will-change: transform;
+  transition: opacity .25s linear;
+  background: rgba(255, 255, 255, 1);
+}
+
+.panel-section.show {
+  height: auto;
+  overflow: visible;
+  opacity: 1;
+}
+
+.panel.full-size {
+  width: 100vw;
+  height: 100vh;
+}
+
+.panel.top {
+  top: 0;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+.panel.bottom {
+  top: auto;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+}
+
+.panel.left {
+  left: 0;
+  right: auto;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+.panel.right {
+  left: auto;
+  right: 0;
+  top: 50%;
+  transform: translate(100%, -50%);
+}
+
+.panel.top.full-size,
+.panel.bottom.full-size {
+  width: 100%;
+  height: auto;
+}
+
+.panel.top.full-size .panel-section,
+.panel.bottom.full-size .panel-section {
+  width: 100%;
+}
+
+.panel.left.full-size,
+.panel.right.full-size {
+  height: 100%;
+  width: auto;
+}
+
+.panel.left.full-size .panel-section,
+.panel.right.full-size .panel-section {
+  height: 100%;
+
+}
+
+.panel.top.fit-left,
+.panel.bottom.fit-left {
+  left: 0;
+  transform: translate(0, 0);
+}
+
+.panel.top.fit-right,
+.panel.bottom.fit-right {
+  left: auto;
+  transform: translate(0, 0);
+  right: 0;
+}
+
+.panel.left.fit-top,
+.panel.right.fit-top {
+  top: 0;
+  transform: translate(0, 0);
+}
+
+.panel.left.fit-bottom,
+.panel.right.fit-bottom {
+  top: auto;
+  transform: translate(0, 0);
+  bottom: 0;
+}
+
+.panel.open.top {
+  transform: translate(-50%, 0);
+}
+
+.panel.open.bottom {
+  transform: translate(-50%, 0);
+}
+
+.panel.open.left {
+  transform: translate(0, -50%);
+}
+
+.panel.open.right {
+  transform: translate(0, -50%);
+}
+
+.panel.open.left.fit-bottom,
+.panel.open.left.fit-top,
+.panel.open.right.fit-bottom,
+.panel.open.right.fit-top {
+  transform: translate(0, 0);
+}
+
+.panel.open.top.fit-left,
+.panel.open.top.fit-right,
+.panel.open.bottom.fit-left,
+.panel.open.bottom.fit-right {
+  transform: translate(0, 0);
+}
+
+/* Theme */
+
+.panel.left .panel-section,
+.panel.right .panel-section,
+.panel.bottom .panel-section {
+  background: #212121;
+  color: #ff7b00;
+}
+
+.panel.open.left.full-size .panel-section,
+.panel.open.right.full-size .panel-section,
+.panel.open.bottom.full-size .panel-section {
+
+  width: 64px;
+}
+
+.panel.open.bottom.full-size .panel-section {
+  width: 100%;
+  height: 64px;
+}
+
+.panel.left .panel-section.show > .inner,
+.panel.right .panel-section.show > .inner,
+.panel.bottom .panel-section.show > .inner {
+  padding: .5em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.panel.bottom.full-size .panel-section.show > .inner {
+  height: auto;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .panel.left .panel-section.show > .inner,
+  .panel.right .panel-section.show > .inner {
+    justify-content: flex-end;
+  }
+}
+

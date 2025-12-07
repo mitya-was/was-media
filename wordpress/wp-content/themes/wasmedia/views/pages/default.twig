@@ -1,0 +1,58 @@
+<article class="article-main">
+    <section class="article-cover">
+        <div class="layout_main">
+            <div class="row no-gutters">
+                {% set order_count = function('make_order_counter', order_count) %}
+                {% set invert_title = function('is_article_options', 'invert_text_color', post) ? 'invert_text_color' : '' %}
+                {% set post_options = {
+                    'post' : post,
+                    'author_info' : false,
+                    'date_info' : false,
+                    'views_info' : false,
+                    'content_part' : 'content',
+                    'template_part' : 'single',
+                    'cover' : cover,
+                    'tags' : 'header',
+                    'heading' : heading,
+                    'class_format' : order_count ~ ' ' ~ invert_title ~ ' ' ~ 'format-wide'
+                } %}
+
+                {{ function('timber_content_parts_resolver', post_options) }}
+            </div>
+        </div>
+    </section>
+
+    <section class="article-content editor">
+        <div class="editor_txt">
+            <div class="layout_main">
+                <div class="editor_default editor_offset">
+                    {{ function('twentyseventeen_edit_link') }}
+                    <h2 class="article-lead h4">
+                        {{ function('was_get_entry', 'lead', 'single', post) }}
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        {% if post_layout_parts is iterable and post_layout_parts|length > 0 %}
+
+            {% for index, layout in post_layout_parts %}
+
+                {% for part, variables in layout %}
+
+                    {% if part != 'none' %}
+                        {% include 'post-layout-parts/post_' ~ part ~ '.twig' with variables %}
+                    {% else %}
+                        {{ variables }}
+                    {% endif %}
+
+                {% endfor %}
+
+            {% endfor %}
+
+        {% else %}
+            {{ post_layout_parts }}
+        {% endif %}
+    </section>
+
+</article>

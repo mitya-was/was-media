@@ -1,0 +1,36 @@
+{% import _self as macros %}
+
+{% if variables['gallery'] %}
+
+    {% if variables['gallery'] is iterable and variables['gallery']|length > 1 %}
+
+        <div class='gallery'>
+            {{ macros.get_dzen_gallery(variables['gallery']) }}
+        </div>
+
+    {% else %}
+
+        <div class='layout_main'>
+            {{ macros.get_dzen_gallery(variables['gallery']) }}
+        </div>
+
+    {% endif %}
+
+{% endif %}
+
+{% macro get_dzen_gallery(gallery) %}
+
+    {% for image in gallery %}
+        <figure>
+            <img title="{{ image['title'] }}" src="{{ image['url'] }}" alt="{{ image['alt'] }}"/>
+
+            {% if image['caption']|length > 0 %}
+                <figcaption>
+                    {{ image['caption'] }}
+                </figcaption>
+            {% endif %}
+
+        </figure>
+    {% endfor %}
+
+{% endmacro %}

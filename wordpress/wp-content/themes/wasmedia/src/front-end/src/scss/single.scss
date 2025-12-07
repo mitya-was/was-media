@@ -1,0 +1,67 @@
+//0 Foundation layer
+// --Core variables and mixins
+@import 'base/variables';
+@import './mixins/index';
+//1 Base layer
+@import 'base/iframe';
+//2 Project layer
+@import 'project/article-main';
+@import 'project/editor-aside';
+@import 'project/compare';
+@import 'project/comments';
+@import 'project/tags';
+
+//2 Cosmetic layer
+@import 'cosmetic/theme';
+
+.single:not(.no-cover) {
+  .article-cover {
+    .post-preview {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.article-cover,
+.editor_media__xl {
+  .layout_main {
+    @extend %single-layout_main;
+  }
+}
+
+.article-cover {
+  .wp-post-image {
+    @include media-breakpoint-up(sm) {
+      display: none;
+      width: 100%;
+      max-height: 510px;
+      background-color: black;
+    }
+  }
+}
+
+#main {
+  .editor_elastic {
+    .swiper-container {
+      .post-preview {
+        .wp-post-image {
+          width: auto;
+          max-width: unset;
+        }
+      }
+    }
+  }
+}
+
+.article-cover .h-entry {
+  max-width: 800px;
+}
+
+%single-layout_main {
+  @include media-breakpoint-down(md) {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

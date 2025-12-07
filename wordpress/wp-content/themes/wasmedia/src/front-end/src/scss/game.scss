@@ -1,0 +1,10 @@
+//0 Foundation layer
+// --Core variables and mixins
+@import 'base/variables';
+@import './mixins/index';
+//1 Base layer
+@import 'base/animate';
+@import '../../node_modules/bootstrap/scss/pagination';
+//2 Project layer
+@import 'base/fb.window';
+@import 'project/quiz';

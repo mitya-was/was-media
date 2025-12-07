@@ -1,0 +1,39 @@
+//0 Foundation layer
+// --Core variables and mixins
+@import 'base/variables';
+@import './mixins/index';
+//1 Base layer
+@import 'base/substrate';
+
+html,
+body,
+.wrapper {
+  display: flex;
+  min-height: calc(100vh - 140px);
+  flex-direction: column;
+}
+
+#main {
+  flex: 1;
+  display: flex;
+}
+
+body {
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+.headerTool {
+  color: white;
+}
+
+#newsletter-subscribe {
+  align-self: center;
+}
+
+.siteHeader.fixed-top {
+  background-color: transparent;
+}

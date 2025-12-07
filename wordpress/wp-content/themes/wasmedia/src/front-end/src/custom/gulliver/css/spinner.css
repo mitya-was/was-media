@@ -1,0 +1,47 @@
+*[data-component=spinner] {
+  width: 100vw;
+  height: 0;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 100;
+  background: #111111;
+  opacity: 1;
+  transition: opacity .25s linear;
+  overflow: hidden;
+}
+
+.spinner {
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  will-change: transform;
+  transform-origin: 50% 40%;
+  transform: rotate(0deg) scale(.4, .4);
+
+}
+
+*[data-component = "spinner"].spin .spinner {
+  animation: spin 1.3s ease-in-out infinite;
+}
+
+*[data-component = "spinner"].fade {
+  opacity: 0;
+}
+
+*[data-component = "spinner"].open {
+  height: 100vh;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(.4, .4); /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    transform: rotate(360deg) scale(.4, .4); /* Firefox 16+, IE 10+, Opera */
+  }
+}

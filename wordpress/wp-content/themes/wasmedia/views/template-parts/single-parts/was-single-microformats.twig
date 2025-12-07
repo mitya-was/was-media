@@ -1,0 +1,149 @@
+{% extends 'was-base.twig' %}
+{% import 'macros/was-macros.twig' as macros %}
+
+{% block banner %}
+    {# top banner disabled temporarily #}
+{% endblock %}
+
+{% block content %}
+
+    <section class="pro_main layout_main">
+
+        <header class="col page-header">
+            <div class="page-breadcrumb display-6">
+                <a href="{{ all_micro_url }}">
+                    {{ archive_title }}
+                </a>
+            </div>
+        </header>
+
+        <div class="row justify-content-md-center aside-left__trigger--js">
+            <div class="content-main">
+
+                <article id="post-{{ post.ID }}" class="article-main editor_default editor_center {% if not cover %}no-cover{% endif %}"
+                         data-component-slug="{{ post.post_name }}">
+
+                    {% set not_in = not_in|merge([post.ID]) %}
+
+                    <section class="article-cover">
+                        <div class="layout_main">
+                            <div class="row no-gutters">
+                                <div class="post-preview post-cover">
+
+                                    {% if cover %}
+
+                                        {% if post_alt_cover %}
+                                            <img width="{{ function('get_image_width', 'medium') }}"
+                                                 class="attachment-medium size-medium wp-post-image"
+                                                 src="{{ post_alt_cover['url'] }}"
+                                                 alt="{{ post_alt_cover['alt'] }}"/>
+
+                                        {% elseif function('has_post_thumbnail', post) %}
+                                            <img width="{{ function('get_image_width', 'medium') }}"
+                                                 class="attachment-medium size-medium wp-post-image"
+                                                 srcset="{{ function(
+                                                     'custom_image_getter',
+                                                     function('get_post_thumbnail_id', post.ID),
+                                                     {
+                                                         'fit': false,
+                                                         'i_sizes': [2 * function('get_image_width', 'medium'), 2 * function('get_image_height', 'medium')]
+                                                     }
+                                                 ) ~ ' 2x' }}"
+                                                 src="{{ function(
+                                                     'custom_image_getter',
+                                                     function('get_post_thumbnail_id', post.ID),
+                                                     {
+                                                         'fit': false,
+                                                         'i_thumb_name': 'medium'
+                                                     }
+                                                 ) }}"/>
+
+                                        {% else %}
+                                            {{ function('wp_get_attachment_image', 288, thumb, false, {'class' : 'wp-post-image'}) }}
+                                        {% endif %}
+
+                                    {% endif %}
+
+                                    <section class="post-entry">
+                                        <header class="entry-header row">
+                                        </header>
+                                    </section>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-content editor">
+                        <div class="editor_txt">
+                            <div class="layout_main">
+                                <div class="editor_default editor_offset">
+                                    <h1 class="display-4 h-entry">
+                                        {{ post.post_title }}
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor_txt">
+                            <div class="layout_main">
+                                <div class="editor_default editor_offset">
+                                    {{ function('twentyseventeen_edit_link') }}
+                                    {{ function('was_get_entry', 'lead', 'single', post) }}
+                                </div>
+                            </div>
+                        </div>
+
+                        {% if post_layout_parts is iterable and post_layout_parts|length > 0 %}
+
+                            {% for index, layout in post_layout_parts %}
+
+                                {% for part, variables in layout %}
+
+                                    {% if part != 'none' %}
+                                        {% include 'post-layout-parts/post_' ~ part ~ '.twig' with variables %}
+                                    {% else %}
+                                        {{ variables }}
+                                    {% endif %}
+
+                                {% endfor %}
+
+                            {% endfor %}
+
+                        {% else %}
+                            {{ post_layout_parts }}
+                        {% endif %}
+
+                    </section>
+
+                    <section class="article_meta">
+                        <div class="layout_main">
+                            <div class="article_meta_media row no-gutters">
+                                {% include 'template-parts/was-social-shares.twig' with {'was_share_content_url' : function('get_permalink', post.ID), 'was_share_content_text' : ''} %}
+                            </div>
+                        </div>
+                    </section>
+                </article>
+
+                <div class="readMore o-2">
+                    <script>
+                        var ajaxurl = '{{ admin_ajax_url }}';
+                        var current_tag = 'false';
+                        var current_post_type = '{{ post.post_type }}';
+                        var not_in = '{{ not_in|join(',') }}';
+                    </script>
+                    <button class="btn btn-xl btn-primary"
+                            data-component="readmore" type="button"
+                            data-options='{"isOnClick":"false"}'>
+                        <big>+</big>
+                        <span>
+                        {{ micro_read_more }}
+                    </span>
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+{% endblock %}

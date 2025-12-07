@@ -1,0 +1,31 @@
+{% import 'macros/was-macros.twig' as macros %}
+
+<div class="{{ variables['media_editor_class'] }}" style="{{ variables['media_custom_style'] }}">
+
+    {% if not variables['is_full_size'] %}
+    <div class="layout_main">
+        <div class="{{ variables['full_size_class'] }}" data-showcredits="false"
+             data-makeresponsive="true">
+            {% endif %}
+
+            {% if variables['is_slider'] %}
+            <div class="{{ variables['slider_class'] }}" data-component="slider" data-config="default">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    {% endif %}
+
+                    {{ macros.get_gallery(variables) }}
+
+                    {% if variables['is_slider'] %}
+                </div>
+            </div>
+            {% endif %}
+
+            {{ macros.get_i_frame(variables) }}
+
+            {% if not variables['is_full_size'] %}
+        </div>
+    </div>
+    {% endif %}
+
+</div>

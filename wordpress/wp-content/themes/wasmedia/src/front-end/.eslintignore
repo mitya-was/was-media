@@ -1,0 +1,8 @@
+[Bb]uild/
+[Pp]ublic/
+[Dd]ist/
+[Bb]in/
+[Rr]elease/
+[Dd]ebug/
+[Tt]est/
+node_modules/

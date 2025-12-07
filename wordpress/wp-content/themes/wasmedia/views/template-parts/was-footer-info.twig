@@ -1,0 +1,17 @@
+{#<div class="foot_tools_i">
+    {{ function('pll__', 'Проекты') }}&nbsp;<a href="https://ru.depositphotos.com" target="_blank"
+                                               rel="dofollow noopener noreferrer">Depositphotos</a>:
+    <a href="https://birdinflight.com/ru/" target="_blank"
+       rel="dofollow noopener noreferrer">Bird&nbsp;In&nbsp;Flight</a>,
+    WAS.
+</div>#}
+<div class="foot_tools_i">
+    {{ function('pll__', 'Пишіть редакції') }}: <em><a href="mailto:team@was.media">team@was.media</a></em>
+</div>
+{% if function('getAdvertLink') %}
+<div class="foot_tools_i">
+    <a href="{{ function('getAdvertLink') }}">{{ function('pll__', 'Рекламодавцям') }}</a>
+</div>
+{%  endif %}
+
+{# Inweb partner block removed per request #}

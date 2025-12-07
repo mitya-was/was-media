@@ -1,0 +1,46 @@
+.color-brand {
+  color: $brand-primary;
+}
+
+.text-muted {
+  color: $text-muted !important;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.b-round {
+  @include border-radius($badge-pill-border-radius);
+}
+
+//Admin Bar To Bottom - Start
+html[data-abar='custom_bottom_a_b'] body {
+  padding-bottom: 32px;
+
+  @media screen and (max-width: 600px) {
+    #wpadminbar {
+      position: fixed;
+    }
+  }
+}
+
+html[data-abar='custom_bottom_a_b'] #wpadminbar {
+  top: auto;
+  bottom: 0;
+}
+
+html[data-abar='custom_bottom_a_b'] #wpadminbar .ab-top-menu > .menupop > .ab-sub-wrapper {
+  bottom: 32px;
+}
+
+html[data-abar='custom_bottom_a_b'] {
+  margin-top: 0 !important;
+}
+
+html[data-abar='custom_bottom_a_b'] .admin-bar .navbar-fixed-top {
+  top: 0;
+}
+
+//Admin Bar To Bottom - End

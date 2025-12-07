@@ -1,0 +1,131 @@
+@import 'vars';
+// --Core variables and mixins
+@import '../../../scss/base/variables';
+@import '../../../scss/mixins/index';
+
+.metro-clock {
+  display: flex;
+  margin: -20px -20px 20px;
+
+  .spacer {
+    position: relative;
+    margin-right: 5%;
+  }
+}
+
+.metro-clock-shell {
+  @include media-breakpoint-up(sm) {
+    padding: 4px;
+  }
+  background-color: $clock-shell-bg;
+  border: 1px solid $clock-shell-border-color;
+  box-shadow: 0 0 0 1px $clock-shell-shadow;
+  border-radius: 10px;
+
+  &:first-child {
+    @include media-breakpoint-up(sm) {
+      margin-right: 6px;
+    }
+  }
+
+  &-inner {
+    display: flex;
+    background-color: $gray-dark;
+    border: 3px solid $gray-dark;
+    box-shadow: 0 0 0 1px $gray-darken;
+    border-radius: 6px;
+  }
+
+  &-section {
+    display: flex;
+    box-shadow: inset 0 0 0 1px $clock-shell-shadow;
+    border-radius: 4px;
+    background-color: $black;
+  }
+
+  .glass-flare {
+    background-image: linear-gradient(-20deg, $flare-top-bg 49%, $flare-bottom-bg 49%);
+
+    &-reverse {
+      background-image: linear-gradient(35deg, $flare-top-bg 49%, $flare-bottom-bg 49%);
+    }
+  }
+
+  .digit {
+    min-height: 60px;
+    min-width: 35px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .segment {
+      display: flex;
+      flex-wrap: wrap;
+      position: absolute;
+      justify-content: space-around;
+      align-content: space-around;
+
+      &:nth-child(1) {
+        top: 10px;
+        left: 9px;
+        right: 9px;
+        height: $dot-size;
+      }
+
+      &:nth-child(2) {
+        top: 13px;
+        right: 5px;
+        width: $dot-size;
+        height: calc(50% - 15px);
+      }
+
+      &:nth-child(3) {
+        bottom: 13px;
+        right: 5px;
+        width: $dot-size;
+        height: calc(50% - 15px);
+      }
+
+      &:nth-child(4) {
+        bottom: 9px;
+        right: 8px;
+        left: 9px;
+        height: $dot-size;
+      }
+
+      &:nth-child(5) {
+        bottom: 13px;
+        left: 5px;
+        width: $dot-size;
+        height: calc(50% - 15px);
+      }
+
+      &:nth-child(6) {
+        top: 13px;
+        left: 5px;
+        width: $dot-size;
+        height: calc(50% - 15px);
+      }
+
+      &:nth-child(7) {
+        bottom: calc(50% - 3px);
+        right: 8px;
+        left: 9px;
+        height: $dot-size;
+      }
+
+      span {
+        display: inline-block;
+        background: $dot-color-off;
+        height: $dot-size;
+        width: $dot-size;
+        border-radius: 50%;
+        /*transition: all 0.1s cubic-bezier(0, 0, 0.2, 1);*/
+      }
+
+      &.on span {
+        background-color: $dot-color-on;
+      }
+    }
+  }
+}

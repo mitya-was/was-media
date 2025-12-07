@@ -1,0 +1,75 @@
+<article id="post-{{ post.ID }}" {{ function('post_class', 'post-preview col o-' ~ class_format, post.ID) }}
+         data-component-slug="{{ post.post_name }}">
+
+    {% if cover %}
+
+        {% if (post_alt_cover) or (is_schedule) %}
+            {% set cover_alt_src =
+                is_schedule ?
+                'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' :
+                post_alt_cover['url'] %}
+            <img width="{{ function('get_image_width', thumb) }}"
+                 class="attachment-thumbnail size-thumbnail wp-post-image"
+                 src="{{ cover_alt_src }}"
+                 alt="{{ post_alt_cover['alt'] }}"/>
+        {% elseif function('has_post_thumbnail', post) %}
+            {% set get_post_cover = function(
+                'get_the_post_thumbnail',
+                post.ID,
+                thumb,
+                {
+                    'data-feature' : cover,
+                    'src' : function(
+                    'custom_image_getter',
+                    function('get_post_thumbnail_id', post.ID),
+                    {
+                        'i_thumb_name': thumb
+                    }
+                ),
+                    'srcset' : ' '
+                }
+                ) %}
+
+            {% if lazy %}
+                {{ function('lazyload_image', get_post_cover) }}
+            {% else %}
+                {{ get_post_cover }}
+            {% endif %}
+
+        {% else %}
+
+            {{ function('wp_get_attachment_image', 288, thumb, false, {'class' : 'wp-post-image'}) }}
+        {% endif %}
+
+    {% endif %}
+
+    {% if template_part != 'single' and not is_schedule %}
+    <a class="lnk-entry" href="{{ function('get_permalink', post.ID) }}" rel="bookmark">
+        {% endif %}
+
+        <div class="post-entry">
+            <header class="entry-header">
+            </header>
+
+            <section class="entry-content">
+                {{ function('insert_content_title', template_part, heading, post) }}
+                {{ function('was_get_sound_ico', post) }}
+
+                {% if is_schedule %}
+                    <div class="date-entry h1">
+                        {{ function('get_the_date', 'j') }} {{ function('pll__', function('get_the_date', 'F')) }}
+                    </div>
+                {% endif %}
+            </section>
+
+            <footer class="entry-footer">
+                {% if author_info %}
+                    {{ function('was_get_entry', 'author', template_part, post) }}
+                {% endif %}
+            </footer>
+        </div>
+
+        {% if template_part != 'single' %}
+    </a>
+    {% endif %}
+</article>

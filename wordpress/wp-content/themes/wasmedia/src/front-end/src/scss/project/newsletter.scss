@@ -1,0 +1,87 @@
+.newsletter-entry {
+  position: static;
+  text-align: center;
+  justify-content: center;
+  text-align: left;
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+    flex-direction: row;
+  }
+}
+
+.newsletter-title {
+  .h-entry {
+    font-size: $font-size-h1;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 12rem;
+
+    .h-entry {
+      font-size: $display4-size;
+    }
+  }
+}
+
+.newsletter-form {
+  max-width: 400px;
+  .input-group {
+    margin-bottom: $spacer/2;
+  }
+}
+
+.newsletter-title {
+  .h-entry {
+    font-size: $font-size-h1;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 11.5rem;
+
+    .h-entry {
+      font-size: $display4-size;
+    }
+  }
+}
+
+.submit-txt {
+  padding-top: 20px;
+  display: inline-block;
+  font-size: $font-size-base + 0.1;
+  @include media-breakpoint-up(lg) {
+    padding-top: 10px;
+    font-weight: inherit;
+    font-size: $font-size-sm;
+    width: 110%;
+    color: $gray-dark;
+    position: absolute;
+    line-height: $input-line-height;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .newsletter-form {
+    width: 60%;
+    max-width: 550px;
+    .input-group {
+      margin-bottom: 0;
+      &.input-fld {
+        @include make-col(8.5);
+        margin-right: 0.5rem;
+      }
+      &.submit-fld {
+        @include make-col(6);
+      }
+    }
+  }
+}
+
+.newsletter-main {
+  .newsletter-entry {
+    background-color: $gray-dark;
+    padding: $grid-gutter-width-base * 2 $grid-gutter-width-base/2;
+    @include media-breakpoint-up(lg) {
+      padding: $grid-gutter-width-base $grid-gutter-width-base/2;
+      background-color: transparent;
+      color: $brand-primary;
+    }
+  }
+}

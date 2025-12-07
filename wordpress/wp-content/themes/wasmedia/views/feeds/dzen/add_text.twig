@@ -1,0 +1,31 @@
+{% import 'macros/was-macros.twig' as macros %}
+
+{% if variables['main_aside'] or variables['aside_options'] == 'chronology' %}
+    <aside>
+
+        {% if variables['aside_options'] != 'chronology' %}
+            {{ variables['main_aside'] }}
+        {% else %}
+
+            {% if variables['main_aside_chronology']|length > 0 %}
+
+                {{ macros.get_chronology(variables) }}
+
+            {% endif %}
+
+        {% endif %}
+
+    </aside>
+{% endif %}
+
+<div class="editor_offset editor_default">
+
+   {{ variables['main_text'] }}
+
+    {% if variables['main_tooltips']|length > 0 %}
+
+        {{ macros.get_tooltips(variables) }}
+
+    {% endif %}
+
+</div>

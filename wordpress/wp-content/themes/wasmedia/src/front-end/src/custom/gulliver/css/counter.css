@@ -1,0 +1,16 @@
+.counter {
+  text-align: center;
+  padding: 1.5em 0 1em 0;
+}
+
+@media (min-width: 992px) {
+  .counter {
+    padding: 2em 0 1.5em 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  .counter {
+    padding: 2.5em 0 2.5em 0;
+  }
+}

@@ -1,0 +1,53 @@
+.icon {
+  display: inline-block;
+  fill: currentColor;
+  position: relative;
+  top: -0.0625em;
+  vertical-align: middle;
+  overflow: visible;
+  height: 1.5em;
+  width: 1.5em;
+
+  @include media-breakpoint-up(lg) {
+    &.icon-inter {
+      cursor: pointer;
+      transition: $transition-color;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  &.icon-xl {
+    width: 5em;
+    height: 5em;
+  }
+
+  &.icon-lg {
+    width: 2em;
+    height: 2em;
+    @include media-breakpoint-up(lg) {
+      width: 3em;
+      height: 3em;
+    }
+  }
+
+  &.icon-md {
+    width: 2em;
+    height: 2em;
+  }
+
+  &.icon-sm {
+    width: 1.3em;
+    height: 1.3em;
+  }
+
+  &.icon-xs {
+    width: 0.9em;
+    height: 0.9em;
+  }
+}
+
+.icon-brand {
+  color: $brand-primary;
+}

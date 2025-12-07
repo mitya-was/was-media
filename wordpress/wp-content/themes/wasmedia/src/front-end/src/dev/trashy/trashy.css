@@ -1,0 +1,426 @@
+/*
+  NOTE:
+
+  Throughout this file, `1rem` is equal to
+  `10px`, assuming a browser's default font
+  size of `16px`. This is set by applying a
+  `62.5%` adjustment to the `<html>` size.
+*/
+
+/*
+Variables.
+==================================================
+*/
+
+:root {
+  --body-font-size: 1.5rem;
+  --max-page-width: 900px;
+  --spacing: 2rem;
+}
+
+/*
+Set defaults.
+==================================================
+*/
+
+* {
+  color: inherit;
+  font-family: sans-serif;
+  text-rendering: optimizeSpeed;
+}
+
+/*
+Body styles.
+==================================================
+*/
+
+html {
+  /*
+    This takes the default `16px` and
+    changes it to `10px`, so our `rem`
+    measurements are base 10, not 16.
+  */
+  font-size: 62.5%;
+}
+
+body {
+  background: #fff;
+  color: #333;
+
+  font-size: var(--body-font-size);
+  line-height: 1.5;
+
+  max-width: var(--max-page-width);
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: var(--spacing);
+}
+
+/*
+Spacing.
+==================================================
+*/
+
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset,
+figure,
+blockquote {
+  margin: 0;
+  margin-bottom: var(--spacing);
+}
+
+/*
+Links.
+==================================================
+*/
+
+a:not([class]) {
+  color: #00f;
+  text-decoration: none;
+}
+
+a:not([class]):hover {
+  text-decoration: underline;
+}
+
+/*
+Disabled state.
+==================================================
+*/
+
+[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/*
+Pointer cursor.
+==================================================
+*/
+
+a:not([disabled]),
+button:not([disabled]),
+input[type="button"]:not([disabled]),
+input[type="reset"]:not([disabled]),
+input[type="submit"]:not([disabled]) {
+  cursor: pointer;
+}
+
+/*
+Images.
+==================================================
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+}
+
+figcaption {
+  color: #999;
+}
+
+/*
+Horizontal rule.
+==================================================
+*/
+
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+/*
+Header: Nav.
+==================================================
+*/
+
+header nav > ul {
+  font-size: 0;
+  padding: 0;
+}
+
+header nav > ul > li {
+  display: inline-block;
+  font-size: 1.6rem;
+}
+
+header nav > ul > li + li {
+  border-left: 1px solid #ccc;
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+/*
+Headings.
+==================================================
+*/
+
+h1 {
+  font-size: 220%;
+}
+
+h2 {
+  font-size: 200%;
+}
+
+h3 {
+  font-size: 180%;
+}
+
+h4 {
+  font-size: 160%;
+}
+
+h5 {
+  font-size: 140%;
+}
+
+h6 {
+  font-size: 120%;
+}
+
+/*
+Blockquote.
+==================================================
+*/
+
+blockquote {
+  border-left: 5px solid #eee;
+  padding-top: var(--spacing);
+  padding-left: var(--spacing);
+  position: relative;
+  overflow: hidden;
+}
+
+blockquote::before,
+blockquote::after {
+  content: "";
+  background: #eee;
+
+  width: 5px;
+  height: 5px;
+
+  position: absolute;
+  left: 0;
+}
+
+blockquote::before {
+  top: 0;
+}
+
+blockquote::after {
+  bottom: 0;
+}
+
+/*
+Code blocks.
+==================================================
+*/
+
+code {
+  font-family: "Courier", monospace;
+}
+
+pre {
+  background: #eee;
+  overflow: auto;
+  padding: 1rem;
+}
+
+/*
+Tables.
+==================================================
+*/
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  padding: 0.5rem 0.25rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+:not(thead) > tr > th,
+:not(thead) > tr > td {
+  border-top: 1px solid #ccc;
+}
+
+tbody:first-child > tr > th,
+tbody:first-child > tr > td {
+  border-top: 0;
+}
+
+table table,
+table table th,
+table table td {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Form elements.
+==================================================
+*/
+
+/* Buttons. */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+  /* Inputs. */
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select,
+textarea {
+  -webkit-appearance: none;
+  border-radius: 4px;
+}
+
+/*
+Buttons.
+==================================================
+*/
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background: #666;
+  border: 0;
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+/*
+Inputs.
+==================================================
+*/
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select,
+textarea {
+  background-color: #fff;
+  border: 1px solid #333;
+  height: 3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: 100%;
+}
+
+input[disabled][type="date"],
+input[disabled][type="datetime"],
+input[disabled][type="datetime-local"],
+input[disabled][type="email"],
+input[disabled][type="month"],
+input[disabled][type="number"],
+input[disabled][type="password"],
+input[disabled][type="search"],
+input[disabled][type="tel"],
+input[disabled][type="text"],
+input[disabled][type="time"],
+input[disabled][type="url"],
+input[disabled][type="week"],
+select[disabled],
+textarea[disabled] {
+  background-color: #eee;
+}
+
+textarea {
+  min-height: 6rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+textarea[disabled] {
+  resize: none;
+}
+
+/*
+  Add a "down" arrow to
+  `<select>` in Webkit.
+*/
+@media (-webkit-min-device-pixel-ratio: 0) {
+  select {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MHB4IiBoZWlnaHQ9IjgwcHgiIHZpZXdCb3g9IjAgMCA1MCA4MCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cmVjdCB3aWR0aD0iNTAiIGhlaWdodD0iODAiIGZpbGw9IiNGRkYiIGZpbGwtb3BhY2l0eT0iMCIvPjxwb2x5Z29uIGZpbGw9IiMzMzMiIHBvaW50cz0iMCAzNCAzMCAzNCAxNSA0OS4wMzYiLz48L2c+PC9zdmc+);
+
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+  }
+}
+
+/*
+Radios & Checkboxes.
+==================================================
+*/
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+/*
+Fieldset.
+==================================================
+*/
+
+fieldset {
+  border: 1px solid #ccc;
+  padding-top: var(--spacing);
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+  padding-bottom: 0;
+}
+
+legend {
+  margin-left: -0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}

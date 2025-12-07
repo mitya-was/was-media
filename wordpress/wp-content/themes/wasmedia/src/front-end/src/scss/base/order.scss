@@ -1,0 +1,14 @@
+$i: 0;
+
+.pro_main > .row > {
+  @while $i < 25 {
+    .o-#{$i} {
+      order: $i;
+    }
+    $i: $i + 1;
+  }
+
+  .o-lst {
+    order: 100;
+  }
+}

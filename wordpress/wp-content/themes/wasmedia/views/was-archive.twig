@@ -1,0 +1,77 @@
+{% extends 'was-base.twig' %}
+{% import 'macros/was-macros.twig' as macros %}
+
+{% block content %}
+    <section class="pro_main layout_main">
+
+        <header class="col page-header">
+            <h1 class="page-title display-3 archive-title">
+                {{ archive_title }}
+            </h1>
+        </header>
+
+        {% if (current_tag) %}
+        {% include 'template-parts/content-parts/was-archive-tabs.twig' %}
+        {% else %}
+
+        <div class="row justify-content-md-center aside-left__trigger--js">
+
+            {% if (post_title) %}
+                {{ post_title }}
+            {% endif %}
+
+            {% if posts is iterable and posts|length > 0 %}
+
+                {% if (current_post_type == "microformats") %}
+                    <div class="content-main col">
+                {% endif %}
+                {% for post in posts[0: (items_count - 1)] %}
+
+                    {% set not_in = not_in|merge([post.ID]) %}
+                    {% set order_count = function('make_order_counter', order_count) %}
+                    {% set invert_title = function('is_article_options', 'invert_text_color', post) ? 'invert_text_color' : '' %}
+                    {% set post_options = {
+                        'slug' : post.post_name,
+                        'post' : post,
+                        'cover' : post.cover,
+                        'post_order' : order_count,
+                        'content_part' : function('get_content_part_by_post_type', post),
+                        'class_format' : order_count ~ ' ' ~ invert_title ~ ' ' ~ 'format-standard'
+                    } %}
+
+                    {{ function('timber_content_parts_resolver', post_options) }}
+                {% endfor %}
+
+                {% if posts[items_count - 1] %}
+                    <div class="readMore editor_center o-11">
+                        <script>
+                            var ajaxurl = '{{ admin_ajax_url }}';
+                            var current_tag = '{{ current_tag.slug }}';
+                            var current_post_type = '{{ current_post_type }}';
+                            var not_in = '{{ not_in|join(',') }}';
+                        </script>
+                        <button class="btn btn-xl btn-primary"
+                                data-component="readmore" type="button"
+                                data-options='{"isRow":"{{ (current_post_type == "microformats") ? 'false' : 'true' }}","isOnClick":"{{ (current_post_type == "microformats") ? 'false' : 'true' }}"}'>
+                            <big>+</big>
+                            <span>
+                                {{ read_more }}
+                            </span>
+                        </button>
+                    </div>
+                {% endif %}
+
+                {% if (current_post_type == "microformats") %}
+                    </div>
+                {% endif %}
+
+            {% else %}
+                {{ function('timber_content_parts_resolver', {'content_part' : 'content-none'}) }}
+            {% endif %}
+
+            {% endif %}
+
+        </div>
+    </section>
+
+{% endblock %}

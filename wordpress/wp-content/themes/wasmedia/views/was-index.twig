@@ -1,0 +1,209 @@
+{% extends 'was-base.twig' %}
+
+{% block banner %}
+    {# top banner disabled temporarily #}
+{% endblock %}
+
+{% block content %}
+
+    <div class="pro_main layout_main">
+        <div class="row">
+
+            {% if posts is iterable and posts|length > 0 %}
+
+                {% if microformat_posts is iterable and microformat_posts|length > 0 %}
+                    {% set order_count = function('make_order_counter', order_count) %}
+
+                    <section class="post-preview col o-{{ order_count }} format-standard micro-section">
+
+                        {% for post in microformat_posts[0 : 2] %}
+                            {% set post_options = {
+                                'post' : post,
+                                'cover' : false,
+                                'content_part' : 'content',
+                                'class_format' : loop.index ~ ' format-micro invert_text_color ',
+                                'author_info' : false
+                            } %}
+
+                            {{ function('timber_content_parts_resolver', post_options) }}
+                        {% endfor %}
+
+                    </section>
+                {% endif %}
+
+                {% for post in index_posts[0 : 4] %}
+                    {% set not_in = not_in|merge([post.ID]) %}
+                    {% set order_count = function('make_order_counter', order_count) %}
+                    {% set invert_title = function('is_article_options', 'invert_text_color', post) ? 'invert_text_color' : '' %}
+                    {% set post_alt_cover = function('get_field', 'alternative_home_featured_image', post.ID) %}
+                    {% set post_options = {
+                        'post' : post,
+                        'content_part' : 'content',
+                        'class_format' : order_count ~ ' ' ~ invert_title,
+                        'post_alt_cover' : post_alt_cover
+                    } %}
+
+                    {{ function('timber_content_parts_resolver', post_options) }}
+                {% endfor %}
+
+                <section class="jewelry jewelry-first-row" data-jewelry-name="main_first_row">{{ function
+                        ('get_external_banners', 'main_first_row') }}</section>
+
+                {% if microformat_posts is iterable and microformat_posts|length > 2 %}
+                    {% set order_count = function('make_order_counter', order_count) %}
+
+                    <section class="post-preview col o-{{ order_count }} format-standard micro-section">
+
+                        {% for post in microformat_posts[2 : 2] %}
+                            {% set post_options = {
+                                'post' : post,
+                                'cover' : false,
+                                'content_part' : 'content',
+                                'class_format' : loop.index ~ ' format-micro invert_text_color ',
+                                'author_info' : false
+                            } %}
+
+                            {{ function('timber_content_parts_resolver', post_options) }}
+                        {% endfor %}
+
+                    </section>
+                {% endif %}
+
+                {% if function('is_sticky', sticky_post.ID) %}
+                    {% for post in sticky_post[0 : 1] %}
+                        {% set not_in = not_in|merge([post.ID]) %}
+                        {% set invert_title = function('is_article_options', 'invert_text_color', post) ? 'invert_text_color' : '' %}
+                        {% set post_alt_cover = function('get_field', 'alternative_home_featured_image', post.ID) %}
+                        {% set post_options = {
+                            'post' : post,
+                            'content_part' : 'content',
+                            'thumb' : 'main-cover',
+                            'class_format' : (order_count + 1) ~ ' ' ~ invert_title ~ ' format-status',
+                            'post_alt_cover' : post_alt_cover
+                        } %}
+
+                        {{ function('timber_content_parts_resolver', post_options) }}
+                    {% endfor %}
+
+                    {% for post in index_posts[4 : 1] %}
+                        {% set not_in = not_in|merge([post.ID]) %}
+                        {% set order_count = function('make_order_counter', order_count) %}
+                        {% set invert_title = function('is_article_options', 'invert_text_color', post) ? 'invert_text_color' : '' %}
+                        {% set post_alt_cover = function('get_field', 'alternative_home_featured_image', post.ID) %}
+                        {% set post_options = {
+                            'post' : post,
+                            'content_part' : 'content',
+                            'class_format' : order_count ~ ' ' ~ invert_title,
+                            'post_alt_cover' : post_alt_cover
+                        } %}
+                        {{ function('timber_content_parts_resolver', post_options) }}
+                    {% endfor %}
+
+                {% else %}
+
+                    {% for post in index_posts_feature[0 : 1] %}
+                        {% set not_in = not_in|merge([post.ID]) %}
+                        {% set order_count = function('make_order_counter', order_count) %}
+                        {% set invert_title = function('is_article_options', 'invert_text_color', post) ? 'invert_text_color' : '' %}
+                        {% set post_alt_cover = function('get_field', 'alternative_home_featured_image', post.ID) %}
+                        {% set post_options = {
+                            'post' : post,
+                            'content_part' : 'content',
+                            'thumb' : 'format-image-cover',
+                            'class_format' : order_count ~ ' ' ~ invert_title,
+                            'post_alt_cover' : post_alt_cover
+                        } %}
+
+                        {{ function('timber_content_parts_resolver', post_options) }}
+                    {% endfor %}
+
+                    {% for post in index_posts[4 : 2] %}
+                        {% set not_in = not_in|merge([post.ID]) %}
+                        {% set order_count = function('make_order_counter', order_count) %}
+                        {% set invert_title = function('is_article_options', 'invert_text_color', post) ? 'invert_text_color' : '' %}
+                        {% set post_alt_cover = function('get_field', 'alternative_home_featured_image', post.ID) %}
+                        {% set post_options = {
+                            'post' : post,
+                            'content_part' : 'content',
+                            'class_format' : order_count ~ ' ' ~ invert_title,
+                            'post_alt_cover' : post_alt_cover
+                        } %}
+
+                        {{ function('timber_content_parts_resolver', post_options) }}
+                    {% endfor %}
+                {% endif %}
+
+                {% set order_count = function('make_order_counter', order_count) %}
+
+                {#<div class="post-preview format-wide col newsletter-main o-{{ order_count }}">
+                    {% include 'template-parts/was-newsletter-form.twig' %}
+                </div>#}
+
+                {% for post in index_posts[6 : 3] %}
+                    {% set not_in = not_in|merge([post.ID]) %}
+                    {% set order_count = function('make_order_counter', order_count) %}
+                    {% set invert_title = function('is_article_options', 'invert_text_color', post) ? 'invert_text_color' : '' %}
+                    {% set post_alt_cover = function('get_field', 'alternative_home_featured_image', post.ID) %}
+                    {% set post_options = {
+                        'post' : post,
+                        'content_part' : 'content',
+                        'class_format' : order_count ~ ' ' ~ invert_title,
+                        'post_alt_cover' : post_alt_cover
+                    } %}
+
+                    {{ function('timber_content_parts_resolver', post_options) }}
+                {% endfor %}
+
+                {% for post in index_posts_feature[1 : 1] %}
+                    {% set not_in = not_in|merge([post.ID]) %}
+                    {% set order_count = function('make_order_counter', order_count) %}
+                    {% set invert_title = function('is_article_options', 'invert_text_color', post) ? 'invert_text_color' : '' %}
+                    {% set post_alt_cover = function('get_field', 'alternative_home_featured_image', post.ID) %}
+                    {% set post_options = {
+                        'post' : post,
+                        'content_part' : 'content',
+                        'thumb' : 'format-image-cover',
+                        'class_format' : order_count ~ ' ' ~ invert_title,
+                        'post_alt_cover' : post_alt_cover
+                    } %}
+
+                    {{ function('timber_content_parts_resolver', post_options) }}
+                {% endfor %}
+
+                {% if index_posts[8] %}
+                    {% set order_count = function('make_order_counter', order_count) %}
+
+                    <div class="readMore col o-{{ order_count }}">
+                        <script>
+                            var ajaxurl = '{{ admin_ajax_url }}';
+                            var current_tag = 'false';
+                            var current_post_type = '{{ current_post_type }}';
+                            var not_in = '{{ not_in|join(',') }}';
+                        </script>
+                        <button class="btn btn-xl btn-primary o-15" data-component="readmore"
+                                data-options='{"isRow":"true","isOnClick":"true"}' type="button">
+                            <big>+</big>
+                            <span>
+                                {{ function('pll__', 'Больше материалов') }}
+                            </span>
+                        </button>
+                    </div>
+                    
+                    {# Pagination for SEO #}
+                    {% if function('paginate_links') %}
+                    <div class="pagination col o-{{ order_count + 1 }}" style="text-align: center; margin-top: 30px;">
+                        {{ function('paginate_links', {
+                            'prev_text': '←',
+                            'next_text': '→',
+                            'type': 'list',
+                            'mid_size': 2
+                        })|raw }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+
+            {% endif %}
+
+        </div>
+    </div>
+{% endblock %}

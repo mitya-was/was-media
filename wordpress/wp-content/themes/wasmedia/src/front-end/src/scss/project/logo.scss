@@ -1,0 +1,32 @@
+// Logo
+.siteLogo {
+  line-height: 1;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: ($spacer/2);
+  }
+}
+
+.siteLogo_lnk {
+  display: block;
+  transition: $transition-color;
+}
+
+.wasLogo {
+  font-size: $logo-size;
+  letter-spacing: -0.06em;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: 0;
+  }
+}
+
+.depoLogo {
+  font-size: $depositphotos-logo-size;
+  margin-top: -10px;
+  margin-left: 6px;
+  letter-spacing: $headings-letter-spacing - 0.02em;
+  text-transform: $font-transform;
+  text-decoration: none;
+}

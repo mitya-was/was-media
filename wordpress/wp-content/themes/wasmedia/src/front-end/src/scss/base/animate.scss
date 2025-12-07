@@ -1,0 +1,30 @@
+////////////////////////////////////////////////////////////
+// Import everything to generate your animate sass module //
+////////////////////////////////////////////////////////////
+//@import "../../node_modules/animatewithsass/animate.scss";
+// INDEX OF ANIMATIONS
+// This is a port of Den Eden's Animate.css, converted for SASS.
+// Source: https://daneden.me/animate/
+//
+// @import this index into your project.
+// Comment out categories below to remove them from your project.
+// Or, @import specific partials (e.g. @import "_attention/_bounce.scss";
+//
+//-----------------------------------------------------------------------
+// Always required
+@import '../../node_modules/animatewithsass/_properties';
+// Import the animations
+@import '../../node_modules/animatewithsass/_attention-seekers/attention-seekers.scss',
+  '../../node_modules/animatewithsass/_bouncing-entrances/bouncing-entrances.scss',
+  '../../node_modules/animatewithsass/_bouncing-exits/bouncing-exits.scss',
+  '../../node_modules/animatewithsass/_fading-entrances/fading-entrances.scss',
+  '../../node_modules/animatewithsass/_fading-exits/fading-exits.scss',
+  //"../../node_modules/animatewithsass/_flippers/flippers.scss",
+    '../../node_modules/animatewithsass/_lightspeed/lightspeed.scss',
+  //"../../node_modules/animatewithsass/_rotating-entrances/rotating-entrances.scss",
+    //"../../node_modules/animatewithsass/_rotating-exits/rotating-exits.scss",
+    '../../node_modules/animatewithsass/_sliding-entrances/sliding-entrances.scss',
+  '../../node_modules/animatewithsass/_sliding-exits/sliding-exits.scss';
+//"../../node_modules/animatewithsass/_specials/specials.scss",
+//"../../node_modules/animatewithsass/_zooming-entrances/zooming-entrances.scss",
+//"../../node_modules/animatewithsass/_zooming-exits/zooming-exits.scss";

@@ -1,0 +1,11 @@
+.breadcrumb {
+  .nav {
+    @include media-breakpoint-down(xs) {
+      justify-content: center;
+    }
+  }
+  .nav-link {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

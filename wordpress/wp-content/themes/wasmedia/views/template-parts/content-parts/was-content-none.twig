@@ -1,0 +1,19 @@
+{% set order_count = function('make_order_counter', order_count) %}
+
+<section class="no-results post-preview col format-standard format-single-article o-{{ order_count }}">
+    <img width="320" height="510" class="wp-post-image" src="http://placehold.it/320x510/000000/000000" alt="">
+    <section class="post-entry">
+        <header class="page-header">
+            <h1 class="page-title">
+                {{ function('_e', 'Nothing Found', 'twentyseventeen') }}
+            </h1>
+        </header>
+        <div class="page-content">
+            <p>
+                {{ function('_e', 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'twentyseventeen') }}
+            </p>
+
+            {{ function('get_search_form') }}
+        </div>
+    </section>
+</section>

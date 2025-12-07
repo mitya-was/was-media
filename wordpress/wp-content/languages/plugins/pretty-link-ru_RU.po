@@ -1,0 +1,3650 @@
+# Translation of Plugins - PrettyLinks &#8211; Affiliate Links, Link Branding, Link Tracking, Marketing and Stripe Payments Plugin - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - PrettyLinks &#8211; Affiliate Links, Link Branding, Link Tracking, Marketing and Stripe Payments Plugin - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-09-18 07:18:59+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - PrettyLinks &#8211; Affiliate Links, Link Branding, Link Tracking, Marketing and Stripe Payments Plugin - Stable (latest release)\n"
+
+#: app/controllers/PrliReviewNoticeController.php:20
+msgid "You do not have permission to perform this action"
+msgstr "У вас нет прав на выполнение этого действия"
+
+#: vendor-prefixed/caseproof/growth-tools/src/App.php:104
+msgid "Installed"
+msgstr "Установлен"
+
+#: vendor-prefixed/caseproof/growth-tools/src/Helper/AddonHelper.php:31
+msgid "Addon activated."
+msgstr "Дополнение активировано."
+
+#: vendor-prefixed/caseproof/growth-tools/src/Helper/AddonHelper.php:36
+msgid "Could not activate addon. Please activate from the Plugins page."
+msgstr "Не удалось активировать дополнение. Активируйте его на странице Плагины."
+
+#: vendor-prefixed/caseproof/growth-tools/src/Helper/AddonHelper.php:22
+msgid "Could not activate addon. Please check user permissions."
+msgstr "Не удалось активировать дополнение. Проверьте разрешения пользователя."
+
+#: vendor-prefixed/caseproof/growth-tools/src/Helper/AddonHelper.php:41
+msgid "Could not activate addon. Please refresh page and try again."
+msgstr "Не удалось активировать дополнение. Обновите страницу и повторите попытку."
+
+#: vendor-prefixed/caseproof/growth-tools/src/Helper/AddonHelper.php:72
+msgid "Could not deactivate the addon. Please deactivate from the Plugins page."
+msgstr "Не удалось деактивировать дополнение. Деактивируйте его на странице Плагины."
+
+#: vendor-prefixed/caseproof/growth-tools/src/App.php:58
+#: vendor-prefixed/caseproof/growth-tools/src/App.php:59
+#: vendor-prefixed/caseproof/growth-tools/src/App.php:208
+msgid "Growth Tools"
+msgstr "Инструменты роста"
+
+#: vendor-prefixed/caseproof/ground-level-in-product-notifications/Services/Ajax.php:100
+msgid "Unknown error."
+msgstr "Неизвестная ошибка."
+
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/LicenseManager.php:208
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/LicenseManager.php:265
+msgid "Invalid nonce"
+msgstr "Неверный nonce"
+
+#: vendor-prefixed/caseproof/ground-level-in-product-notifications/Services/Ajax.php:84
+msgid "Invalid nonce."
+msgstr "Неверный одноразовый номер."
+
+#: vendor-prefixed/caseproof/ground-level-in-product-notifications/Services/Ajax.php:92
+msgid "You are not allowed to perform this action."
+msgstr "У вас нет доступа для выполнения этого действия."
+
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/LicenseManager.php:82
+msgid "License activated successfully"
+msgstr "Лицензия успешно активирована"
+
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/LicenseManager.php:95
+msgid "License deactivated successfully"
+msgstr "Лицензия успешно деактивирована"
+
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:242
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:394
+msgid "Could not install plugin. Please download and install manually."
+msgstr "Не удалось установить плагин. Пожалуйста, загрузите его с WordPress.org и установите вручную."
+
+#. Plugin Name of the plugin
+#: pretty-link.php
+msgid "PrettyLinks"
+msgstr "PrettyLinks"
+
+#: app/views/links/prettypay_link_stripe.php:229
+msgid "Default (Homepage)"
+msgstr "Домашняя страница по умолчанию"
+
+#: app/views/admin/payments/options.php:123
+msgid "Homepage"
+msgstr "Домашняя страница"
+
+#: app/controllers/PrliLinksController.php:69
+msgid "Add New"
+msgstr "Добавить новую"
+
+#: i18n/countries.php:245
+msgid "Western Sahara"
+msgstr "Западная Сахара"
+
+#: i18n/countries.php:244
+msgid "Wallis and Futuna"
+msgstr "Уоллис и Футуна"
+
+#: i18n/countries.php:243
+msgid "Vietnam"
+msgstr "Вьетнам"
+
+#: i18n/countries.php:242
+msgid "Venezuela"
+msgstr "Венесуэла"
+
+#: i18n/countries.php:241
+msgid "Vatican"
+msgstr "Ватикан"
+
+#: i18n/countries.php:240
+msgid "Vanuatu"
+msgstr "Вануату"
+
+#: i18n/countries.php:239
+msgid "Uzbekistan"
+msgstr "Узбекистан"
+
+#: i18n/countries.php:238
+msgid "Uruguay"
+msgstr "Уругвай"
+
+#: i18n/countries.php:237
+msgid "United States"
+msgstr "США"
+
+#: i18n/countries.php:236
+msgid "United Kingdom (UK)"
+msgstr "Великобритания"
+
+#: i18n/countries.php:235
+msgid "United Arab Emirates"
+msgstr "Объединенные Арабские Эмираты"
+
+#: i18n/countries.php:234
+msgid "Ukraine"
+msgstr "Украина"
+
+#: i18n/countries.php:233
+msgid "Uganda"
+msgstr "Уганда"
+
+#: i18n/countries.php:232
+msgid "Tuvalu"
+msgstr "Тувалу"
+
+#: i18n/countries.php:231
+msgid "Turks and Caicos Islands"
+msgstr "Острова Теркс и Кайкос"
+
+#: i18n/countries.php:215
+msgid "Swaziland"
+msgstr "Свазиленд"
+
+#: i18n/countries.php:214
+msgid "Svalbard and Jan Mayen"
+msgstr "Шпицберген и Ян-Майен"
+
+#: i18n/countries.php:213
+msgid "Suriname"
+msgstr "Суринам"
+
+#: i18n/countries.php:212
+msgid "Sudan"
+msgstr "Судан"
+
+#: i18n/countries.php:211
+msgid "Sri Lanka"
+msgstr "Шри-Ланка"
+
+#: i18n/countries.php:210
+msgid "Spain"
+msgstr "Испания"
+
+#: i18n/countries.php:209
+msgid "South Sudan"
+msgstr "Южный Судан"
+
+#: i18n/countries.php:208
+msgid "South Korea"
+msgstr "Южная Корея"
+
+#: i18n/countries.php:207
+msgid "South Georgia/Sandwich Islands"
+msgstr "Южная Георгия/Сандвичевы Острова"
+
+#: i18n/countries.php:206
+msgid "South Africa"
+msgstr "Южно-Африканская Республика"
+
+#: i18n/countries.php:205
+msgid "Somalia"
+msgstr "Сомали"
+
+#: i18n/countries.php:204
+msgid "Solomon Islands"
+msgstr "Соломоновы Острова"
+
+#: i18n/countries.php:203
+msgid "Slovenia"
+msgstr "Словения"
+
+#: i18n/countries.php:202
+msgid "Slovakia"
+msgstr "Словакия"
+
+#: i18n/countries.php:201
+msgid "Singapore"
+msgstr "Сингапур"
+
+#: i18n/countries.php:249
+msgid "Zimbabwe"
+msgstr "Зимбабве"
+
+#: i18n/countries.php:248
+msgid "Zambia"
+msgstr "Замбия"
+
+#: i18n/countries.php:247
+msgid "Yemen"
+msgstr "Йемен"
+
+#: i18n/countries.php:246
+msgid "Western Samoa"
+msgstr "Западное Самоа"
+
+#: i18n/countries.php:226
+msgid "Tonga"
+msgstr "Тонга"
+
+#: i18n/countries.php:225
+msgid "Tokelau"
+msgstr "Токелау"
+
+#: i18n/countries.php:224
+msgid "Togo"
+msgstr "Того"
+
+#: i18n/countries.php:223
+msgid "Timor-Leste"
+msgstr "Восточный Тимор"
+
+#: i18n/countries.php:222
+msgid "Thailand"
+msgstr "Таиланд"
+
+#: i18n/countries.php:221
+msgid "Tanzania"
+msgstr "Танзания"
+
+#: i18n/countries.php:220
+msgid "Tajikistan"
+msgstr "Таджикистан"
+
+#: i18n/countries.php:219
+msgid "Taiwan"
+msgstr "Тайвань"
+
+#: i18n/countries.php:218
+msgid "Syria"
+msgstr "Сирия"
+
+#: i18n/countries.php:217
+msgid "Switzerland"
+msgstr "Швейцария"
+
+#: i18n/countries.php:216
+msgid "Sweden"
+msgstr "Швеция"
+
+#: i18n/countries.php:200
+msgid "Sierra Leone"
+msgstr "Сьерра-Леоне"
+
+#: i18n/countries.php:199
+msgid "Seychelles"
+msgstr "Сейшельские острова"
+
+#: i18n/countries.php:198
+msgid "Serbia"
+msgstr "Сербия"
+
+#: i18n/countries.php:197
+msgid "Senegal"
+msgstr "Сенегал"
+
+#: i18n/countries.php:230
+msgid "Turkmenistan"
+msgstr "Туркменистан"
+
+#: i18n/countries.php:229
+msgid "Turkey"
+msgstr "Турция"
+
+#: i18n/countries.php:228
+msgid "Tunisia"
+msgstr "Тунис"
+
+#: i18n/countries.php:227
+msgid "Trinidad and Tobago"
+msgstr "Тринидад и Тобаго"
+
+#: i18n/countries.php:184
+msgid "Russia"
+msgstr "Россия"
+
+#: i18n/countries.php:192
+msgid "Saint Pierre and Miquelon"
+msgstr "Сен-Пьер и Микелон"
+
+#: i18n/countries.php:191
+msgid "Saint Martin (Dutch part)"
+msgstr "Синт-Мартен (Нидерл.)"
+
+#: i18n/countries.php:190
+msgid "Saint Martin (French part)"
+msgstr "Синт-Мартен (Фр.)"
+
+#: i18n/countries.php:189
+msgid "Saint Lucia"
+msgstr "Сент-Люсия"
+
+#: i18n/countries.php:188
+msgid "Saint Kitts and Nevis"
+msgstr "Сент-Китс и Невис"
+
+#: i18n/countries.php:187
+msgid "Saint Helena"
+msgstr "Остров Святой Елены"
+
+#: i18n/countries.php:186
+msgid "Saint Barth&eacute;lemy"
+msgstr "Сен-Бартелеми"
+
+#: i18n/countries.php:185
+msgid "Rwanda"
+msgstr "Руанда"
+
+#: i18n/countries.php:183
+msgid "Romania"
+msgstr "Румыния"
+
+#: i18n/countries.php:182
+msgid "Reunion"
+msgstr "Реюньон"
+
+#: i18n/countries.php:181
+msgid "Qatar"
+msgstr "Катар"
+
+#: i18n/countries.php:180
+msgid "Puerto Rico"
+msgstr "Пуэрто-Рико"
+
+#: i18n/countries.php:179
+msgid "Portugal"
+msgstr "Португалия"
+
+#: i18n/countries.php:178
+msgid "Poland"
+msgstr "Польша"
+
+#: i18n/countries.php:196
+msgid "Saudi Arabia"
+msgstr "Саудовская Аравия"
+
+#: i18n/countries.php:195
+msgid "S&atilde;o Tom&eacute; and Pr&iacute;ncipe"
+msgstr "Сан-Томе и Принсипи"
+
+#: i18n/countries.php:194
+msgid "San Marino"
+msgstr "Сан-Марино"
+
+#: i18n/countries.php:193
+msgid "Saint Vincent and the Grenadines"
+msgstr "Сент-Винсент и Гренадины"
+
+#: i18n/countries.php:173
+msgid "Papua New Guinea"
+msgstr "Папуа-Новая Гвинея"
+
+#: i18n/countries.php:172
+msgid "Panama"
+msgstr "Панама"
+
+#: i18n/countries.php:171
+msgid "Palestinian Territory"
+msgstr "Палестинские территории"
+
+#: i18n/countries.php:170
+msgid "Pakistan"
+msgstr "Пакистан"
+
+#: i18n/countries.php:169
+msgid "Oman"
+msgstr "Оман"
+
+#: i18n/countries.php:168
+msgid "Norway"
+msgstr "Норвегия"
+
+#: i18n/countries.php:167
+msgid "North Korea"
+msgstr "Северная Корея"
+
+#: i18n/countries.php:166
+msgid "Norfolk Island"
+msgstr "Остров Норфолк"
+
+#: i18n/countries.php:165
+msgid "Niue"
+msgstr "Ниуэ"
+
+#: i18n/countries.php:164
+msgid "Nigeria"
+msgstr "Нигерия"
+
+#: i18n/countries.php:163
+msgid "Niger"
+msgstr "Нигер"
+
+#: i18n/countries.php:162
+msgid "Nicaragua"
+msgstr "Никарагуа"
+
+#: i18n/countries.php:161
+msgid "New Zealand"
+msgstr "Новая Зеландия"
+
+#: i18n/countries.php:160
+msgid "New Caledonia"
+msgstr "Новая Каледония"
+
+#: i18n/countries.php:159
+msgid "Netherlands Antilles"
+msgstr "Нидерландские Антильские острова"
+
+#: i18n/countries.php:177
+msgid "Pitcairn"
+msgstr "Питкэрн"
+
+#: i18n/countries.php:176
+msgid "Philippines"
+msgstr "Филиппины"
+
+#: i18n/countries.php:175
+msgid "Peru"
+msgstr "Перу"
+
+#: i18n/countries.php:174
+msgid "Paraguay"
+msgstr "Парагвай"
+
+#: i18n/countries.php:154
+msgid "Myanmar"
+msgstr "Мьянма"
+
+#: i18n/countries.php:153
+msgid "Mozambique"
+msgstr "Мозамбик"
+
+#: i18n/countries.php:152
+msgid "Morocco"
+msgstr "Марокко"
+
+#: i18n/countries.php:151
+msgid "Montserrat"
+msgstr "Монтсеррат"
+
+#: i18n/countries.php:158
+msgid "Netherlands"
+msgstr "Нидерланды"
+
+#: i18n/countries.php:157
+msgid "Nepal"
+msgstr "Непал"
+
+#: i18n/countries.php:156
+msgid "Nauru"
+msgstr "Науру"
+
+#: i18n/countries.php:155
+msgid "Namibia"
+msgstr "Намибия"
+
+#: i18n/countries.php:116
+msgid "Jersey"
+msgstr "Джерси"
+
+#: i18n/countries.php:115
+msgid "Japan"
+msgstr "Япония"
+
+#: i18n/countries.php:114
+msgid "Jamaica"
+msgstr "Ямайка"
+
+#: i18n/countries.php:113
+msgid "Ivory Coast"
+msgstr "Кот-д'Ивуар"
+
+#: i18n/countries.php:112
+msgid "Italy"
+msgstr "Италия"
+
+#: i18n/countries.php:111
+msgid "Israel"
+msgstr "Израиль"
+
+#: i18n/countries.php:110
+msgid "Isle of Man"
+msgstr "Остров Мэн"
+
+#: i18n/countries.php:109
+msgid "Republic of Ireland"
+msgstr "Ирландия"
+
+#: i18n/countries.php:108
+msgid "Iraq"
+msgstr "Ирак"
+
+#: i18n/countries.php:61
+msgid "Cuba"
+msgstr "Куба"
+
+#: i18n/countries.php:60
+msgid "Croatia"
+msgstr "Хорватия"
+
+#: i18n/countries.php:59
+msgid "Costa Rica"
+msgstr "Коста Рика"
+
+#: i18n/countries.php:58
+msgid "Cook Islands"
+msgstr "Острова Кука"
+
+#: i18n/countries.php:57
+msgid "Congo (Kinshasa)"
+msgstr "Конго (Киншаса)"
+
+#: i18n/countries.php:56
+msgid "Congo (Brazzaville)"
+msgstr "Конго (Браззавиль)"
+
+#: i18n/countries.php:55
+msgid "Comoros"
+msgstr "Коморы"
+
+#: i18n/countries.php:54
+msgid "Colombia"
+msgstr "Колумбия"
+
+#: i18n/countries.php:150
+msgid "Montenegro"
+msgstr "Черногория"
+
+#: i18n/countries.php:149
+msgid "Mongolia"
+msgstr "Монголия"
+
+#: i18n/countries.php:148
+msgid "Monaco"
+msgstr "Монако"
+
+#: i18n/countries.php:147
+msgid "Moldova"
+msgstr "Молдова"
+
+#: i18n/countries.php:6
+msgid "&#197;land Islands"
+msgstr "Аландские острова"
+
+#: i18n/countries.php:5
+msgid "Afghanistan"
+msgstr "Афганистан"
+
+#: i18n/countries.php:7
+msgid "Albania"
+msgstr "Албания"
+
+#: i18n/countries.php:8
+msgid "Algeria"
+msgstr "Алжир"
+
+#. translators: %s: number of links
+#: app/controllers/PrliLinksController.php:1088
+msgid "All %s"
+msgstr "Все %s"
+
+#: i18n/countries.php:9
+msgid "Andorra"
+msgstr "Андорра"
+
+#: i18n/countries.php:10
+msgid "Angola"
+msgstr "Ангола"
+
+#: i18n/countries.php:11
+msgid "Anguilla"
+msgstr "Ангилья"
+
+#: app/views/links/prettypay_link_stripe.php:72
+msgid "Custom"
+msgstr "Пользовательский"
+
+#: i18n/countries.php:12
+msgid "Antarctica"
+msgstr "Антарктика"
+
+#: i18n/countries.php:63
+msgid "Cyprus"
+msgstr "Кипр"
+
+#: i18n/countries.php:13
+msgid "Antigua and Barbuda"
+msgstr "Антигуа и Барбуда"
+
+#: i18n/countries.php:64
+msgid "Czech Republic"
+msgstr "Чехия"
+
+#: i18n/countries.php:14
+msgid "Argentina"
+msgstr "Аргентина"
+
+#: app/views/links/prettypay_link_stripe.php:66
+msgid "Daily"
+msgstr "Раз в день"
+
+#: app/views/links/prettypay_link_stripe.php:80
+#: app/views/links/prettypay_link_stripe.php:199
+msgid "days"
+msgstr "дни"
+
+#: i18n/countries.php:15
+msgid "Armenia"
+msgstr "Армения"
+
+#: i18n/countries.php:135
+msgid "Malawi"
+msgstr "Малави"
+
+#: i18n/countries.php:16
+msgid "Aruba"
+msgstr "Аруба"
+
+#: i18n/countries.php:136
+msgid "Malaysia"
+msgstr "Малайзия"
+
+#: i18n/countries.php:17
+msgid "Australia"
+msgstr "Австралия"
+
+#: i18n/countries.php:137
+msgid "Maldives"
+msgstr "Мальдивы"
+
+#: i18n/countries.php:18
+msgid "Austria"
+msgstr "Австрия"
+
+#. translators: %s: thank you page title
+#: app/views/links/prettypay_link_stripe.php:235
+msgid "Default (%s)"
+msgstr "По умолчанию (%s)"
+
+#: app/views/prettypay/invoice.php:54
+msgid "Total"
+msgstr "Итого"
+
+#: i18n/countries.php:138
+msgid "Mali"
+msgstr "Мали"
+
+#: i18n/countries.php:65
+msgid "Denmark"
+msgstr "Дания"
+
+#. translators: %s: number of links in the trash
+#: app/controllers/PrliLinksController.php:1097
+msgid "Trash %s"
+msgstr "Корзина %s"
+
+#: i18n/countries.php:19
+msgid "Azerbaijan"
+msgstr "Азербайджан"
+
+#: i18n/countries.php:139
+msgid "Malta"
+msgstr "Мальта"
+
+#: app/controllers/PrliStripeController.php:390
+msgid "Try again"
+msgstr "Попробуйте снова"
+
+#: app/views/admin/payments/options.php:79
+msgid "Disconnect"
+msgstr "Отсоединиться"
+
+#: app/views/prettypay/invoice.php:61
+msgid "Manage Subscription"
+msgstr "Управление подпиской"
+
+#: i18n/countries.php:140
+msgid "Marshall Islands"
+msgstr "Маршалловы острова"
+
+#: i18n/countries.php:20
+msgid "Bahamas"
+msgstr "Багамы"
+
+#: app/views/prettypay/invoice.php:41
+msgid "Discount"
+msgstr "Скидка"
+
+#: i18n/countries.php:141
+msgid "Martinique"
+msgstr "Мартиника"
+
+#: i18n/countries.php:66
+msgid "Djibouti"
+msgstr "Джибути"
+
+#: i18n/countries.php:21
+msgid "Bahrain"
+msgstr "Бахрейн"
+
+#: i18n/countries.php:142
+msgid "Mauritania"
+msgstr "Мавритания"
+
+#: i18n/countries.php:67
+msgid "Dominica"
+msgstr "Доминика"
+
+#: i18n/countries.php:22
+msgid "Bangladesh"
+msgstr "Бангладеш"
+
+#: i18n/countries.php:143
+msgid "Mauritius"
+msgstr "Маврикий"
+
+#: app/helpers/PrliAppHelper.php:49
+msgid "View"
+msgstr "Посмотреть"
+
+#: i18n/countries.php:68
+msgid "Dominican Republic"
+msgstr "Доминиканская Республика"
+
+#: i18n/countries.php:23
+msgid "Barbados"
+msgstr "Барбадос"
+
+#: i18n/countries.php:144
+msgid "Mayotte"
+msgstr "Майотта"
+
+#: app/views/links/prettypay_link_stripe.php:67
+msgid "Weekly"
+msgstr "Еженедельно"
+
+#: i18n/countries.php:69
+msgid "Ecuador"
+msgstr "Эквадор"
+
+#: i18n/countries.php:24
+msgid "Belarus"
+msgstr "Беларусь"
+
+#: app/views/links/prettypay_link_stripe.php:71
+msgid "Yearly"
+msgstr "Ежегодно"
+
+#: i18n/countries.php:145
+msgid "Mexico"
+msgstr "Мексика"
+
+#: i18n/countries.php:26
+msgid "Belau"
+msgstr "Белау"
+
+#: i18n/countries.php:146
+msgid "Micronesia"
+msgstr "Микронезия"
+
+#: i18n/countries.php:70
+msgid "Egypt"
+msgstr "Египет"
+
+#: i18n/countries.php:25
+msgid "Belgium"
+msgstr "Бельгия"
+
+#: app/views/links/prettypay_link_stripe.php:68
+msgid "Monthly"
+msgstr "Ежемесячно"
+
+#: i18n/countries.php:71
+msgid "El Salvador"
+msgstr "Сальвадор"
+
+#: i18n/countries.php:27
+msgid "Belize"
+msgstr "Белиз"
+
+#: app/models/PrliUtils.php:1398
+msgid "NEW"
+msgstr "НОВЫЙ"
+
+#: i18n/countries.php:28
+msgid "Benin"
+msgstr "Бенин"
+
+#: i18n/countries.php:72
+msgid "Equatorial Guinea"
+msgstr "Экваториальная Гвинея"
+
+#: i18n/countries.php:29
+msgid "Bermuda"
+msgstr "Бермуды"
+
+#: i18n/countries.php:73
+msgid "Eritrea"
+msgstr "Эритрея"
+
+#: i18n/countries.php:30
+msgid "Bhutan"
+msgstr "Бутан"
+
+#: i18n/countries.php:74
+msgid "Estonia"
+msgstr "Эстония"
+
+#: app/views/admin/payments/options.php:32 app/views/options/form.php:63
+msgid "Payments"
+msgstr "Платежи"
+
+#: i18n/countries.php:31
+msgid "Bolivia"
+msgstr "Боливия"
+
+#: i18n/countries.php:75
+msgid "Ethiopia"
+msgstr "Эфиопия"
+
+#: i18n/countries.php:32
+msgid "Bonaire, Saint Eustatius and Saba"
+msgstr "Бонайре, Синт-Эстатиус и Саба"
+
+#: i18n/countries.php:76
+msgid "Falkland Islands"
+msgstr "Фолклендские острова"
+
+#: i18n/countries.php:33
+msgid "Bosnia and Herzegovina"
+msgstr "Босния и Герцеговина"
+
+#: i18n/countries.php:77
+msgid "Faroe Islands"
+msgstr "Фарерские острова"
+
+#: i18n/countries.php:34
+msgid "Botswana"
+msgstr "Ботсвана"
+
+#: i18n/countries.php:78
+msgid "Fiji"
+msgstr "Фиджи"
+
+#: i18n/countries.php:35
+msgid "Bouvet Island"
+msgstr "Буве, о-в"
+
+#: i18n/countries.php:36
+msgid "Brazil"
+msgstr "Бразилия"
+
+#: i18n/countries.php:79
+msgid "Finland"
+msgstr "Финляндия"
+
+#: i18n/countries.php:37
+msgid "British Indian Ocean Territory"
+msgstr "Британская территория в Индийском океане"
+
+#: i18n/countries.php:80
+msgid "France"
+msgstr "Франция"
+
+#: i18n/countries.php:38
+msgid "British Virgin Islands"
+msgstr "Британские Виргинские о-ва"
+
+#: i18n/countries.php:81
+msgid "French Guiana"
+msgstr "Французская Гвиана"
+
+#: i18n/countries.php:39
+msgid "Brunei"
+msgstr "Бруней"
+
+#: app/views/admin/payments/options.php:226
+#: app/views/admin/payments/options.php:251
+#: app/views/admin/payments/options.php:259
+#: app/views/admin/payments/options.php:275
+msgid "Recommended"
+msgstr "Рекомендуется"
+
+#: i18n/countries.php:82
+msgid "French Polynesia"
+msgstr "Французская Полинезия"
+
+#: i18n/countries.php:40
+msgid "Bulgaria"
+msgstr "Болгария"
+
+#: i18n/countries.php:83
+msgid "French Southern Territories"
+msgstr "Французские южные территории"
+
+#: i18n/countries.php:41
+msgid "Burkina Faso"
+msgstr "Буркина-Фасо"
+
+#: i18n/countries.php:84
+msgid "Gabon"
+msgstr "Габон"
+
+#: i18n/countries.php:42
+msgid "Burundi"
+msgstr "Бурунди"
+
+#: i18n/countries.php:85
+msgid "Gambia"
+msgstr "Гамбия"
+
+#: i18n/countries.php:86
+msgid "Georgia"
+msgstr "Грузия"
+
+#: i18n/countries.php:87
+msgid "Germany"
+msgstr "Германия"
+
+#: i18n/countries.php:43
+msgid "Cambodia"
+msgstr "Камбоджа"
+
+#: i18n/countries.php:88
+msgid "Ghana"
+msgstr "Гана"
+
+#: i18n/countries.php:44
+msgid "Cameroon"
+msgstr "Камерун"
+
+#: i18n/countries.php:89
+msgid "Gibraltar"
+msgstr "Гибралтар"
+
+#: i18n/countries.php:45
+msgid "Canada"
+msgstr "Канада"
+
+#: i18n/countries.php:90
+msgid "Greece"
+msgstr "Греция"
+
+#: i18n/countries.php:46
+msgid "Cape Verde"
+msgstr "Кабо-Верде"
+
+#: i18n/countries.php:91
+msgid "Greenland"
+msgstr "Гренландия"
+
+#: i18n/countries.php:92
+msgid "Grenada"
+msgstr "Гренада"
+
+#: i18n/countries.php:47
+msgid "Cayman Islands"
+msgstr "Каймановы острова"
+
+#: i18n/countries.php:93
+msgid "Guadeloupe"
+msgstr "Гваделупа"
+
+#: i18n/countries.php:48
+msgid "Central African Republic"
+msgstr "Центральноафриканская Республика"
+
+#: i18n/countries.php:94
+msgid "Guatemala"
+msgstr "Гватемала"
+
+#: i18n/countries.php:49
+msgid "Chad"
+msgstr "Чад"
+
+#: i18n/countries.php:95
+msgid "Guernsey"
+msgstr "Гернси"
+
+#: i18n/countries.php:50
+msgid "Chile"
+msgstr "Чили"
+
+#: i18n/countries.php:96
+msgid "Guinea"
+msgstr "Гвинея"
+
+#: i18n/countries.php:51
+msgid "China"
+msgstr "Китай"
+
+#: i18n/countries.php:97
+msgid "Guinea-Bissau"
+msgstr "Гвинея-Бисау"
+
+#: i18n/countries.php:52
+msgid "Christmas Island"
+msgstr "Остров Рождества"
+
+#: i18n/countries.php:98
+msgid "Guyana"
+msgstr "Гайана"
+
+#: i18n/countries.php:53
+msgid "Cocos (Keeling) Islands"
+msgstr "Кокосовые (Килинг) о-ва"
+
+#: i18n/countries.php:99
+msgid "Haiti"
+msgstr "Гаити"
+
+#: i18n/countries.php:100
+msgid "Heard Island and McDonald Islands"
+msgstr "Остров Херд и острова Макдональд"
+
+#: i18n/countries.php:101
+msgid "Honduras"
+msgstr "Гондурас"
+
+#: i18n/countries.php:102
+msgid "Hong Kong"
+msgstr "Гонконг"
+
+#: i18n/countries.php:103
+msgid "Hungary"
+msgstr "Венгрия"
+
+#: i18n/countries.php:104
+msgid "Iceland"
+msgstr "Исландия"
+
+#: i18n/countries.php:105
+msgid "India"
+msgstr "Индия"
+
+#: i18n/countries.php:106
+msgid "Indonesia"
+msgstr "Индонезия"
+
+#: app/views/links/prettypay_link_stripe.php:79
+msgid "Interval"
+msgstr "Интервал"
+
+#: i18n/countries.php:107
+msgid "Iran"
+msgstr "Иран"
+
+#: i18n/countries.php:117
+msgid "Jordan"
+msgstr "Иордания"
+
+#: i18n/countries.php:118
+msgid "Kazakhstan"
+msgstr "Казахстан"
+
+#: i18n/countries.php:119
+msgid "Kenya"
+msgstr "Кения"
+
+#: i18n/countries.php:120
+msgid "Kiribati"
+msgstr "Кирибати"
+
+#: i18n/countries.php:121
+msgid "Kuwait"
+msgstr "Кувейт"
+
+#: i18n/countries.php:122
+msgid "Kyrgyzstan"
+msgstr "Кыргызстан"
+
+#: i18n/countries.php:123
+msgid "Laos"
+msgstr "Лаос"
+
+#: i18n/countries.php:124
+msgid "Latvia"
+msgstr "Латвия"
+
+#: i18n/countries.php:125
+msgid "Lebanon"
+msgstr "Ливан"
+
+#: i18n/countries.php:126
+msgid "Lesotho"
+msgstr "Лесото"
+
+#: i18n/countries.php:127
+msgid "Liberia"
+msgstr "Либерия"
+
+#: i18n/countries.php:128
+msgid "Libya"
+msgstr "Ливия"
+
+#: i18n/countries.php:129
+msgid "Liechtenstein"
+msgstr "Лихтенштейн"
+
+#: app/views/links/prettypay_link_stripe.php:179
+msgid "View docs"
+msgstr "Смотреть документацию"
+
+#: app/views/links/prettypay_link_stripe.php:81
+msgid "weeks"
+msgstr "недель"
+
+#: i18n/countries.php:130
+msgid "Lithuania"
+msgstr "Литва"
+
+#: i18n/countries.php:131
+msgid "Luxembourg"
+msgstr "Luxembourg"
+
+#: i18n/countries.php:132
+msgid "Macao S.A.R., China"
+msgstr "Макао (САР), Китай"
+
+#: i18n/countries.php:133
+msgid "Macedonia"
+msgstr "Македония"
+
+#: i18n/countries.php:134
+msgid "Madagascar"
+msgstr "Мадагаскар"
+
+#: app/views/links/prettypay_link_stripe.php:82
+msgid "months"
+msgstr "месяцы"
+
+#: app/views/links/prettypay_link_stripe.php:59
+msgid "One time"
+msgstr "Однократные"
+
+#: app/views/prettypay/invoice.php:12
+msgid "Order: %s"
+msgstr "Заказ: %s"
+
+#: i18n/countries.php:62
+msgid "Cura&Ccedil;ao"
+msgstr "Кюрасао"
+
+#: app/views/admin/payments/options.php:248
+msgid "Payment Method Update"
+msgstr "Метод оплаты обновлен"
+
+#: app/controllers/PrliStripeController.php:936
+msgid "Payment Pending"
+msgstr "Ожидание оплаты"
+
+#: app/controllers/PrliStripeController.php:936
+msgid "Payment Successful"
+msgstr "Оплата прошла успешно"
+
+#: app/views/admin/payments/options.php:140
+#: app/views/links/prettypay_link_stripe.php:44
+msgid "Currency"
+msgstr "Валюта"
+
+#: app/views/admin/payments/options.php:196
+#: app/views/admin/payments/options.php:198
+msgid "Privacy Policy URL"
+msgstr "URL-адрес политики конфиденциальности"
+
+#: app/views/links/prettypay_link_stripe.php:55
+msgid "Recurring"
+msgstr "Повторяющиеся"
+
+#: app/views/prettypay/invoice.php:35
+msgid "Subtotal"
+msgstr "Промежуточный итог"
+
+#: app/helpers/PrliAppHelper.php:39
+msgid "- Auto Create New Page -"
+msgstr "- Авто создание новой страницы -"
+
+#: app/views/prettypay/invoice.php:48
+msgid "Tax"
+msgstr "Налоги"
+
+#: app/controllers/PrliOptionsController.php:115
+msgid "Thank You"
+msgstr "Спасибо"
+
+#: app/views/links/prettypay_link_stripe.php:99
+msgid "Add product"
+msgstr "Добавить товар"
+
+#: app/views/links/prettypay_link_stripe.php:63
+msgid "Billing period"
+msgstr "Расчётный период"
+
+#: app/views/admin/payments/options.php:68
+msgid "Connected to Stripe"
+msgstr "Подключено к Stripe"
+
+#: app/views/links/prettypay_link_stripe.php:77
+msgid "every"
+msgstr "каждый"
+
+#: app/views/links/prettypay_link_stripe.php:70
+msgid "Every 6 months"
+msgstr "Каждые 6 месяцев"
+
+#: app/views/admin/payments/options.php:52
+msgid "Fraud prevention tools"
+msgstr "Инструменты защиты от мошенничества"
+
+#: app/controllers/PrliStripeController.php:584
+msgid "HTTP error"
+msgstr "Ошибка HTTP"
+
+#: app/views/options/form.php:488 app/views/options/form.php:551
+msgid "Pages"
+msgstr "Страницы"
+
+#: app/views/options/form.php:484 app/views/options/form.php:547
+msgid "Posts"
+msgstr "Записи"
+
+#: app/views/options/form.php:433
+msgid "Add Nofollow"
+msgstr "Добавить nofollow"
+
+#: app/views/admin/onboarding/welcome.php:22
+msgid "Get Started"
+msgstr "Начать"
+
+#: app/views/admin/onboarding/active_license.php:32
+msgid "Account email"
+msgstr "Email учётной записи"
+
+#: app/views/admin/onboarding/active_license.php:66
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/LicenseManager.php:185
+msgid "Deactivate License"
+msgstr "Деактивировать лицензию"
+
+#: app/views/admin/onboarding/active_license.php:35
+msgid "Unknown"
+msgstr "Неизвестно"
+
+#: app/views/admin/onboarding/nav/complete.php:10
+msgid "Finish"
+msgstr "Готово"
+
+#: app/views/admin/onboarding/active_license.php:40
+msgid "Product"
+msgstr "Товар"
+
+#: app/views/admin/onboarding/parts/category-pro.php:16
+#: app/views/admin/onboarding/parts/category-pro.php:43
+msgid "Category Name"
+msgstr "Название категории"
+
+#: app/views/admin/onboarding/nav/category.php:13
+#: app/views/admin/onboarding/nav/features.php:3
+#: app/views/admin/onboarding/nav/finish.php:6
+#: app/views/admin/onboarding/nav/license.php:7
+#: app/views/admin/onboarding/nav/pretty-link.php:13
+msgid "Continue"
+msgstr "Продолжить"
+
+#: app/views/admin/onboarding/parts/pretty-link.php:70
+msgid "Import"
+msgstr "Импорт"
+
+#: app/views/admin/onboarding/license.php:10
+msgid "Your License"
+msgstr "Ваша лицензия"
+
+#: app/views/admin/onboarding/active_license.php:25
+msgid "License activated"
+msgstr "Лицензия активирована"
+
+#: app/views/admin/onboarding/license.php:18
+#: app/views/admin/onboarding/nav/category.php:10
+#: app/views/admin/onboarding/nav/finish.php:3
+#: app/views/admin/onboarding/nav/pretty-link.php:10
+msgid "Skip"
+msgstr "Пропускать"
+
+#: app/views/admin/onboarding/active_license.php:48
+msgid "Activations"
+msgstr "Активаций"
+
+#: app/views/admin/onboarding/parts/category-pro.php:21
+msgid "Category Slug"
+msgstr "Ярлык категории"
+
+#: app/views/admin/onboarding/parts/category-pro.php:26
+msgid "Count"
+msgstr "Попытка"
+
+#: app/views/admin/onboarding/parts/category-pro.php:40
+msgid "Create Category"
+msgstr "Создать категорию"
+
+#: app/views/admin/onboarding/parts/category-pro.php:8
+msgid "Create New Category"
+msgstr "Создать рубрику"
+
+#: app/views/admin/onboarding/parts/finish.php:67
+msgid "Finish setup"
+msgstr "Завершить установку"
+
+#: app/controllers/PrliOnboardingController.php:46
+#: app/views/admin/onboarding/license.php:14
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/LicenseManager.php:149
+msgid "Activate License"
+msgstr "Активировать лицензию"
+
+#: app/controllers/PrliOnboardingController.php:131
+msgid "Page"
+msgstr "Страница"
+
+#: app/controllers/PrliOnboardingController.php:70
+msgid "Finish Setup"
+msgstr "Завершить настройку"
+
+#: app/helpers/PrliOnboardingHelper.php:123
+#: app/views/admin/onboarding/features.php:45
+msgid "QR Codes"
+msgstr "QR-коды"
+
+#: app/controllers/PrliOnboardingController.php:139
+#: app/views/admin/onboarding/created-links-list.php:31
+#: app/views/admin/onboarding/parts/category-pro.php:33
+#: app/views/admin/onboarding/parts/pretty-link.php:102
+msgid "Remove"
+msgstr "Удалить"
+
+#: app/controllers/PrliOnboardingController.php:76
+msgid "Complete"
+msgstr "Завершён"
+
+#: app/controllers/PrliOnboardingController.php:650
+msgid "Invalid request."
+msgstr "Неверный запрос."
+
+#: app/controllers/PrliOnboardingController.php:129
+#: app/views/admin/onboarding/created-links-list.php:23
+msgid "Link Name"
+msgstr "Имя ссылки"
+
+#: app/helpers/PrliOnboardingHelper.php:184
+msgid "Link Category"
+msgstr "Рубрика ссылки"
+
+#: app/helpers/PrliOnboardingHelper.php:128
+#: app/views/admin/onboarding/features.php:105
+msgid "MonsterInsights"
+msgstr "MonsterInsights"
+
+#: app/controllers/PrliOnboardingController.php:124
+msgid "An error occurred"
+msgstr "Произошла ошибка"
+
+#: app/controllers/PrliOnboardingController.php:130
+msgid "Course"
+msgstr "Курс"
+
+#: app/controllers/PrliOnboardingController.php:128
+msgid "Course Name"
+msgstr "Название курса"
+
+#: app/controllers/PrliAppController.php:411 app/views/admin/update/ui.php:3
+msgid "Manage License"
+msgstr "Управление лицензией"
+
+#: app/controllers/PrliAddonsController.php:28
+#: app/views/admin/addons/addon-page-pro.php:37
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:386
+#: vendor-prefixed/caseproof/ground-level-mothership/Views/products.php:40
+#: vendor-prefixed/caseproof/growth-tools/src/App.php:105
+msgid "Active"
+msgstr "Активен"
+
+#: app/controllers/PrliAddonsController.php:31
+#: app/views/admin/addons/addon-page-pro.php:86
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:389
+#: vendor-prefixed/caseproof/ground-level-mothership/Views/products.php:92
+#: vendor-prefixed/caseproof/growth-tools/src/App.php:107
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: app/views/links/form_product_display.php:90
+#: app/views/links/form_product_display.php:93
+msgid "Badge Text"
+msgstr "Текст бейджа"
+
+#: app/views/links/form_product_display.php:50
+msgid "Update Image"
+msgstr "Обновить изображение"
+
+#: app/views/admin/addons/addon-page-pro.php:98
+msgid "Upgrade Now"
+msgstr "Обновить сейчас"
+
+#: app/views/admin/addons/addon-page-pro.php:40
+#: vendor-prefixed/caseproof/ground-level-mothership/Views/products.php:43
+#: vendor-prefixed/caseproof/growth-tools/src/App.php:103
+msgid "Not Installed"
+msgstr "Не установлен"
+
+#: app/controllers/PrliAddonsController.php:81
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:187
+msgid "Plugin activated."
+msgstr "Плагин активирован."
+
+#: app/controllers/PrliAddonsController.php:191
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:294
+msgid "Plugin installed & activated."
+msgstr "Плагин установлен и активирован."
+
+#: app/controllers/PrliAddonsController.php:199
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:304
+msgid "Plugin installed."
+msgstr "Плагин установлен."
+
+#: app/views/links/form_product_display.php:34
+msgid "Boxed"
+msgstr "Блоками"
+
+#: app/views/links/form_product_display.php:77
+#: app/views/links/form_product_display.php:80
+#: app/views/links/prettypay_link_stripe.php:40
+msgid "Price"
+msgstr "Цена"
+
+#: app/views/links/form_product_display.php:41
+#: app/views/links/form_product_display.php:44
+msgid "Product Image"
+msgstr "Изображение продукта"
+
+#: app/views/options/form.php:1133 app/views/options/form.php:1135
+msgid "Button Background Color"
+msgstr "Цвет фона кнопки"
+
+#: app/views/options/form.php:1161 app/views/options/form.php:1163
+msgid "Button Hover Background Color"
+msgstr "Цвет фона кнопки при наведении"
+
+#: app/views/options/form.php:1175 app/views/options/form.php:1177
+msgid "Button Hover Text Color"
+msgstr "Цвет текста кнопки при наведении"
+
+#: app/views/options/form.php:1147 app/views/options/form.php:1149
+msgid "Button Text Color"
+msgstr "Цвет текста кнопки"
+
+#: app/views/links/form_product_display.php:18
+msgid "Copy Shortcode"
+msgstr "Скопировать короткий код"
+
+#: app/controllers/PrliAddonsController.php:29
+#: app/views/admin/addons/addon-page-lite.php:27
+#: app/views/admin/addons/addon-page-pro.php:43
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:387
+#: vendor-prefixed/caseproof/ground-level-mothership/Views/products.php:46
+msgid "Inactive"
+msgstr "Неактивна"
+
+#: app/controllers/PrliAddonsController.php:116
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:214
+#: vendor-prefixed/caseproof/growth-tools/src/Helper/AddonHelper.php:70
+msgid "Plugin deactivated."
+msgstr "Плагин деактивирован."
+
+#: app/views/links/form_product_display.php:103
+#: app/views/links/form_product_display.php:106
+msgid "Primary Button Text"
+msgstr "Текс главной кнопки"
+
+#: app/views/admin/addons/addon-page-lite.php:5
+#: app/views/admin/addons/addon-page-pro.php:5
+#: vendor-prefixed/caseproof/ground-level-mothership/Views/products.php:14
+msgid "Refresh Add-ons"
+msgstr "Обновить дополнения"
+
+#: app/views/links/form_product_display.php:116
+#: app/views/links/form_product_display.php:119
+msgid "Review URL"
+msgstr "Ссылка на отзыв"
+
+#: app/views/admin/addons/addon-page-lite.php:27
+msgid "Status: "
+msgstr "Статус: "
+
+#. translators: %s: add-on status label
+#. Translators: %s: add-on status label.
+#: app/views/admin/addons/addon-page-pro.php:66
+#: vendor-prefixed/caseproof/ground-level-mothership/Views/products.php:73
+msgid "Status: %s"
+msgstr "Статус: %s"
+
+#: app/controllers/PrliAppController.php:921
+msgid "Support"
+msgstr "Поддержка"
+
+#: app/controllers/PrliAddonsController.php:118
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:216
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: app/controllers/PrliAddonsController.php:191
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:295
+msgid "Add-on installed & activated."
+msgstr "Дополнение установлено и активировано."
+
+#: app/views/admin/addons/addon-page-lite.php:15
+#: app/views/admin/addons/addon-page-pro.php:18
+#: vendor-prefixed/caseproof/ground-level-mothership/Views/products.php:10
+msgid "Available Add-ons"
+msgstr "Доступные дополнения"
+
+#: app/controllers/PrliAddonsController.php:33
+#: app/controllers/PrliAddonsController.php:138
+msgid "Could not install plugin."
+msgstr "Не удалось установить плагин."
+
+#: app/controllers/PrliAddonsController.php:58
+#: app/controllers/PrliAddonsController.php:101
+#: app/controllers/PrliAddonsController.php:124
+#: app/controllers/PrliOnboardingController.php:196
+#: app/controllers/PrliOnboardingController.php:212
+#: app/controllers/PrliOnboardingController.php:218
+#: app/controllers/PrliOnboardingController.php:394
+#: app/controllers/PrliOnboardingController.php:643
+#: app/controllers/PrliOnboardingController.php:728
+#: app/controllers/PrliOnboardingController.php:772
+#: app/controllers/PrliOnboardingController.php:830
+#: app/controllers/PrliUpdateController.php:66
+#: app/controllers/PrliUpdateController.php:80
+#: app/controllers/PrliUpdateController.php:161
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:154
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:201
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:228
+msgid "Bad request."
+msgstr "Недопустимый запрос."
+
+#: app/controllers/PrliUpdateController.php:647
+msgid "Invalid response."
+msgstr "Неверный ответ."
+
+#: app/controllers/PrliUpdateController.php:402
+msgid "License key deactivated"
+msgstr "Лицензионный ключ деактивирован"
+
+#: app/controllers/PrliAddonsController.php:66
+#: app/controllers/PrliAddonsController.php:109
+#: app/controllers/PrliAddonsController.php:132
+#: app/controllers/PrliLinksController.php:715
+#: app/controllers/PrliOnboardingController.php:204
+#: app/controllers/PrliPostsController.php:157
+#: app/controllers/PrliPostsController.php:185
+#: app/controllers/PrliUpdateController.php:74
+#: app/controllers/PrliUpdateController.php:169
+#: app/controllers/PrliUpdateController.php:208
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:162
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:207
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:236
+msgid "Security check failed."
+msgstr "Проверка безопасности не удалась."
+
+#: app/views/admin/upgrade/reports.php:13
+#: app/views/admin/upgrade/reports.php:36
+msgid "Goal Link"
+msgstr "Целевая ссылка"
+
+#: app/views/options/form.php:1118
+msgid "Public Link Options"
+msgstr "Настройки публичной ссылки"
+
+#: app/controllers/PrliReviewNoticeController.php:95
+#: app/views/admin/payments/customer_portal_notice.php:16
+msgid "No thanks"
+msgstr "Нет, спасибо"
+
+#: app/controllers/PrliReviewNoticeController.php:94
+msgid "Give Feedback"
+msgstr "Оставить отзыв"
+
+#: app/controllers/PrliReviewNoticeController.php:92
+msgid "We're sorry to hear you aren't enjoying Pretty Links. We would love a chance to improve. Could you take a minute and let us know what we can do better?"
+msgstr "Нам жаль слышать, что вам не нравится Pretty Links. Мы будем рады возможности улучшить ситуацию. Не могли бы вы уделить нам минутку и сообщить, что мы можем сделать лучше?"
+
+#: app/controllers/PrliReviewNoticeController.php:88
+msgid "I already did"
+msgstr "Я уже сделал"
+
+#: app/controllers/PrliReviewNoticeController.php:87
+msgid "Nope, maybe later"
+msgstr "Нет, может позже"
+
+#: app/controllers/PrliReviewNoticeController.php:86
+msgid "Okay, you deserve it"
+msgstr "Ладно, вы это заслужили"
+
+#: app/controllers/PrliReviewNoticeController.php:83
+msgid "That's awesome! Could you please do me a BIG favor and give it a 5-star rating on WordPress to help us spread the word and boost our motivation?"
+msgstr "Это отлично! Не могли бы вы оказать нам БОЛЬШУЮ услугу и поставить ему максимальную оценку в каталоге WordPress, чтобы помочь нашему плагину становиться популярнее и повысить нашу мотивацию?"
+
+#: app/controllers/PrliFlyoutMenuController.php:91
+msgid "Suggest a Feature"
+msgstr "Предложить функцию"
+
+#: app/controllers/PrliFlyoutMenuController.php:86
+msgid "Support & Docs"
+msgstr "Поддержка и документация"
+
+#: app/controllers/PrliFlyoutMenuController.php:34
+msgid "See Quick Links"
+msgstr "См. Быстрые ссылки"
+
+#: app/controllers/PrliLinksController.php:180
+msgid "Tell Me More"
+msgstr "Подробности"
+
+#: app/controllers/PrliAppController.php:206
+#: app/controllers/PrliLinksController.php:177
+#: app/controllers/PrliUpdateController.php:745
+msgid "Link Tags"
+msgstr "Тэги ссылок"
+
+#: app/controllers/PrliAppController.php:198
+#: app/controllers/PrliLinksController.php:176
+#: app/controllers/PrliUpdateController.php:739
+msgid "Link Categories"
+msgstr "Рубрики ссылок"
+
+#: app/controllers/PrliLinksController.php:175
+msgid "Support & Updates"
+msgstr "Поддержка и обновления"
+
+#: app/controllers/PrliLinksController.php:173
+msgid "Auto Create Pretty Links"
+msgstr "Авто-создание Pretty Links"
+
+#: app/controllers/PrliLinksController.php:146
+msgid "Advanced Features"
+msgstr "Расширенные возможности"
+
+#: app/views/admin/upgrade/reports.php:30
+msgid "No Pretty Link Reports were found"
+msgstr "Не найдено отчётов Pretty Link"
+
+#: app/controllers/PrliAppController.php:91
+msgid "You're using Pretty Links Lite. To unlock more features, consider <a href=\"https://prettylinks.com/pl/main-menu/upgrade?plugin-upgrade-header\">upgrading to Pro.</a>"
+msgstr "Вы используете Pretty Links Lite. Чтобы разблокировать больше возможностей, рассмотрите <a href=\"https://prettylinks.com/pl/main-menu/upgrade?plugin-upgrade-header\">обновление до Pro.</a>"
+
+#: app/controllers/PrliAppController.php:238
+#: app/controllers/PrliAppController.php:239
+#: app/controllers/PrliUpdateController.php:763
+msgid "Import / Export"
+msgstr "Импорт / Экспорт"
+
+#: app/controllers/PrliAppController.php:214
+#: app/controllers/PrliUpdateController.php:751
+msgid "Link Reports"
+msgstr "Отчёты по ссылке"
+
+#: app/controllers/PrliLinksController.php:178
+msgid "Plus Much More!"
+msgstr "И много чего ещё!"
+
+#: app/controllers/PrliLinksController.php:174
+msgid "Auto-Link Keywords"
+msgstr "Ключи авто-ссылок"
+
+#: app/controllers/PrliAppController.php:215
+msgid "Reports"
+msgstr "Отчёты"
+
+#: app/views/options/form.php:641
+msgid "Keyword &amp; URL Options"
+msgstr "Параметры ключевого слова и URL"
+
+#. Description of the plugin
+#: pretty-link.php
+msgid "Shrink, track and share any URL using your website and brand!"
+msgstr "Сокращайте, отслеживайте и шерьте любой URL, используя ваш веб-сайт и бренд!"
+
+#: app/views/links/form_advanced.php:22 js/build/editor.js:3
+#: js/editor/components/link-editor/index.js:381
+msgid "Sponsored Link"
+msgstr "Ссылка с атрибутом Sponsored"
+
+#: app/controllers/PrliLinksController.php:658
+#: app/views/admin/onboarding/features.php:34
+#: app/views/links/form_advanced.php:19
+#: app/views/shared/tinymce_form_popup.php:54
+msgid "Sponsored"
+msgstr "Sponsored"
+
+#: app/helpers/PrliLinksHelper.php:60
+msgid "Sponsored Enabled"
+msgstr "Атрибут Sponsored разрешён"
+
+#: app/views/options/form.php:127 app/views/options/form.php:453
+msgid "Add Sponsored"
+msgstr "Добавляет Sponsored"
+
+#: app/views/options/form.php:128
+msgid "Add the 'sponsored' attribute by default to new links. This will add sponsored in the HTTP Response headers when enabled."
+msgstr "Добавляет ко всем новым ссылкам атрибут 'sponsored'. Когда включено, добавляет 'sponsored' в ответы HTTP."
+
+#: app/views/links/form_advanced.php:10
+msgid "Add a nofollow and noindex to this link's http redirect header. (Recommended)"
+msgstr "Добавить атрибуты nofollow и noindex к http-заголовку переадресации этой ссылки. (Рекомендуется)"
+
+#: app/views/links/form_advanced.php:23
+msgid "Add a sponsored attribute to this link's http redirect header. Recommended if this is an affiliate link."
+msgstr "Добавить атрибут sponsored к http-заголовку переадресации. Рекомендуется для партнёрских ссылок."
+
+#: app/views/options/form.php:125
+msgid "Enable Sponsored"
+msgstr "Разрешает атрибут Sponsored"
+
+#: app/controllers/PrliLinksController.php:653
+#: app/controllers/PrliLinksController.php:660
+#: app/controllers/PrliLinksController.php:667
+msgid "No Change"
+msgstr "Без изменений"
+
+#: app/controllers/PrliAppController.php:521
+msgid "Oops, Copy Failed!"
+msgstr "Ох..., сбой копирования!"
+
+#: app/controllers/PrliAppController.php:520
+msgid "Copied!"
+msgstr "Скопировано!"
+
+#: app/controllers/PrliLinksController.php:374
+msgid "Pretty Link created."
+msgstr "Pretty Link создана."
+
+#: app/controllers/PrliLinksController.php:370
+msgid "Pretty Link updated."
+msgstr "Pretty Link обновлена."
+
+#: app/controllers/PrliAppController.php:519
+msgid "Copy to Clipboard"
+msgstr "Скопировать в буфер обмена"
+
+#: app/controllers/PrliLinksController.php:542
+msgid "Target"
+msgstr "Цель"
+
+#: app/controllers/PrliLinksController.php:73
+msgid "View Pretty Link"
+msgstr "Посмотреть Pretty Link"
+
+#: app/controllers/PrliLinksController.php:71
+msgid "Edit Pretty Link"
+msgstr "Редактировать Pretty Link"
+
+#: app/views/links/form_pro.php:100
+msgid "Time"
+msgstr "Время"
+
+#: app/views/links/form_pro.php:99
+msgid "Technology"
+msgstr "Технологии"
+
+#: app/views/links/form_pro.php:98
+msgid "Geographic"
+msgstr "Географическое положение"
+
+#: app/views/links/form_pro.php:90
+msgid "These powerful options are available to give you dynamic control over redirection for this pretty link."
+msgstr "Эти мощные настройки дают вам динамический контроль над редиректами для этой pretty link."
+
+#: app/views/links/form_pro.php:89
+msgid "Dynamic Redirection Options"
+msgstr "Настройки динамического редиректа"
+
+#: app/views/links/form_pro.php:86
+msgid "Dynamic Redirection"
+msgstr "Динамическая переадресация"
+
+#. translators: %1$s: open link tag, %2$s close link tag
+#: app/views/tools/form.php:31
+msgid "Just drag this \"Get PrettyLink\" link to your toolbar to install the bookmarklet. As you browse the web, you can just click this bookmarklet to create a pretty link from the current url you're looking at. %1$s(more help)%2$s"
+msgstr "Просто перетащите эту ссылку \"Получить PrettyLink\" на панель управления, чтобы установить букмарклет. Во время web-сёрфинга, просто щёлкните по букмарклету, чтобы создать pretty link из текущего url. %1$s(больше помощи)%2$s"
+
+#: app/views/links/form_pro.php:97
+msgid "Rotation"
+msgstr "Чередование"
+
+#: app/views/admin/popups/rating.php:13
+msgid "No"
+msgstr "Нет"
+
+#: app/views/admin/popups/rating.php:12
+msgid "Yes"
+msgstr "Да"
+
+#: app/views/links/form_pro.php:66 app/views/links/form_pro.php:69
+msgid "Head Scripts"
+msgstr "Скрипты заголовка"
+
+#: app/views/links/form_pro.php:49
+msgid "Auto-Replace URLs"
+msgstr "Авто-замена URL"
+
+#: app/views/links/form_pro.php:46
+msgid "URL Replacements"
+msgstr "Замены URL"
+
+#: app/views/links/form_pro.php:36
+msgid "Enter a comma separated list of keywords / keyword phrases that you'd like to replace with this link in your Posts & Pages."
+msgstr "Введите разделённый запятыми список ключевых слов/фраз, которые хотите заменить для этой ссылки в Записях и на Страницах."
+
+#: app/views/links/form_pro.php:35
+msgid "Auto-Replace Keywords"
+msgstr "Авто-заменяемые ключевые слова"
+
+#: app/views/groups/list.php:20
+msgid "Search"
+msgstr "Поиск"
+
+#: app/views/clicks/list.php:62
+msgid "Search Clicks"
+msgstr "Поиск кликов"
+
+#: app/views/groups/list.php:80 app/views/groups/list.php:84
+msgid "View links in %s"
+msgstr "Посмотреть ссылки в %s"
+
+#: app/views/clicks/list.php:43
+msgid "Customize"
+msgstr "Настроить"
+
+#: app/views/clicks/csv_download.php:4 app/views/clicks/list.php:6
+msgid "For %s"
+msgstr "Для %s"
+
+#. translators: %1$s: open b tag, %2$s: close b tag, %3$d: current activation
+#. count, %4$s: max activations
+#: app/views/admin/update/active_license.php:44
+msgid "%1$s%3$d of %4$s%2$s sites have been activated with this license key"
+msgstr "С этим лицензионным ключом активировано сайтов %1$s%3$d из %4$s%2$s "
+
+#: app/views/admin/update/active_license.php:32
+msgid "Active on %s"
+msgstr "Активность: %s"
+
+#: app/views/admin/popups/upgrade.php:24
+msgid "Maybe Later"
+msgstr "Возможно, позже..."
+
+#: app/views/admin/popups/upgrade.php:17
+msgid "Plus, upgrading is fast, easy and won't disrupt any of your existing links or data."
+msgstr "Кроме того, апгрейд быстр, прост и не разрушит ваших текущих ссылок или данных."
+
+#: app/views/admin/popups/upgrade.php:13
+msgid "Split-test your Pretty Links"
+msgstr "Сплит-тест ваших Pretty Link"
+
+#: app/views/admin/popups/upgrade.php:12
+msgid "Expire your Pretty Links"
+msgstr "Ваши Pretty Links истекают"
+
+#: app/views/admin/popups/upgrade.php:11
+msgid "Redirect by location, time, device or rotation"
+msgstr "Переадресация по месту, времени, устройству или ротационная"
+
+#: app/views/admin/popups/upgrade.php:10
+msgid "Redirect with cloaking, Javascript or Meta-refresh"
+msgstr "Переадресовать с клоакингом, JavaScript-ом, или тэгом Meta-refresh"
+
+#: app/views/admin/popups/upgrade.php:9
+msgid "Monetize existing content with automated Pretty Link placement"
+msgstr "Монетизация существующего содержимого с автоматически размещенными Pretty Links"
+
+#: app/views/admin/popups/upgrade.php:7
+msgid "Unlock Pretty Links' PRO features and you'll be able to:"
+msgstr "Разблокируйте PRO-функции Pretty Links и вы сможете:"
+
+#: app/views/admin/popups/rating.php:29 app/views/admin/popups/rating.php:37
+msgid "Leave Feedback"
+msgstr "Оставить отзыв"
+
+#: app/controllers/PrliReviewNoticeController.php:79
+#: app/views/admin/popups/rating.php:8
+msgid "Are you enjoying using Pretty Links?"
+msgstr "Вам понравилось использовать Pretty Links?"
+
+#: app/views/links/form_pro.php:20
+msgid "Expire Link"
+msgstr "Ссылка с истекшим сроком действия"
+
+#: app/views/links/form_pro.php:21
+msgid "Set this link to expire after a specific date or number of clicks."
+msgstr "Установить эту ссылку, как \"с истёкшим сроком\", после определённого числа кликов"
+
+#: app/views/links/form_pro.php:17
+msgid "Expire"
+msgstr "Истечение срока действия"
+
+#: app/views/links/form.php:35 app/views/links/form_product_display.php:33
+msgid "Basic"
+msgstr "Основные"
+
+#: app/views/admin/popups/rating.php:30
+msgid "To help us improve Pretty Links, would you mind taking a moment to leave feedback?"
+msgstr "Чтобы помочь нам улучшить Pretty Links, можете найти минутку для обратной связи?"
+
+#: app/views/admin/onboarding/welcome.php:112
+msgid "Dynamic Redirect Types"
+msgstr "Типы динамической переадресации"
+
+#: app/controllers/PrliLinksController.php:172
+#: app/views/admin/onboarding/welcome.php:101
+msgid "Advanced Redirect Types"
+msgstr "Расширенные типы переадресации"
+
+#: app/views/admin/onboarding/welcome.php:59
+msgid "The Power of Pretty Links Pro"
+msgstr "Мощь Pretty Links Pro"
+
+#: app/views/admin/onboarding/welcome.php:53
+msgid "Wasn't that easy? Now, you can use this link wherever you want!"
+msgstr "Это было просто, не так ли? Теперь, вы сможете использовать эту ссылку где захотите!"
+
+#: app/views/admin/onboarding/welcome.php:48
+#: app/views/admin/onboarding/welcome.php:49
+msgid "Copy the Pretty Link URL"
+msgstr "Скопировать URL Pretty Link"
+
+#: app/views/admin/onboarding/welcome.php:43
+#: app/views/admin/onboarding/welcome.php:44
+msgid "Click \"Update\""
+msgstr "Щёлкните \"Обновить\""
+
+#: app/views/admin/onboarding/welcome.php:38
+#: app/views/admin/onboarding/welcome.php:39
+msgid "Customize your Pretty Link Slug"
+msgstr "Настроить ярлык вашей Pretty LInk"
+
+#: app/views/admin/onboarding/welcome.php:33
+#: app/views/admin/onboarding/welcome.php:34
+msgid "Enter the URL of your Affiliate Link"
+msgstr "Введите URL вашей аффилиат-ссылки"
+
+#: app/views/admin/onboarding/welcome.php:28
+#: app/views/admin/onboarding/welcome.php:29
+msgid "Click \"Add New Link\""
+msgstr "Щёлкните \"Добавить новую ссылку\""
+
+#: app/views/admin/onboarding/welcome.php:62
+msgid "There are many reasons that premium users of Pretty Links <br> are able to take their business to the next level:"
+msgstr "Есть много причин, по которым премиум-пользователи Pretty Links <br> могут вывести свой бизнес на новый уровень:"
+
+#: app/views/admin/onboarding/welcome.php:8
+msgid "Welcome to Pretty Links"
+msgstr "Добро пожаловать в Pretty Links"
+
+#: app/views/options/form.php:1098
+msgid "Enable Public Links"
+msgstr "Разрешить публичные ссылки"
+
+#: app/views/options/form.php:1090
+msgid "Public Links Creation Options"
+msgstr "Настройки создания публичных ссылок"
+
+#: app/views/options/form.php:1064
+msgid "Top and Bottom"
+msgstr "Сверху и снизу"
+
+#: app/views/options/form.php:1063
+msgid "Bottom"
+msgstr "Снизу"
+
+#: app/views/options/form.php:1062
+msgid "Top"
+msgstr "Сверху"
+
+#: app/views/options/form.php:1067
+msgid "Social Buttons Manual Placement"
+msgstr "Ручное размещение кнопок соцсетей"
+
+#: app/views/options/form.php:1100
+msgid "Enable Public Link Creation on this Site"
+msgstr "Разрешить создание публичных ссылок на этом сайте"
+
+#: app/views/options/form.php:1049
+msgid "Social Buttons Placement"
+msgstr "Размещение кнопок соцсетей"
+
+#: app/views/options/form.php:1047
+msgid "Buttons Placement"
+msgstr "Размещение кнопок"
+
+#: app/views/options/form.php:1022
+msgid "Social Buttons"
+msgstr "Кнопки соцсетей"
+
+#: app/views/options/form.php:1020
+msgid "Buttons"
+msgstr "Кнопки"
+
+#: app/views/options/form.php:1016 app/views/options/form.php:1082
+msgid "Social Buttons Options"
+msgstr "Параметры кнопок соцсети"
+
+#: app/views/options/form.php:676
+msgid "Create Pretty Links for Pages"
+msgstr "Создать Pretty Links для страниц"
+
+#: app/views/options/form.php:673
+msgid "Page Shortlinks"
+msgstr "Короткие ссылки для страницы"
+
+#: app/views/options/form.php:659
+msgid "Create Pretty Links for Posts"
+msgstr "Создать Pretty Links для записей"
+
+#: app/views/options/form.php:656
+msgid "Post Shortlinks"
+msgstr "Короткие ссылки для записи"
+
+#: app/views/options/form.php:648 app/views/options/form.php:692
+msgid "Auto-Create Shortlink Options"
+msgstr "Настройки авто-создаваемых коротких ссылок"
+
+#: app/views/options/form.php:677
+msgid "Automatically Create a Pretty Link for each of your published Pages"
+msgstr "Автоматически создать Pretty Link для каждой из опубликованных страниц"
+
+#: app/views/options/form.php:660
+msgid "Automatically Create a Pretty Link for each of your published Posts"
+msgstr "Автоматически создать Pretty Link для каждой из опубликованных записей"
+
+#: app/views/options/form.php:581
+msgid "Replace in Feeds"
+msgstr "Заменить в фидах"
+
+#: app/views/options/form.php:564
+msgid "Replace in Comments"
+msgstr "Заменить в комментариях"
+
+#: app/views/options/form.php:566
+msgid "Replace Keywords and URLs in Comments"
+msgstr "Заменить ключевые слова и URLы в комментариях"
+
+#: app/views/options/form.php:523
+msgid "Replace All URLs"
+msgstr "Заменить все URL"
+
+#: app/views/options/form.php:525
+msgid "Replace All non-Pretty Link URLs With Pretty Link URLs"
+msgstr "Заменить все URL не-Pretty Link на URLы Pretty Link"
+
+#: app/views/options/form.php:583
+msgid "Replace Keywords and URLs in Feeds"
+msgstr "Заменить ключевые слова и URL в фидах"
+
+#: app/views/options/form.php:567
+msgid "This option will enable the keyword / URL replacement routine to run in Comments."
+msgstr "Эта настройка включит процедуру замены ключевых слов/URL в комментариях."
+
+#: app/views/options/form.php:399
+msgid "Automatically Add Affiliate Link Disclosures to Keyword Replacements"
+msgstr "Автоматически добавить раскрытие партнерских ссылок при замене ключевых слов"
+
+#: app/views/options/form.php:396
+msgid "Keyword Disclosure"
+msgstr "Раскрытие ключевого слова"
+
+#: app/views/options/form.php:418
+msgid "Open in New Window"
+msgstr "Открыть в новом окне"
+
+#: app/views/options/form.php:288
+msgid "FYI, your current IP address is %s."
+msgstr "К вашему сведению, ваш текущий IP-адрес: %s."
+
+#: app/views/options/form.php:347
+msgid "Keyword &amp; URL Auto Replacements Options"
+msgstr "Настройки авто-замен ключевых слов &amp; URL"
+
+#: app/views/options/form.php:420
+msgid "Open Keyword Replacement Links in New Window"
+msgstr "Открыть замену ключевых слов ссылок в новом окне"
+
+#: app/views/options/form.php:379
+msgid "Set Keyword Replacement Thresholds"
+msgstr "Установить пороговые значения замены ключевых слов"
+
+#: app/views/options/form.php:606
+msgid "Automatically Add a Link to Disclosures"
+msgstr "Автоматически добавить ссылку к раскрытию"
+
+#: app/views/options/form.php:501
+msgid "Enable URL Replacements"
+msgstr "Включить замену URL"
+
+#: app/views/options/form.php:201
+msgid "Generate QR Codes"
+msgstr "Генерировать QR-коды"
+
+#: app/views/options/form.php:199
+msgid "Enable %sQR Codes%s"
+msgstr "Включить %sQR-коды%s"
+
+#: app/views/options/form.php:175
+msgid "The number of characters to use when auto-generating a random slug for pretty links. The default is 4. You cannot use less than 2."
+msgstr "Число символов, используемое при авто-генерации случайного ярлыка pretty links. По-умолчанию, 4. Нельзя использовать меньше 2"
+
+#: app/views/options/form.php:230 app/views/options/form.php:232
+msgid "Global Head Scripts"
+msgstr "Скрипты глобального заголовка"
+
+#: app/views/options/form.php:172 app/views/options/form.php:174
+msgid "Slug Character Count"
+msgstr "Число символов в ярлыке"
+
+#: app/controllers/PrliLinksController.php:539
+#: app/views/admin/popups/prettypay.php:46
+#: app/views/admin/popups/prettypay.php:380
+#: app/views/links/prettypay_link_stripe.php:251
+msgid "Settings"
+msgstr "Настройки"
+
+#: app/views/options/form.php:153 app/views/options/form.php:155
+msgid "Base Slug Prefix"
+msgstr "Основной префикс ярлыка"
+
+#: app/views/admin/onboarding/parts/link_popup.php:15
+#: app/views/options/form.php:81
+msgid "Redirection"
+msgstr "Переадресация"
+
+#: app/helpers/PrliOnboardingHelper.php:125
+#: app/views/admin/onboarding/features.php:67 app/views/options/form.php:53
+msgid "Replacements"
+msgstr "Замены"
+
+#: app/views/shared/link-table-nav.php:16
+#: app/views/shared/link-table-nav.php:106 app/views/shared/table-nav.php:14
+msgid "Displaying %1$s&#8211;%2$s of %3$s"
+msgstr "Показаны %1$s&#8211;%2$s из %3$s"
+
+#: app/controllers/PrliAppController.php:762
+msgid "Ajax error"
+msgstr "Ошибка Ajax"
+
+#: app/controllers/PrliAppController.php:761
+msgid "Invalid server response"
+msgstr "Неверный ответ сервера"
+
+#: app/controllers/PrliAppController.php:269
+msgid "Welcome"
+msgstr "Добро пожаловать"
+
+#: app/controllers/PrliAppController.php:265
+#: app/views/prettypay/fee_notice.php:7
+msgid "Upgrade"
+msgstr "Обновить"
+
+#: app/controllers/PrliLinksController.php:937
+msgid "All Groups (Legacy)"
+msgstr "Все группы (устаревшее)"
+
+#: app/controllers/PrliLinksController.php:900
+msgid "An error occurred creating the link"
+msgstr "При создании ссылки произошла ошибка"
+
+#: app/controllers/PrliLinksController.php:871
+msgid "Security check failed"
+msgstr "Проверка безопасности не удалась"
+
+#: app/controllers/PrliAppController.php:74
+#: app/controllers/PrliAppController.php:133
+#: app/controllers/PrliAppController.php:147
+#: app/controllers/PrliAppController.php:161
+#: app/controllers/PrliLinksController.php:474
+#: app/controllers/PrliLinksController.php:849
+#: app/controllers/PrliLinksController.php:867
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/LicenseManager.php:203
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/LicenseManager.php:260
+msgid "Insufficient permissions"
+msgstr "Недостаточно прав"
+
+#: app/views/options/form.php:54
+msgid "Auto-Create Links"
+msgstr "Авто-создаваемые ссылки"
+
+#: app/controllers/PrliLinksController.php:863
+#: app/controllers/PrliStripeController.php:604
+#: app/controllers/PrliStripeController.php:741
+#: app/controllers/PrliStripeController.php:747
+#: app/controllers/PrliStripeController.php:1141
+#: app/controllers/PrliUpdateController.php:200
+msgid "Bad request"
+msgstr "Плохой запрос"
+
+#: app/controllers/PrliLinksController.php:785
+msgid "Pretty Link &raquo;"
+msgstr "Pretty Link &raquo;"
+
+#: app/controllers/PrliLinksController.php:540
+#: app/views/admin/popups/prettypay.php:51
+#: app/views/admin/popups/prettypay.php:381
+msgid "Link Title"
+msgstr "Заголовок ссылки"
+
+#: app/controllers/PrliLinksController.php:509
+#: app/views/admin/popups/prettypay.php:66
+#: app/views/admin/popups/prettypay.php:384 app/views/links/form_pro.php:32
+msgid "Keywords"
+msgstr "Ключевые слова"
+
+#: app/controllers/PrliAppController.php:207
+#: app/controllers/PrliLinksController.php:508
+#: app/views/admin/popups/prettypay.php:61
+#: app/views/admin/popups/prettypay.php:383
+msgid "Tags"
+msgstr "Метки"
+
+#: app/controllers/PrliAppController.php:199
+#: app/controllers/PrliLinksController.php:507
+#: app/views/admin/popups/prettypay.php:56
+#: app/views/admin/popups/prettypay.php:382
+msgid "Categories"
+msgstr "Рубрики"
+
+#: app/controllers/PrliLinksController.php:485
+msgid "Fix the following errors:"
+msgstr "Исправлены следующие ошибки:"
+
+#: app/controllers/PrliLinksController.php:483
+msgid "Success!"
+msgstr "Успешно!"
+
+#: app/controllers/PrliLinksController.php:138
+msgid "Pretty Link Settings"
+msgstr "Настройки Pretty Link"
+
+#: app/controllers/PrliLinksController.php:77
+msgid "Parent Pretty Link:"
+msgstr "Родительская Pretty Link:"
+
+#: app/controllers/PrliLinksController.php:76
+msgid "No Pretty Links found in Trash"
+msgstr "В корзине нет Pretty Links"
+
+#: app/controllers/PrliLinksController.php:75
+msgid "No Pretty Links found"
+msgstr "Не найдены Pretty Links"
+
+#: app/controllers/PrliLinksController.php:74
+msgid "Search Pretty Links"
+msgstr "Искать Pretty Links"
+
+#: app/helpers/PrliAppHelper.php:20
+msgid "Upgrade to Pro to unlock this feature"
+msgstr "Обновитесь до Pto, чтобы разблокировать этот функционал"
+
+#: app/controllers/PrliLinksController.php:521
+#: app/controllers/PrliLinksController.php:527
+#: app/controllers/PrliLinksController.php:533 app/helpers/PrliAppHelper.php:19
+#: app/helpers/PrliOnboardingHelper.php:241 app/views/links/form.php:37
+msgid "Pro"
+msgstr "Pro"
+
+#: app/helpers/PrliLinksHelper.php:119
+msgid "This link isn't being tracked"
+msgstr "Эта ссылка не отслеживается"
+
+#: app/helpers/PrliLinksHelper.php:92 app/helpers/PrliLinksHelper.php:199
+msgid "Visit Short URL: %s in a New Window"
+msgstr "Откройте укороченный URL: %s в новом окне"
+
+#: app/helpers/PrliLinksHelper.php:91 app/helpers/PrliLinksHelper.php:188
+msgid "Visit Target URL: %s in a New Window"
+msgstr "Откройте целевой URL: %s в новом окне"
+
+#: app/models/PrliUtils.php:96
+msgid "The Slug can't be empty"
+msgstr "Ярлык не может быть пустым"
+
+#: app/models/PrliGroup.php:114
+msgid "Group must have a name."
+msgstr "Группа должна как-то называться."
+
+#: app/views/links/form_basic.php:25 app/views/options/form.php:93
+msgid "Get cloaked redirects, Javascript redirects and more when you %1$sUpgrade to PRO%2$s"
+msgstr "Переадресации через клоакинг, JavaScript и т.д. Вы получите, когда %1$sОбновитесь до PRO%2$s"
+
+#: app/views/options/form.php:59
+msgid "Public"
+msgstr "Открытая"
+
+#: app/controllers/PrliLinksController.php:782
+msgid "Target &raquo;"
+msgstr "Цель &raquo;"
+
+#: app/helpers/PrliLinksHelper.php:110
+msgid "%d Clicks / %d Uniques"
+msgstr "%d Переходы / %d Уникальные"
+
+#: app/models/PrliUtils.php:103
+msgid "This Pretty Link Slug is already taken. There's already another pretty link with this slug: %s"
+msgstr "Этот ярлык Pretty Link уже существует. Есть другая pretty link с этим ярлыком: %s"
+
+#: app/controllers/PrliLinksController.php:525
+msgid "Upgrade to a Pretty Links premium plan to get Link Tags"
+msgstr "Чтобы использовать метки ссылок, обновитесь до премиум-плана Pretty Links"
+
+#: app/controllers/PrliLinksController.php:531
+msgid "Upgrade to a Pretty Links premium plan to get Keyword Replacements"
+msgstr "Чтобы использовать замены ключевых слов, обновитесь до премиум-плана Pretty Links"
+
+#: app/controllers/PrliLinksController.php:519
+msgid "Upgrade to a Pretty Links premium plan to get Link Categories"
+msgstr "Чтобы использовать категории, обновитесь до премиум-плана Pretty Links"
+
+#: app/views/options/form.php:58
+msgid "Social"
+msgstr "Соцсети"
+
+#: app/controllers/PrliLinksController.php:808
+#: app/controllers/PrliLinksController.php:809
+msgid "View Split Test Report"
+msgstr "Просмотр отчёта по сплит-тесту"
+
+#: app/controllers/PrliAppController.php:414
+#: app/controllers/PrliAppController.php:420
+msgid "Activate Pro License"
+msgstr "Активировать Pro-лицензию"
+
+#. Plugin URI of the plugin
+#: pretty-link.php
+msgid "https://prettylinks.com/pl/plugin-uri"
+msgstr "https://prettylinks.com/pl/plugin-uri"
+
+#: app/views/admin/update/inactive_license.php:46
+msgid "Redirect based on a visitor's location"
+msgstr "Переадресация, основанная на местоположении посетителя"
+
+#: app/views/admin/update/inactive_license.php:45
+msgid "Protect your affiliate links by using Cloaked Redirects"
+msgstr "Защита ваших партнёрских ссылок с использованием переадресации через клоакинг"
+
+#: app/controllers/PrliLinksController.php:458
+msgid "Pretty Link Cleanup Visitor Locks"
+msgstr "Очистка блокировки посетителей Pretty Link"
+
+#: app/views/admin/update/inactive_license.php:48
+msgid "Find out what works and what doesn't by split testing your links"
+msgstr "Проверьте, что работает, а что - нет, через сплит-тестирование ссылок"
+
+#: app/views/admin/popups/upgrade.php:18
+#: app/views/admin/update/inactive_license.php:55
+msgid "We think you'll love it!"
+msgstr "Думаем, вам понравится!"
+
+#: app/controllers/PrliFlyoutMenuController.php:79
+#: app/views/admin/popups/upgrade.php:23
+msgid "Upgrade to Pretty Links Pro"
+msgstr "Обновиться до Pretty Links Pro"
+
+#: app/views/admin/popups/upgrade.php:6
+msgid "Upgrade to Pretty Links PRO"
+msgstr "Обновиться до Pretty Links Pro"
+
+#: app/views/admin/popups/rating.php:24 app/views/admin/popups/rating.php:36
+msgid "Remind Me Later"
+msgstr "Напомнить позже"
+
+#: app/views/admin/popups/rating.php:19 app/views/admin/popups/rating.php:31
+msgid "Thanks for your support!"
+msgstr "Спасибо за вашу поддержку!"
+
+#: app/controllers/PrliLinksController.php:470
+#: app/controllers/PrliLinksController.php:845
+#: app/controllers/PrliPopupController.php:95
+msgid "Forbidden"
+msgstr "Запрещено"
+
+#: app/controllers/PrliPopupController.php:63
+msgid "An unknown error occurred."
+msgstr "Возникла неизвестная ошибка."
+
+#: app/views/admin/popups/upgrade.php:14
+#: app/views/admin/update/inactive_license.php:49
+msgid "And much, much more!"
+msgstr "И многое, многое другое!"
+
+#: app/views/admin/popups/rating.php:40
+msgid "Never Remind Me Again"
+msgstr "Никогда не напоминайте мне снова"
+
+#: app/views/admin/popups/rating.php:25
+msgid "Review Pretty Links"
+msgstr "Предпросмотр Pretty Links"
+
+#: app/views/admin/popups/rating.php:17
+msgid "Rate Pretty Links"
+msgstr "Ранжировать Pretty Links"
+
+#: app/views/admin/update/inactive_license.php:47
+msgid "Auto-prettylink your Pages &amp; Posts"
+msgstr "Авто-перевод в Pretty Link ваших страниц и записей"
+
+#: app/views/admin/update/inactive_license.php:44
+msgid "Auto-replace keywords throughout your site with Pretty Links"
+msgstr "Авто-замена ключевых слов на сайте с использованием Pretty Links"
+
+#: app/controllers/PrliPopupController.php:114
+msgid "The popup was successfully stopped"
+msgstr "Всплывающее окно успешно остановлено"
+
+#: app/controllers/PrliPopupController.php:110
+msgid "The popup was successfully delayed"
+msgstr "Всплывающее окно успешно отложено"
+
+#: app/controllers/PrliPopupController.php:105
+msgid "Invalid popup"
+msgstr "Неверное всплывающее окно"
+
+#: app/controllers/PrliPopupController.php:99
+msgid "Must specify a popup"
+msgstr "Необходимо определить всплывающее окно"
+
+#: app/views/admin/update/inactive_license.php:53
+msgid "Plus, upgrading is fast, easy and won't disrupt any of your existing links or data. And there's even a 14 day money back guarantee."
+msgstr "Кроме того, обновление быстрое, простое и не разрушит существующие ссылки или данные. В любом случае, есть 14-ти дневная гарантия возврата денег."
+
+#: app/views/admin/popups/rating.php:18
+msgid "If you enjoy using Pretty Links would you mind taking a moment to rate it on WordPress.org? It won't take more than a minute."
+msgstr "Если вам нравится использовать Pretty Links, сможете найти время для его оценки на WordPress.org? Не займёт больше минуты."
+
+#: app/controllers/PrliAppController.php:415
+msgid "Buy"
+msgstr "Купить"
+
+#: app/controllers/PrliAddonsController.php:30
+#: app/controllers/PrliAppController.php:259
+#: app/controllers/PrliAppController.php:262
+#: app/views/admin/addons/addon-page-lite.php:32
+#: app/views/admin/addons/addon-page-pro.php:90
+#: app/views/admin/onboarding/license.php:17
+#: vendor-prefixed/caseproof/ground-level-mothership/Manager/AddonsManager.php:388
+#: vendor-prefixed/caseproof/ground-level-mothership/Views/products.php:100
+#: vendor-prefixed/caseproof/growth-tools/src/App.php:106
+msgid "Activate"
+msgstr "Активировать"
+
+#: app/controllers/PrliAppController.php:410
+#: app/controllers/PrliAppController.php:416
+#: app/controllers/PrliAppController.php:421
+#: app/controllers/PrliAppController.php:926
+msgid "Docs"
+msgstr "Документация"
+
+#. translators: %1$s: open link tag, %2$s: close link tag
+#: app/views/admin/update/activation_warning.php:58
+msgid "After you paste your license key on the %1$s\"Pretty Links\" -> \"Activate Pro\" admin page,%2$s you'll start getting automatic updates."
+msgstr "После вставки лицензионного ключа в %1$s\"Pretty Links\" -> \"Activate Pro\" админ-страницы,%2$s вы начнёте получать автоматические обновления."
+
+#: app/views/links/prettypay_link_stripe.php:91
+#: app/views/shared/tinymce_form_popup.php:31
+#: app/views/shared/tinymce_form_popup.php:48
+#: app/views/shared/tinymce_form_popup.php:56
+#: app/views/shared/tinymce_form_popup.php:64
+msgid "Default"
+msgstr "По умолчанию"
+
+#: app/views/shared/tinymce_form_popup.php:25
+#: app/views/shared/tinymce_form_popup.php:90
+msgid "Link Text"
+msgstr "Текст ссылки"
+
+#. Author URI of the plugin
+#: pretty-link.php
+msgid "http://prettylinks.com"
+msgstr "http://prettylinks.com"
+
+#: app/views/tools/form.php:89
+msgid "Clear all clicks"
+msgstr "Очистить все клики"
+
+#: app/views/tools/form.php:87
+msgid "Delete All Clicks"
+msgstr "Стереть все клики"
+
+#: app/views/tools/form.php:18 app/views/tools/form.php:25
+msgid "Bookmarklet"
+msgstr "Букмарклет"
+
+#: app/views/options/form.php:330 app/views/options/form.php:332
+msgid "Whitelist IP Addresses"
+msgstr "Белый список IP"
+
+#: app/views/shared/nav.php:14
+msgid "Connect:"
+msgstr "Подключение:"
+
+#: app/views/shared/nav.php:18
+msgid "Get Help:"
+msgstr "Получить помощь:"
+
+#: app/views/shared/public_link.php:22
+msgid "Here is your Pretty Link"
+msgstr "Вот ваша красивая ссылка"
+
+#: app/views/shared/public_link.php:30
+msgid "Here's your pretty link for"
+msgstr "Вот ваша красивая ссылка для"
+
+#: app/views/shared/tinymce_form_popup.php:4 js/build/editor.js:3
+#: js/editor/components/link-editor/index.js:64
+msgid "Insert Pretty Link"
+msgstr "Вставить красивую ссылку"
+
+#: app/views/shared/tinymce_form_popup.php:10 js/build/editor.js:3
+#: js/editor/components/link-editor/index.js:456
+msgid "Create New Pretty Link"
+msgstr "Создать новую красивую ссылку"
+
+#: app/views/shared/tinymce_form_popup.php:17
+msgid "Slug"
+msgstr "Ярлык"
+
+#: app/views/shared/tinymce_form_popup.php:20
+msgid "valid"
+msgstr "верный"
+
+#: app/views/shared/tinymce_form_popup.php:21
+msgid "invalid"
+msgstr "неверный"
+
+#: app/views/tools/form.php:82
+msgid "Clear clicks 90 days or older"
+msgstr "Очистить переходы 90 дней, или старше"
+
+#: app/views/tools/form.php:80
+msgid "Delete Clicks older than 90 days"
+msgstr "Удалить переходы старше 90 дней"
+
+#: app/views/tools/form.php:77
+msgid "Clear clicks 30 days or older"
+msgstr "Очистить переходы 30 дней, или старше"
+
+#: app/views/tools/form.php:75
+msgid "Delete Clicks older than 30 days"
+msgstr "Удалить переходы старше 30 дней"
+
+#: app/views/shared/tinymce_form_popup.php:78
+msgid "Use Existing Pretty Link"
+msgstr "Использовать существующую Pretty Link"
+
+#: app/views/shared/tinymce_form_popup.php:74
+msgid "Insert New Pretty Link"
+msgstr "Вставить новую Pretty Link"
+
+#: app/views/shared/tinymce_form_popup.php:71
+#: app/views/shared/tinymce_form_popup.php:95
+msgid "Open this Pretty Link in a new window/tab"
+msgstr "Открыть Pretty Link в новом окне/вкладке"
+
+#: app/controllers/PrliLinksController.php:655
+#: app/controllers/PrliLinksController.php:662
+#: app/controllers/PrliLinksController.php:669
+#: app/views/shared/tinymce_form_popup.php:50
+#: app/views/shared/tinymce_form_popup.php:58
+#: app/views/shared/tinymce_form_popup.php:66
+msgid "Disabled"
+msgstr "Отключить"
+
+#: app/controllers/PrliLinksController.php:654
+#: app/controllers/PrliLinksController.php:661
+#: app/controllers/PrliLinksController.php:668
+#: app/views/shared/tinymce_form_popup.php:49
+#: app/views/shared/tinymce_form_popup.php:57
+#: app/views/shared/tinymce_form_popup.php:65
+msgid "Enabled"
+msgstr "Включить"
+
+#: app/views/shared/tinymce_form_popup.php:41
+msgid "Javascript"
+msgstr "Javascript"
+
+#: app/views/shared/tinymce_form_popup.php:40
+msgid "Meta Refresh"
+msgstr "Meta Refresh"
+
+#: app/views/shared/tinymce_form_popup.php:39
+msgid "Pixel"
+msgstr "Пиксель"
+
+#: app/views/admin/onboarding/parts/link_popup.php:20
+#: app/views/shared/tinymce_form_popup.php:38
+msgid "Cloaked"
+msgstr "Клоакинг"
+
+#: app/views/options/form.php:56 app/views/shared/tinymce_form_popup.php:37
+msgid "Pretty Bar"
+msgstr "Pretty Bar"
+
+#: app/views/shared/tinymce_form_popup.php:80
+msgid "Search by Slug, Title, or Target URL..."
+msgstr "Искать по ярлыку, заголовку или целевому URL..."
+
+#: app/views/options/form.php:333
+msgid "Enter IP Addresses or IP Ranges you want to always include in your Click data and Stats even if they are flagged as robots. Each IP Address should be separated by commas. Example: 192.168.0.1, 192.168.2.1, 192.168.3.4 or 192.168.*.*"
+msgstr "Введите IP-адреса или диапазоны IP, которые вы хотите исключить из данных переходов и статистики, если они помечены. как роботные. Каждый IP-адрес должен быть разделён запятыми. Например:  192.168.0.1, 192.168.2.1, 192.168.3.4 или 192.168.*.*"
+
+#: app/views/tools/form.php:78
+msgid "This will clear all clicks in your database that are older than 30 days."
+msgstr "Очищение всех переходов из БД, старше чем 30 дней."
+
+#: app/views/tools/form.php:26
+msgid "Get Pretty Link"
+msgstr "Получить Pretty Link"
+
+#: app/views/tools/form.php:19 app/views/tools/form.php:70
+msgid "Trim Clicks"
+msgstr "Обрезать переходы"
+
+#: app/views/shared/tinymce_form_popup.php:100
+msgid "Insert Existing Pretty Link"
+msgstr "Вставить существующую Pretty Link"
+
+#: app/views/tools/form.php:28
+msgid "Install Pretty Link Bookmarklet"
+msgstr "Установить букмарклет Pretty Link"
+
+#: app/views/tools/form.php:90
+msgid "Seriously, only click this link if you want to delete all the Click data in your database."
+msgstr "Просто перейдите по этой ссылке, чтобы удалить все данные о переходах из вашей БД."
+
+#: app/views/tools/form.php:83
+msgid "This will clear all clicks in your database that are older than 90 days."
+msgstr "Это очистит все переходы из БД, старше чем 90 дней."
+
+#: app/views/tools/form.php:52
+msgid "Navigate through your Bookmarks until you find the new bookmark and click \"Edit\""
+msgstr "Ищите в закладках, пока не найдёте новую, а потом перейдите на \"Правка\""
+
+#: app/models/PrliClick.php:239
+msgid "all links"
+msgstr "все ссылки"
+
+#: app/helpers/PrliLinksHelper.php:46
+msgid "Temporary (307) Redirection"
+msgstr "Временная (307) переадресация"
+
+#: app/helpers/PrliLinksHelper.php:15
+#: app/views/admin/onboarding/parts/link_popup.php:17
+#: app/views/links/form_basic.php:17 app/views/shared/tinymce_form_popup.php:33
+msgid "302 (Temporary)"
+msgstr "302 (Временная)"
+
+#: app/controllers/PrliUpdateController.php:667
+msgid "You do not have access."
+msgstr "У вас нет доступа."
+
+#: app/controllers/PrliUpdateController.php:628
+msgid "Your License Key was invalid"
+msgstr "Ваш лицензионный ключ неверен"
+
+#: app/controllers/PrliUpdateController.php:547
+msgid "Check for Update"
+msgstr "Проверить обновление"
+
+#: app/helpers/PrliLinksHelper.php:77 app/helpers/PrliLinksHelper.php:155
+msgid "Reset %s"
+msgstr "Сбросить %s"
+
+#: app/helpers/PrliLinksHelper.php:80 app/views/clicks/list.php:161
+msgid "View clicks for %s"
+msgstr "Посмотреть клики для %s"
+
+#: app/helpers/PrliLinksHelper.php:85 app/helpers/PrliLinksHelper.php:166
+msgid "Post %s to Twitter"
+msgstr "Запостить %s в Twitter"
+
+#: app/helpers/PrliLinksHelper.php:86 app/helpers/PrliLinksHelper.php:177
+msgid "Send %s in an Email"
+msgstr "Отправить %s в Email-е"
+
+#: app/models/PrliClick.php:249
+msgid "Unique hits"
+msgstr "Уникальные хиты"
+
+#: app/views/links/form_basic.php:7
+msgid "Redirection*"
+msgstr "Переадресация*"
+
+#: app/views/links/form_basic.php:10 app/views/options/form.php:83
+msgid "Redirection Type"
+msgstr "Тип переадресации"
+
+#: app/helpers/PrliLinksHelper.php:52
+msgid "Permanent (301) Redirection"
+msgstr "Постоянная (301) переадресация"
+
+#: app/helpers/PrliLinksHelper.php:49
+msgid "Temporary (302) Redirection"
+msgstr "Временная (302) переадресация"
+
+#: app/views/links/form_basic.php:11
+msgid "This is the method of redirection for your link."
+msgstr "Это - метод переадресации вашей pretty link."
+
+#: app/views/admin/update/ui.php:22
+msgid "Pretty Links Pro License"
+msgstr "Лицензия Pretty Links Pro"
+
+#: app/views/links/form_basic.php:65 app/views/links/form_basic.php:68
+msgid "Notes"
+msgstr "Примечания"
+
+#: app/controllers/PrliLinksController.php:665
+#: app/views/links/form_advanced.php:60 app/views/links/form_advanced.php:63
+#: app/views/shared/tinymce_form_popup.php:62
+msgid "Tracking"
+msgstr "Отслеживание"
+
+#: app/views/options/form.php:101 app/views/options/form.php:103
+msgid "Enable Tracking"
+msgstr "Разрешает отслеживание"
+
+#: app/views/links/form_basic.php:37
+msgid "This is the URL that your Pretty Link will redirect to."
+msgstr "Это - URL, на который ваша Pretty Link будет переадресована."
+
+#: app/views/links/form_basic.php:52
+msgid "This is how your pretty link will appear. You can edit the Pretty Link slug here."
+msgstr "То, как будет выглядеть pretty link. Здесь можно править ярлык Pretty Link."
+
+#: app/views/links/form_basic.php:69
+msgid "This is a field where you can enter notes about a particular link. This notes field is mainly for your own link management needs. It isn't currently used anywhere on the front end."
+msgstr "В это поле можно вписать заметки о конкретной ссылке. Они предназначаются для ваших ручных управленческих нужд. В настоящее время не используется на фронтенде."
+
+#: app/views/links/form_product_display.php:56
+#: app/views/links/form_product_display.php:59
+msgid "Description"
+msgstr "Описание"
+
+#: vendor-prefixed/caseproof/growth-tools/src/App.php:108
+msgid "Install"
+msgstr "Установить"
+
+#: app/views/admin/update/ui.php:16
+msgid "License"
+msgstr "Лицензия"
+
+#: app/controllers/PrliAddonsController.php:49
+#: app/controllers/PrliAppController.php:272
+msgid "Add-ons"
+msgstr "Дополнения"
+
+#: app/views/clicks/list.php:75 app/views/clicks/list.php:172
+msgid "OS"
+msgstr "ОС"
+
+#: app/helpers/PrliLinksHelper.php:75 app/views/groups/list.php:75
+#: app/views/groups/list.php:78
+msgid "Edit %s"
+msgstr "Редактировать %s"
+
+#: app/views/admin/update/active_license.php:27
+msgid "License Key:"
+msgstr "Лицензионный ключ:"
+
+#: app/views/admin/update/active_license.php:31
+msgid "Status:"
+msgstr "Состояние:"
+
+#: app/views/admin/update/active_license.php:35
+msgid "Product:"
+msgstr "Товар:"
+
+#: app/views/admin/update/active_license.php:39
+msgid "Activations:"
+msgstr "Активаций:"
+
+#: app/views/groups/list.php:7
+msgid "Add Group"
+msgstr "Добавить группу"
+
+#: app/views/groups/new.php:71 app/views/widgets/widget.php:21
+msgid "Create"
+msgstr "Создать"
+
+#: app/views/links/form_basic.php:33
+msgid "Target URL*"
+msgstr "Целевой URL*"
+
+#: app/controllers/PrliAppController.php:252
+msgid "Pretty Links | Tools"
+msgstr "Красивые ссылки | Инструменты"
+
+#: app/controllers/PrliAppController.php:255
+msgid "Pretty Links | Options"
+msgstr "Красивые ссылки | Параметры"
+
+#: app/controllers/PrliOptionsController.php:84
+msgid "Excluded IP Addresses must be a comma separated list of IPv4 or IPv6 addresses or ranges."
+msgstr "Исключенные IP адреса должны быть указаны списком IPv4 или IPv6 адресов или диапазонов адресов с разделением запятыми."
+
+#: app/controllers/PrliOptionsController.php:88
+msgid "Whitelist IP Addresses must be a comma separated list of IPv4 or IPv6 addresses or ranges."
+msgstr "IP адреса белого списка должны быть указаны списком IPv4 или IPv6 адресов или диапазонов адресов с разделением запятыми."
+
+#: app/controllers/PrliUpdateController.php:616
+msgid "You had an HTTP error connecting to Caseproof's Mothership API"
+msgstr "Возникла HTTP ошибка подключения к API Caseproof's Mothership"
+
+#: app/controllers/PrliUpdateController.php:645
+#: app/views/admin/update/active_license.php:19
+#: app/views/admin/update/edge_updates.php:4 app/views/widgets/widget.php:22
+msgid "Loading..."
+msgstr "Загрузка..."
+
+#: app/helpers/PrliLinksHelper.php:56
+msgid "Nofollow Enabled"
+msgstr "Включен атрибут nofollow"
+
+#: app/helpers/PrliLinksHelper.php:76 app/views/groups/list.php:79
+msgid "Delete %s"
+msgstr "Удалить %s"
+
+#: app/views/admin/update/inactive_license.php:57
+msgid "Upgrade to Pro today!"
+msgstr "Перейдите на PRO сейчас!"
+
+#: app/controllers/PrliLinksController.php:651
+#: app/views/admin/onboarding/features.php:23
+#: app/views/links/form_advanced.php:6
+msgid "No Follow"
+msgstr "nofollow"
+
+#: app/views/links/form_advanced.php:9
+msgid "Nofollow Link"
+msgstr "Ссылка Nofollow"
+
+#: app/views/links/form_advanced.php:32 app/views/links/form_advanced.php:35
+msgid "Delay Redirect"
+msgstr "Задержка перед перенаправлением"
+
+#: app/controllers/PrliLinksController.php:72 js/build/editor.js:3
+#: js/editor/components/link-editor/index.js:401
+msgid "New Pretty Link"
+msgstr "Новая красивая ссылка"
+
+#: app/views/options/form.php:49
+msgid "General"
+msgstr "Основное"
+
+#: app/views/options/form.php:52
+msgid "Reporting"
+msgstr "Отчёты"
+
+#: app/views/options/form.php:70
+msgid "General Options"
+msgstr "Основные настройки"
+
+#: app/views/options/form.php:76
+msgid "Default Link Options"
+msgstr "Параметры ссылок по умолчанию"
+
+#: app/models/PrliClick.php:246
+msgid "All clicks"
+msgstr "Все клики"
+
+#: app/views/clicks/csv_download.php:7
+msgid "All clicks on %s"
+msgstr "Все клики по %s"
+
+#: app/controllers/PrliToolsController.php:104
+msgid "No clicks older than %1$d days were found, so nothing was deleted"
+msgstr "Клики давностью более %1$d не были найдены, нечего очищать"
+
+#: app/controllers/PrliToolsController.php:95
+msgid "Click Database was Cleared."
+msgstr "Статистика кликов очищена."
+
+#: app/controllers/PrliToolsController.php:101
+msgid "Clicks older than %1$d days (%2$d Clicks) were deleted"
+msgstr "Клики давностью более %1$d дней (%2$d переходов) были удалены"
+
+#: app/controllers/PrliAppController.php:248
+msgid "Pretty Links | Clicks"
+msgstr "Красивые ссылки| Клики"
+
+#: app/views/admin/update/inactive_license.php:22
+msgid "Activate License Key on %s"
+msgstr "Активировать лицензионный ключ на %s"
+
+#: app/views/admin/update/inactive_license.php:15
+msgid "Enter Your Pretty Links Pro License Key:"
+msgstr "Введите лицензионный ключ для Pretty Links Pro:"
+
+#: app/views/admin/update/active_license.php:59
+msgid "Upgrade plugin to Pro"
+msgstr "Улучшить плагин до Pro"
+
+#: app/views/clicks/csv_download.php:3
+msgid "Download Clicks"
+msgstr "Скачать клики"
+
+#: app/views/clicks/csv_download.php:6
+msgid "Click Reports:"
+msgstr "Отчёт по кликам:"
+
+#: app/views/clicks/csv_download.php:24
+msgid "Clicks %d-%d (%d Records)"
+msgstr "Клики %d-%d (%d записей)"
+
+#: app/views/admin/update/activation_warning.php:7
+msgid "Error with PRETTYLINK_LICENSE_KEY: %s"
+msgstr "Ошибка PRETTYLINK_LICENSE_KEY: %s"
+
+#: app/views/admin/update/activation_warning.php:14
+#: app/views/admin/update/activation_warning.php:41
+msgid "Pretty Links Pro isn't able to get critical automatic updates"
+msgstr "Pretty Links Pro не получает важных автоматических обновлений"
+
+#: app/views/admin/update/activation_warning.php:15
+msgid "It looks like you used to have Pretty Links Pro activated with a username and password but now you need a license key to activate it."
+msgstr "Похоже, что у вас активирован Pretty Links Pro с именем пользователя и паролем, однако сейчас требуется ключ лицензии для активации."
+
+#. translators: %1$s: open link tag, %2$s: close link tag
+#: app/views/admin/update/activation_warning.php:21
+msgid "You can get your license key by logging in at %1$sPrettyLinkPro.com.%2$s"
+msgstr "Вы можете получить ключ лицензии зайдя на %1$sPrettyLinkPro.com.%2$s"
+
+#: app/models/PrliUtils.php:88
+msgid "*** Pretty Links Debug: %s"
+msgstr "*** Pretty Links отладка: %s"
+
+#: app/views/clicks/list.php:21
+msgid "Back to Clicks"
+msgstr "Назад к кликам"
+
+#: app/views/clicks/list.php:32
+msgid "All Clicks"
+msgstr "Все клики"
+
+#: app/views/clicks/list.php:33
+msgid "Unique Clicks"
+msgstr "Уникальные клики"
+
+#: app/views/clicks/list.php:147
+msgid "View All Activity for IP Address: %s"
+msgstr "Посмотреть всю активность с IP адреса: %s"
+
+#: app/views/clicks/list.php:111
+msgid "No Clicks have been recorded yet"
+msgstr "Кликов пока не зарегистрировано"
+
+#: app/helpers/PrliLinksHelper.php:34
+msgid "Cloaked Redirection"
+msgstr "Переадресация через клоакинг"
+
+#: app/views/links/form_basic.php:48
+msgid "Pretty Link*"
+msgstr "Pretty Link*"
+
+#: app/views/options/form.php:115
+msgid "Add No Follow"
+msgstr "Добавить No Follow"
+
+#: app/views/options/form.php:113
+msgid "Enable No Follow"
+msgstr "Разрешить No Follow"
+
+#: app/views/admin/update/active_license.php:55
+msgid "Deactivate License Key on %s"
+msgstr "Деактивировать лицензионный ключ для %s"
+
+#: app/views/admin/update/active_license.php:24
+msgid "Active License Key Information:"
+msgstr "Информация о текущем лицензионном ключе:"
+
+#: app/views/admin/addons/addon-page-pro.php:115
+msgid "There were no Add-ons found for your license or lack thereof..."
+msgstr "Для вашей лицензии не было найдено дополнений или их отсутствие..."
+
+#. translators: %1$s: open link tag, %2$s: close link tag
+#: app/views/admin/update/activation_warning.php:47
+msgid "You can retrieve or purchase a license key at %1$sPrettyLinks.com%2$s to enable automatic updates today."
+msgstr "Вы можете получить или купить лицензионный ключ на %1$sPrettyLinks.com%2$s, чтобы сегодня же включить автоматические обновления."
+
+#. translators: %1$s: open link tag, %2$s: close link tag
+#: app/views/admin/update/activation_warning.php:32
+msgid "After you paste your license key on the %1$s\"Pretty Link\" -> \"Activate Pro\" admin page,%2$s you'll start getting updates again."
+msgstr "После вставки лицензионного ключа в %1$s\"Pretty Link\" -> \"Activate Pro\" админ-страницы,%2$s вы начнёте снова получать обновления."
+
+#: app/helpers/PrliLinksHelper.php:77
+msgid "Are you sure you want to reset your %s Pretty Link? This will delete all of the statistical data about this Pretty Link in your database."
+msgstr "Уверены, что хотите сбросить Pretty Link %s? Это удалит всю статистику об этой Pretty Link из вашей БД."
+
+#: app/helpers/PrliLinksHelper.php:37
+msgid "Pixel Tracking Redirection"
+msgstr "Перенаправление через отслеживание пикселя"
+
+#: app/helpers/PrliLinksHelper.php:31
+msgid "PrettyBar Redirection"
+msgstr "Перенаправление PrettyBar"
+
+#: app/controllers/PrliUpdateController.php:671
+msgid "Edge updates couldn't be updated."
+msgstr "Обновления Edge не могут обновиться."
+
+#: app/views/options/form.php:301
+msgid "Automatically Trim Clicks"
+msgstr "Автоматически обрезать переходы"
+
+#: app/views/options/form.php:299
+msgid "Auto-Trim Clicks"
+msgstr "Авто-обрезка переходов"
+
+#: app/views/options/form.php:284
+msgid "Excluded IP Addresses"
+msgstr "Исключенные IP-адреса"
+
+#: app/views/options/form.php:137
+msgid "Enable Permalink Fix"
+msgstr "Разрешить исправление постоянных ссылок"
+
+#: app/views/groups/list.php:81
+msgid "View hits in %s"
+msgstr "Посмотреть клики по %s"
+
+#: app/views/groups/list.php:79
+msgid "Are you sure you want to delete your %s Pretty Link Group?"
+msgstr "Вы уверены, что хотите удалить группу %s из Pretty Link?"
+
+#: app/views/clicks/list.php:150
+msgid "View All Activity for Visitor: %s"
+msgstr "Посмотреть всю активность посетителя %s"
+
+#: app/views/options/form.php:139
+msgid "Use fix for index.php Permalink Structure"
+msgstr "Использовать исправление для index.php структуры постоянных ссылок"
+
+#: app/views/options/form.php:267 app/views/options/form.php:269
+msgid "Tracking Style"
+msgstr "Стиль отслеживания"
+
+#: app/helpers/PrliLinksHelper.php:76
+msgid "Are you sure you want to delete your %s Pretty Link? This will delete the Pretty Link and all of the statistical data about it in your database."
+msgstr "Уверены, что хотите удалить Pretty Link %s? Это удалит Pretty Link  и всю статистику о ней из вашей БД."
+
+#: app/views/options/form.php:270
+msgid "Changing your tracking style can affect the accuracy of your existing statistics. Extended mode must be used for Conversion reporting."
+msgstr "Смена стиля отслеживания повлияет на существующую статистику. Для отчета по конверсиям должен использоваться расширенный режим."
+
+#: app/controllers/PrliAppController.php:248
+#: app/controllers/PrliLinksController.php:546 app/models/PrliClick.php:258
+#: app/views/admin/popups/prettypay.php:71
+#: app/views/admin/popups/prettypay.php:385 app/views/clicks/list.php:4
+#: app/views/groups/list.php:81
+msgid "Clicks"
+msgstr "Переходы"
+
+#: app/views/admin/addons/addon-page-pro.php:94
+#: vendor-prefixed/caseproof/ground-level-mothership/Views/products.php:109
+msgid "Install Add-on"
+msgstr "Установить дополнение"
+
+#: app/views/admin/addons/addon-page-lite.php:5
+#: app/views/admin/addons/addon-page-pro.php:5
+msgid "Pretty Links Add-ons"
+msgstr "Дополнения Pretty Link"
+
+#: app/controllers/PrliUpdateController.php:649
+msgid "Are you sure? Pretty Links will not be functional on %s if this License Key is deactivated."
+msgstr "Вы уверены? Pretty Links Pro перестанет работать на %s, если вы деактивируете лицензионный ключ."
+
+#: app/controllers/PrliAppController.php:252 app/views/tools/form.php:3
+msgid "Tools"
+msgstr "Инструменты"
+
+#: app/controllers/PrliClicksController.php:104
+msgid "All Links"
+msgstr "Все ссылки"
+
+#: app/controllers/PrliAppController.php:419
+#: app/helpers/PrliOnboardingHelper.php:243
+#: app/views/admin/update/inactive_license.php:28 app/views/shared/nav.php:9
+msgid "Upgrade to Pro"
+msgstr "Обновить до Pro"
+
+#: app/views/options/form.php:4
+msgid "User Manual"
+msgstr "Руководство пользователя"
+
+#: app/views/options/form.php:262
+msgid "Reporting Options"
+msgstr "Настройки отчетов"
+
+#: app/views/options/form.php:282
+msgid "Excluded IP Addresses:"
+msgstr "Исключенные IP-адреса:"
+
+#: app/views/shared/public_link.php:41
+msgid "send this link to:"
+msgstr "отправить эту ссылку в:"
+
+#: app/views/options/form.php:274
+msgid "Normal Tracking"
+msgstr "Обычное отслеживание"
+
+#: app/controllers/PrliXmlRpcController.php:39
+#: app/controllers/PrliXmlRpcController.php:106
+#: app/controllers/PrliXmlRpcController.php:155
+#: app/controllers/PrliXmlRpcController.php:212
+#: app/controllers/PrliXmlRpcController.php:241
+#: app/controllers/PrliXmlRpcController.php:269
+#: app/controllers/PrliXmlRpcController.php:302
+#: app/controllers/PrliXmlRpcController.php:334
+msgid "Sorry, Login failed"
+msgstr "Извините, сбой логина"
+
+#: app/controllers/PrliOptionsController.php:70
+msgid "Options saved."
+msgstr "Настройки сохранены."
+
+#: app/views/shared/nav.php:19
+msgid "Tutorials"
+msgstr "Руководства"
+
+#: app/controllers/PrliClicksController.php:99
+msgid "Visitor: "
+msgstr "Посетитель:"
+
+#: app/controllers/PrliClicksController.php:94
+msgid "IP Address: "
+msgstr "IP-адрес:"
+
+#: app/views/shared/nav.php:6
+msgid "Pro Manual"
+msgstr "Руководство для Pro"
+
+#: app/controllers/PrliXmlRpcController.php:116
+msgid "You must provide a target URL"
+msgstr "Вы должны указать целевой URL"
+
+#: app/controllers/PrliXmlRpcController.php:45
+#: app/controllers/PrliXmlRpcController.php:112
+#: app/controllers/PrliXmlRpcController.php:161
+#: app/controllers/PrliXmlRpcController.php:218
+#: app/controllers/PrliXmlRpcController.php:247
+#: app/controllers/PrliXmlRpcController.php:275
+#: app/controllers/PrliXmlRpcController.php:308
+#: app/controllers/PrliXmlRpcController.php:340
+msgid "Sorry, you must be an administrator to access this resource"
+msgstr "Извините, вам нужно быть администратором, чтобы иметь доступ к этому ресурсу"
+
+#: app/views/options/form.php:84
+msgid "Select the type of redirection you want your newly created links to have."
+msgstr "Выберите тип переадресации, с которым будут создаваться все новые ссылки."
+
+#: app/views/options/form.php:104
+msgid "Default all new links to be tracked."
+msgstr "По-умолчанию, все новые ссылки будут отслеживаемыми."
+
+#: app/views/tools/form.php:53
+msgid "Delete all the text from the address"
+msgstr "Удалить весь текст из адреса"
+
+#: app/views/tools/form.php:49
+msgid "Copy this text:"
+msgstr "Копировать этот текст:"
+
+#: app/views/options/form.php:311 app/views/options/form.php:313
+msgid "Filter Robots"
+msgstr "Фильтровать роботов"
+
+#: app/controllers/PrliXmlRpcController.php:311
+#: app/controllers/PrliXmlRpcController.php:343
+msgid "Sorry, you must provide an id to lookup"
+msgstr "Извините, для поиска обеспечьте id"
+
+#: app/controllers/PrliXmlRpcController.php:350
+msgid "There was an error fetching your Pretty Link URL"
+msgstr "Произошла ошибка при получении URL вашей Pretty Link"
+
+#: app/controllers/PrliXmlRpcController.php:285
+#: app/controllers/PrliXmlRpcController.php:318
+msgid "There was an error fetching your Pretty Link"
+msgstr "Произошла ошибка при получении вашей Pretty Link"
+
+#: app/controllers/PrliXmlRpcController.php:252
+msgid "There was an error fetching the Pretty Links"
+msgstr "Произошла ошибка при получении ваших Pretty Links"
+
+#: app/controllers/PrliAppController.php:779
+msgid "Pretty Link Quick Add"
+msgstr "Быстрое добавление Pretty Link"
+
+#: app/controllers/PrliAppController.php:707
+msgid "Pretty Links Pro Successfully Uninstalled."
+msgstr "Pretty Links Pro успешно удалён."
+
+#: app/controllers/PrliXmlRpcController.php:36
+#: app/controllers/PrliXmlRpcController.php:103
+#: app/controllers/PrliXmlRpcController.php:152
+#: app/controllers/PrliXmlRpcController.php:209
+#: app/controllers/PrliXmlRpcController.php:238
+#: app/controllers/PrliXmlRpcController.php:266
+#: app/controllers/PrliXmlRpcController.php:299
+#: app/controllers/PrliXmlRpcController.php:331
+msgid "Sorry, XML-RPC Not enabled for this website"
+msgstr "Извините, но на сайте не включен XML-RPC"
+
+#: app/controllers/PrliXmlRpcController.php:144
+#: app/controllers/PrliXmlRpcController.php:194
+msgid "There was an error creating your Pretty Link"
+msgstr "Произошла ошибка при создании вашей Pretty Link красивой ссылки"
+
+#: app/controllers/PrliXmlRpcController.php:165
+msgid "You must provide the id of the link you want to update"
+msgstr "Следует указать id ссылки, которую вы желаете обновить"
+
+#: app/controllers/PrliXmlRpcController.php:223
+msgid "There was an error fetching the Pretty Link Groups"
+msgstr "Произошла ошибка при получении ваших групп Pretty Link"
+
+#: app/controllers/PrliXmlRpcController.php:278
+msgid "Sorry, you must provide a slug to lookup"
+msgstr "Извините, для поиска нужно указать ярлык"
+
+#: app/views/shared/public_link.php:45
+msgid "back"
+msgstr "назад"
+
+#: app/views/tools/form.php:54
+msgid "Paste the text you copied in Step 1 into the address field"
+msgstr "Вставьте текст, скопированный из Шага 1, в поле адреса"
+
+#. translators: %1$s: open strong tag, %2$s close strong tag
+#: app/views/tools/form.php:59
+msgid "To save the changes hit \"Bookmarks\" and %1$syou're done!%2$s"
+msgstr "Для сохранения изменений, щёлкните \"Закладки\" %1$sи готово!%2$s"
+
+#: app/controllers/PrliLocalApiController.php:128
+msgid "Pretty Link ID must be set for successful update."
+msgstr "Для успешного обновления, должен быть установлен ID Pretty Link."
+
+#: app/controllers/PrliLocalApiController.php:103
+#: app/controllers/PrliLocalApiController.php:167
+msgid "An error prevented your Pretty Link from being created"
+msgstr "Созданию вашей Pretty Link помешала ошибка"
+
+#: app/views/options/form.php:275
+msgid "Extended Tracking (more stats / slower performance)"
+msgstr "Расширенное отслеживание (больше статистик / хуже производительность)"
+
+#: app/views/tools/form.php:36
+msgid "Show iPhone Bookmarklet Instructions"
+msgstr "Показать инструкции по букмарклетам для iPhone"
+
+#: app/views/options/form.php:276
+msgid "Simple Click Count Tracking (less stats / faster performance)"
+msgstr "Простое отслеживание кликов (меньше статистик / выше производительность)"
+
+#: app/views/tools/form.php:50
+msgid "Tap the + button at the bottom of the screen"
+msgstr "Нажмите кнопку + внизу экрана"
+
+#. translators: %1$s: open strong tag, %2$s close strong tag
+#: app/views/tools/form.php:43
+msgid "%1$sNote:%2$s iPhone users can install this bookmarklet in their Safari to create Pretty Links with the following steps:"
+msgstr "%1$sЗамечание:%2$s пользователи iPhone могут установить этот букмарклет для создания Pretty Links в свой Safari через следующие шаги:"
+
+#: app/views/options/form.php:285
+msgid "Enter IP Addresses or IP Ranges you want to exclude from your Click data and Stats. Each IP Address should be separated by commas. Example: 192.168.0.1, 192.168.2.1, 192.168.3.4 or 192.168.*.*"
+msgstr "Введите IP-адреса. которые вы хотите исключить из данных переходов и статистики. Каждый IP-адрес должен быть разделён запятыми. Например:  192.168.0.1, 192.168.2.1, 192.168.3.4 или 192.168.*.*"
+
+#. translators: %1$s: br tag, %2$s: open link tag, %3$s: close link tag
+#: app/controllers/PrliAppController.php:692
+msgid "You're almost done!%1$s%2$sFinish your Re-Install of Pretty Links Pro%3$s"
+msgstr "Почти готово! %1$s%2$sЗакончить переустановку Pretty Links Pro%3$s"
+
+#: app/controllers/PrliAppController.php:839
+msgid "Your Pretty Links Pro installation isn't quite complete yet.<br/>%1$sAutomatically Upgrade to Enable Pretty Links Pro%2$s"
+msgstr "Установка Pretty Links Pro ещё не завершена.<br/>%1$sАвтоматически обновиться, чтобы включить Pretty Links Pro%2$s"
+
+#: app/controllers/PrliStripeConnectController.php:317
+msgid "Learn More"
+msgstr "Узнать больше"
+
+#: app/controllers/PrliLinksController.php:775 app/views/clicks/list.php:64
+#: app/views/groups/list.php:24
+msgid "Reset"
+msgstr "Сброс"
+
+#: app/views/groups/list.php:79
+msgid "Delete"
+msgstr "Удалить"
+
+#: app/controllers/PrliAppController.php:517 app/views/groups/edit.php:72
+#: app/views/options/form.php:1221
+msgid "Update"
+msgstr "Обновить"
+
+#: app/controllers/PrliLinksController.php:547 app/models/PrliClick.php:258
+#: app/views/admin/popups/prettypay.php:76
+#: app/views/admin/popups/prettypay.php:386
+#: app/views/admin/upgrade/groups.php:13 app/views/admin/upgrade/groups.php:35
+#: app/views/admin/upgrade/products.php:13
+#: app/views/admin/upgrade/products.php:32
+msgid "Date"
+msgstr "Дата"
+
+#: app/views/links/form_pro.php:96 app/views/options/form.php:574
+#: app/views/options/form.php:597 app/views/options/form.php:1065
+#: app/views/shared/tinymce_form_popup.php:83
+#: app/views/shared/tinymce_form_popup.php:87
+msgid "None"
+msgstr "Отсутствует"
+
+#: app/views/clicks/list.php:43 app/views/groups/edit.php:72
+#: app/views/groups/new.php:71 app/views/links/prettypay_link_stripe.php:98
+msgid "Cancel"
+msgstr "Отмена"
+
+#: app/views/admin/onboarding/parts/category-pro.php:62
+#: app/views/admin/onboarding/parts/link_popup.php:29
+msgid "Save"
+msgstr "Сохранить"
+
+#: app/views/admin/upgrade/reports.php:8 app/views/admin/upgrade/reports.php:35
+#: app/views/groups/edit.php:36 app/views/groups/list.php:41
+#: app/views/groups/list.php:93 app/views/groups/new.php:37
+#: app/views/links/prettypay_link_stripe.php:34
+msgid "Name"
+msgstr "Имя"
+
+#: app/views/clicks/list.php:83 app/views/clicks/list.php:176
+msgid "Visitor"
+msgstr "Посетитель"
+
+#: app/views/admin/errors.php:7 app/views/shared/errors.php:12
+msgid "ERROR"
+msgstr "ОШИБКА"
+
+#: app/views/clicks/list.php:91 app/views/clicks/list.php:180
+msgid "Host"
+msgstr "Хост"
+
+#: app/views/admin/onboarding/parts/category-pro.php:49
+#: app/views/admin/upgrade/groups.php:17 app/views/admin/upgrade/groups.php:39
+#: app/views/admin/upgrade/reports.php:18
+#: app/views/admin/upgrade/reports.php:37 app/views/groups/list.php:46
+#: app/views/groups/list.php:80 app/views/groups/list.php:94
+#: app/views/options/form.php:51
+msgid "Links"
+msgstr "Ссылки"
+
+#: app/views/admin/upgrade/reports.php:23
+#: app/views/admin/upgrade/reports.php:38 app/views/groups/list.php:51
+#: app/views/groups/list.php:95
+msgid "Created"
+msgstr "Создан"
+
+#: app/views/groups/edit.php:21
+msgid "Name:"
+msgstr "Имя:"
+
+#: app/views/clicks/list.php:101 app/views/clicks/list.php:184
+msgid "Link"
+msgstr "Ссылка"
+
+#: app/views/groups/edit.php:26 app/views/groups/new.php:27
+msgid "Description:"
+msgstr "Описание:"
+
+#: app/views/clicks/list.php:39
+msgid "to"
+msgstr "до"
+
+#: app/models/PrliClick.php:253
+msgid "and"
+msgstr "и"
+
+#: app/views/clicks/list.php:79 app/views/clicks/list.php:174
+msgid "IP"
+msgstr "IP"
+
+#: app/views/clicks/list.php:95 app/views/clicks/list.php:182
+msgid "URI"
+msgstr "URI"
+
+#: app/controllers/PrliAppController.php:255
+#: app/views/links/prettypay_link_stripe.php:107 app/views/options/form.php:3
+msgid "Options"
+msgstr "Опции"
+
+#: app/models/PrliClick.php:253
+msgid "between"
+msgstr "между"
+
+#: app/helpers/PrliLinksHelper.php:16
+#: app/views/admin/onboarding/parts/link_popup.php:18
+#: app/views/links/form_basic.php:18 app/views/shared/tinymce_form_popup.php:34
+msgid "301 (Permanent)"
+msgstr "301 (Постоянный)"
+
+#: app/helpers/PrliLinksHelper.php:14 app/views/links/form_basic.php:16
+#: app/views/shared/tinymce_form_popup.php:32
+msgid "307 (Temporary)"
+msgstr "307 (Временный)"
+
+#: app/models/PrliClick.php:253
+msgid "Pretty Link:"
+msgstr "Pretty Link:"
+
+#: app/models/PrliLink.php:480
+msgid "Target URL can't be blank"
+msgstr "Целевой URL не может быть пустым"
+
+#: app/models/PrliLink.php:484
+msgid "Target URL must be different than the Pretty Link"
+msgstr "Целевой URL должен отличаться от Pretty Link"
+
+#: app/models/PrliLink.php:488
+msgid "Link URL must be a correctly formatted url"
+msgstr "URL ссылки должен быть корректным url"
+
+#: app/models/PrliLink.php:496
+msgid "Pretty Link slugs must not end with a slash (\"/\")"
+msgstr "Ярлык Pretty Link не должен оканчиваться слэшем (\"/\")"
+
+#: app/models/PrliLink.php:492
+msgid "Pretty Link slugs must not contain question marks, ampersands or number signs."
+msgstr "Ярлык Pretty Link не должен содержать знаков вопроса, амперсандов (&) и цифр"
+
+#: app/views/clicks/list.php:87 app/views/clicks/list.php:178
+msgid "Timestamp"
+msgstr "Метка времени"
+
+#: app/views/clicks/list.php:73 app/views/clicks/list.php:171
+msgid "Browser"
+msgstr "Браузер"
+
+#: app/views/clicks/list.php:30
+msgid "Type:"
+msgstr "Тип:"
+
+#: app/views/clicks/list.php:18
+msgid "Back to Links"
+msgstr "Назад к ссылкам"
+
+#: app/views/clicks/list.php:11
+msgid "Customize Report"
+msgstr "Настроить отчёт"
+
+#: app/views/clicks/list.php:37
+msgid "Date Range:"
+msgstr "Диапазон дат:"
+
+#: app/views/groups/list.php:6
+msgid "Groups"
+msgstr "Группы"
+
+#: app/views/groups/edit.php:31 app/views/groups/new.php:32
+msgid "Links:"
+msgstr "Ссылки:"
+
+#: app/views/groups/edit.php:10
+msgid "Edit Group"
+msgstr "Править группу"
+
+#: app/controllers/PrliLinksController.php:68
+#: app/controllers/PrliOnboardingController.php:432
+#: app/helpers/PrliLinksHelper.php:175 app/helpers/PrliOnboardingHelper.php:162
+#: app/views/admin/onboarding/parts/link_popup.php:10
+#: app/views/links/form_basic.php:51 app/views/shared/tinymce_form_popup.php:86
+#: app/views/widgets/widget.php:15 js/build/editor.js:3
+#: js/editor/formats/pretty-link/index.js:25
+msgid "Pretty Link"
+msgstr "Pretty Link"
+
+#: app/views/clicks/list.php:190
+msgid "Download CSV"
+msgstr "Скачать CSV"
+
+#: app/views/links/form_advanced.php:36
+msgid "Time in seconds to wait before redirecting"
+msgstr "Время ожидания в секундах до переадресации"
+
+#: app/helpers/PrliLinksHelper.php:43
+msgid "Javascript Redirection"
+msgstr "Переадресация с JavaScript"
+
+#: app/helpers/PrliLinksHelper.php:40
+msgid "Meta Refresh Redirection"
+msgstr "Переадресация с Meta Refresh"
+
+#: app/views/groups/new.php:22
+msgid "Name*:"
+msgstr "Имя*:"
+
+#: app/views/groups/new.php:10
+msgid "New Group"
+msgstr "Новая группа"
+
+#: app/views/groups/list.php:62
+msgid "No Pretty Link Groups were found"
+msgstr "Не найдено групп Pretty Link"
+
+#: app/views/groups/edit.php:37 app/views/groups/new.php:38
+msgid "Current Group"
+msgstr "Текущая группа"
+
+#: app/views/groups/edit.php:28 app/views/groups/new.php:29
+msgid "A Description of this group."
+msgstr "Описание этой группы."
+
+#: app/views/groups/edit.php:23 app/views/groups/new.php:24
+msgid "This is how you'll identify your Group."
+msgstr "Это показывает, как вы будете идентифицировать группу."
+
+#: app/views/clicks/list.php:98 app/views/clicks/list.php:183
+msgid "Referrer"
+msgstr "Реферер"
+
+#: app/helpers/PrliLinksHelper.php:143
+msgid "Target URL:"
+msgstr "Целевой URL:"
+
+#: app/controllers/PrliLinksController.php:778
+msgid "Tweet"
+msgstr "Твитнуть"
+
+#: app/views/shared/tinymce_form_popup.php:46 js/build/editor.js:3
+#: js/editor/components/link-editor/index.js:376
+msgid "Nofollow"
+msgstr "Nofollow"
+
+#: app/views/shared/tinymce_form_popup.php:29
+msgid "Redirect Type"
+msgstr "Тип переадресации"
+
+#: app/views/links/form.php:36
+msgid "Advanced"
+msgstr "Расширенные"
+
+#: app/views/links/form_advanced.php:46 app/views/links/form_advanced.php:49
+msgid "Parameter Forwarding"
+msgstr "Проброс параметров"
+
+#: app/views/links/form_advanced.php:64
+msgid "Enable Pretty Link's built-in hit (click) tracking"
+msgstr "Разрешает встроенное отслеживание кликов по Pretty Link"
+
+#: app/views/links/form_advanced.php:50
+msgid "Forward parameters passed to this link onto the Target URL"
+msgstr "Пробросить параметры, передаваемые этой ссылкой в целевой URL"
+
+#: app/helpers/PrliLinksHelper.php:64
+msgid "Parameter Forwarding Enabled"
+msgstr "Разрешён проброс параметров"
+
+#: app/controllers/PrliLinksController.php:70
+msgid "Add New Pretty Link"
+msgstr "Добавить новую Pretty Link"
+
+#. Author of the plugin
+#: pretty-link.php app/controllers/PrliAppController.php:383
+#: app/controllers/PrliLinksController.php:67
+#: app/controllers/PrliLinksController.php:548
+#: app/controllers/PrliPostsController.php:59
+#: app/helpers/PrliOnboardingHelper.php:169
+#: app/views/admin/popups/prettypay.php:81
+#: app/views/admin/popups/prettypay.php:387
+msgid "Pretty Links"
+msgstr "Pretty Links"
+
+#. translators: %1$s: open strong tag, %2$s close strong tag
+#: app/views/groups/edit.php:61 app/views/groups/new.php:60
+msgid "Select some links for this group. %1$sNote: each link can only be in one group at a time.%2$s"
+msgstr "Выберите несколько ссылок из группы. %1$sЗамечание: каждая ссылка должна быть только в одной группе.%2$s"
+
+#: app/views/options/form.php:22
+msgid "Permalink Settings"
+msgstr "Настройки постоянных ссылок"
+
+#: app/models/PrliClick.php:253
+msgid "on"
+msgstr "в"
+
+#. translators: %1$s: open strong tag, %2$s: close strong tag
+#: app/views/options/form.php:17
+msgid "%1$sWordPress Must be Configured:%2$s Pretty Links won't work until you select a Permalink Structure other than 'Default'"
+msgstr "%1$sWordPress должен быть настроен:%2$s Pretty Links не будет работать, пока вы не выберете структуру постоянных ссылок иную, чем \"По-умолчанию\""
+
+#: app/controllers/PrliLinksController.php:855
+msgid "Your Pretty Link was Successfully Reset"
+msgstr "Ваша Pretty Link была успешно сброшена"
+
+#: app/helpers/PrliAppHelper.php:48 app/views/groups/list.php:78
+#: js/build/editor.js:3 js/editor/components/link-editor/index.js:151
+msgid "Edit"
+msgstr "Изменить"
+
+#: app/controllers/PrliLinksController.php:779
+msgid "Email"
+msgstr "Email"
+
+#: app/views/admin/onboarding/parts/link_popup.php:5
+#: app/views/links/form_basic.php:36 app/views/shared/tinymce_form_popup.php:13
+#: app/views/shared/tinymce_form_popup.php:82 app/views/widgets/widget.php:11
+msgid "Target URL"
+msgstr "Целевой URL"

@@ -1,0 +1,50 @@
+{% extends 'was-base.twig' %}
+
+{% block content %}
+    <section class="pro_main layout_main">
+        <div class="row">
+            <header class="col page-header">
+
+                {% if posts is iterable and posts|length > 0 %}
+                    <span class="lead">
+                       {{ function('pll__', 'Результаты поиска') }}
+                         </span>
+                    <h1 class="page-title display-3">
+                        {{ function('get_search_query') }}
+                    </h1>
+                {% else %}
+                    <h1 class="page-title display-4">
+                        {{ function('pll__', 'Ничего не найдено') }}
+                    </h1>
+                {% endif %}
+
+            </header>
+
+            {% if posts is iterable and posts|length > 0 %}
+
+                {% for post in posts %}
+                    {% set order_count = function('make_order_counter', order_count) %}
+                    {% set is_micro = post.post_type == 'microformats' %}
+                    {% set post_format_class = is_micro ? 'format-micro' : '' %}
+                    {% set invert_title = function('is_article_options', 'invert_text_color', post) ? 'invert_text_color' : '' %}
+                    {% set post_options = {
+                        'post' : post,
+                        'cover' : not is_micro,
+                        'content_part' : 'content',
+                        'class_format' : order_count ~ ' ' ~ invert_title ~ ' ' ~ post_format_class
+                    } %}
+
+                    {{ function('timber_content_parts_resolver', post_options) }}
+                {% endfor %}
+
+            {% else %}
+                <div class="not-found">
+                    {{ function('get_search_form') }}
+                    <div class="layout_main">
+                        {% include 'template-parts/was-tags-navigation.twig' %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

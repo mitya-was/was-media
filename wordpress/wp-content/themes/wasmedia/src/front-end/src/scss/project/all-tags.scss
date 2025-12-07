@@ -1,0 +1,47 @@
+.allTags {
+  padding-top: $spacer * 4;
+  padding-bottom: $spacer * 2;
+
+  .col {
+    @include media-breakpoint-up(sm) {
+      @include make-col(7);
+    }
+    @include media-breakpoint-up(md) {
+      @include make-col(5);
+    }
+    @include media-breakpoint-up(xl) {
+      @include make-col(3);
+    }
+    margin-bottom: $spacer * 2;
+  }
+
+  &-link {
+    margin-bottom: 0.5rem;
+    float: left;
+    clear: both;
+    letter-spacing: 0;
+    text-decoration: none;
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  &-label {
+    text-transform: initial;
+  }
+
+  &-header {
+    color: $brand-primary;
+  }
+}
+
+.modal-default {
+  .allTags-link {
+    color: $white;
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+}

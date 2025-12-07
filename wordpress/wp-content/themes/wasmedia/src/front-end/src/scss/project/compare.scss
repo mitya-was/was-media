@@ -1,0 +1,340 @@
+.juxtapose {
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.jx-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.jx-handle {
+  position: absolute;
+  height: 100%;
+  width: 40px;
+  cursor: col-resize;
+  z-index: 15;
+  margin-left: -20px;
+}
+
+.vertical .jx-handle {
+  height: 40px;
+  width: 100%;
+  cursor: row-resize;
+  margin-top: -20px;
+  margin-left: 0;
+}
+
+.jx-control {
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 3px;
+  background-color: white;
+}
+
+.vertical .jx-control {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.jx-controller {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 60px;
+  width: 9px;
+  margin-left: -3px;
+  background-color: white;
+}
+
+.vertical .jx-controller {
+  height: 9px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  top: -3px;
+  position: relative;
+}
+
+.jx-arrow {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  transition: all 0.2s ease;
+}
+
+.vertical .jx-arrow {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  transition: all 0.2s ease;
+}
+
+.jx-arrow.jx-left {
+  left: 2px;
+  border-style: solid;
+  border-width: 8px 8px 8px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+.jx-arrow.jx-right {
+  right: 2px;
+  border-style: solid;
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.vertical .jx-arrow.jx-left {
+  left: 0px;
+  top: 2px;
+  border-style: solid;
+  border-width: 0px 8px 8px 8px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.vertical .jx-arrow.jx-right {
+  right: 0px;
+  top: initial;
+  bottom: 2px;
+  border-style: solid;
+  border-width: 8px 8px 0 8px;
+  border-color: #fff transparent transparent transparent;
+}
+
+.jx-handle:hover .jx-arrow.jx-left,
+.jx-handle:active .jx-arrow.jx-left {
+  left: -1px;
+}
+
+.jx-handle:hover .jx-arrow.jx-right,
+.jx-handle:active .jx-arrow.jx-right {
+  right: -1px;
+}
+
+.vertical .jx-handle:hover .jx-arrow.jx-left,
+.vertical .jx-handle:active .jx-arrow.jx-left {
+  left: 0px;
+  top: 0px;
+}
+
+.vertical .jx-handle:hover .jx-arrow.jx-right,
+.vertical .jx-handle:active .jx-arrow.jx-right {
+  right: 0px;
+  bottom: 0px;
+}
+
+.jx-image {
+  position: absolute;
+  height: 100%;
+  display: inline-block;
+  top: 0;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.vertical .jx-image {
+  width: 100%;
+  left: 0;
+  top: initial;
+}
+
+.jx-image img {
+  height: 100%;
+  z-index: 5;
+  position: absolute;
+
+  max-height: none;
+  max-width: none;
+  max-height: initial;
+  max-width: initial;
+}
+
+.vertical .jx-image img {
+  height: initial;
+  width: 100%;
+}
+
+.jx-image.jx-left {
+  left: 0;
+  background-position: left;
+}
+
+.jx-image.jx-left img {
+  left: 0;
+}
+
+.jx-image.jx-right {
+  right: 0;
+  background-position: right;
+}
+
+.jx-image.jx-right img {
+  right: 0;
+  bottom: 0;
+}
+
+.veritcal .jx-image.jx-left {
+  top: 0;
+  background-position: top;
+}
+
+.veritcal .jx-image.jx-left img {
+  top: 0;
+}
+
+.vertical .jx-image.jx-right {
+  bottom: 0;
+  background-position: bottom;
+}
+
+.veritcal .jx-image.jx-right img {
+  bottom: 0;
+}
+
+.jx-image .jx-label {
+  font-size: 1em;
+  padding: 0.25em 0.75em;
+  position: relative;
+  display: inline-block;
+  top: 0;
+  background-color: #000; /* IE 8 */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  z-index: 10;
+  white-space: nowrap;
+  line-height: 18px;
+  vertical-align: middle;
+}
+
+.jx-image.jx-left .jx-label {
+  float: left;
+  left: 0;
+}
+
+.jx-image.jx-right .jx-label {
+  float: right;
+  right: 0;
+}
+
+.vertical .jx-image .jx-label {
+  display: table;
+  position: absolute;
+}
+
+.vertical .jx-image.jx-right .jx-label {
+  left: 0;
+  bottom: 0;
+  top: initial;
+}
+
+.jx-credit {
+  line-height: 1.1;
+  font-size: 0.75em;
+}
+
+.jx-credit em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Animation */
+
+.jx-image.transition {
+  transition: width 0.5s ease;
+}
+
+.jx-handle.transition {
+  transition: left 0.5s ease;
+}
+
+.vertical .jx-image.transition {
+  transition: height 0.5s ease;
+}
+
+.vertical .jx-handle.transition {
+  transition: top 0.5s ease;
+}
+
+/* Knight Lab Credit */
+.jx-knightlab {
+  background-color: #000; /* IE 8 */
+  background-color: rgba(0, 0, 0, 0.25);
+  bottom: 0;
+  display: table;
+  height: 14px;
+  line-height: 14px;
+  padding: 1px 4px 1px 5px;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.jx-knightlab .knightlab-logo {
+  display: inline-block;
+  vertical-align: middle;
+  height: 8px;
+  width: 8px;
+  background-color: #c34528;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  top: -1.25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.jx-knightlab:hover {
+  background-color: #000; /* IE 8 */
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.jx-knightlab:hover .knightlab-logo {
+  background-color: #ce4d28;
+}
+
+.jx-knightlab .juxtapose-name {
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 10px;
+  padding-left: 0.375em;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+/* keyboard accessibility */
+.jx-controller:focus,
+.jx-image.jx-left .jx-label:focus,
+.jx-image.jx-right .jx-label:focus,
+.jx-knightlab:focus {
+  background: #eae34a;
+  color: #000;
+}
+
+.jx-knightlab:focus span.juxtapose-name {
+  color: #000;
+  border: none;
+}
+
+.jx-knightlab {
+  display: none;
+}

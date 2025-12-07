@@ -1,0 +1,192 @@
+{% import 'macros/was-macros.twig' as macros %}
+
+{% if variables['is_game_ready'] %}
+    <div class="editor_game">
+        <div class="layout_main">
+            <div class="{{ variables['game_editor_class'] }}" data-component="game" data-type="{{ variables['game_data_type'] }}"
+                 data-options="{{ variables['game_data_options'] }}">
+                <div class="gameIntro gameCover">
+
+                    {% if variables['is_intro_cover'] %}
+                        <img class="wp-post-image" width="{{ variables['intro_img']['width'] }}"
+                             height="{{ variables['intro_img']['height'] }}" src="{{ variables['intro_img']['src'] }}"
+                             srcset="{{ variables['intro_img']['srcset'] }}"
+                             sizes="(min-width: 36em) {{ variables['intro_img']['width'] }}, 100vw"
+                             alt="{{ variables['intro_img']['alt'] }}"/>
+                    {% endif %}
+
+                    <div class="introMsg">
+                        <button class="btn {{ variables['cover_buttons_shape_value'] }} {{ variables['cover_buttons_color_value'] }}" {{ variables['cover_buttons_custom_style'] }}
+                                type="button">
+                            {{ variables['intro_button_text'] }}
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gameWrapper hidden">
+
+                    {% if variables['game_label'] %}
+                        <p class="h1 gameLabel">
+                            {{ variables['game_label'] }}
+                        </p>
+                    {% endif %}
+
+                    {% for game_item in variables['game_items'] %}
+                        <div class="gameItem" style="
+                        {% if game_item['question_cover_src'] %} background-image:url({{ game_item['question_cover_src'] }}); {% endif %};
+                        {% if game_item['question_cover_bg_color'] %} background-color: {{ game_item['question_cover_bg_color'] }}; {% endif %}
+                        {% if game_item['question_cover_text_color'] %} color: {{ game_item['question_cover_text_color'] }} {% endif %}">
+
+                            <div class="question">
+
+                                {% if game_item['question_gallery'] is iterable and
+                                game_item['question_gallery']|length > 0 and
+                                not variables['is_question_img_background'] %}
+                                    <div class="{{ game_item['question_item_class'] }}">
+
+                                        {% for image in game_item['question_gallery'] %}
+                                            <div class="itemImg">
+                                                <img class="wp-post-image question-image"
+                                                     src="{{ image['src'] }}"
+                                                     alt="{{ image['alt'] }}"/>
+                                            </div>
+                                        {% endfor %}
+
+                                    </div>
+
+                                {% endif %}
+
+                                {% if game_item['question_media_path'] %}
+
+                                    {% if game_item['is_audio'] %}
+                                        <audio class="question-audio" autostart="false" controls=""
+                                               controlslist="nodownload">
+                                            <source src="{{ game_item['question_media_path'] }}" type="audio/mpeg">
+                                        </audio>
+                                    {% endif %}
+
+                                    {% if game_item['is_iframe'] %}
+                                            <div class="iframeWrapper i_video">
+                                                <iframe class="video_iframe" src="{{ game_item['question_media_path'] }}"></iframe>
+                                                <span>{{ game_item['question_media_path']|slice(-4) }}</span>
+                                            </div>
+                                    {% endif %}
+                                    {% if game_item['is_image'] %}
+                                        <div class="itemImg">
+                                            <img class="wp-post-image question-image"
+                                                 src="{{ game_item['question_media_path'] }}"
+                                                 alt=""/>
+                                        </div>
+                                    {% endif %}
+
+                                {% endif %}
+
+                                {% if game_item['question_title'] %}
+                                    <p class="h3">
+                                        {{ game_item['question_title'] }}
+                                    </p>
+                                {% endif %}
+
+                                {% if game_item['question_text'] %}
+                                    <p class="question-txt">
+                                        {{ game_item['question_text'] }}
+                                    </p>
+                                {% endif %}
+
+                            </div>
+
+                            {% if game_item['item_versions'] is iterable and game_item['item_versions']|length > 0 %}
+                                <div class="versions {{ game_item['version_class'] }}">
+
+                                    {% for item_version in game_item['item_versions'] %}
+                                        <button class="btn item-control {{ variables['button_class'] }}"
+                                                data-item="{{ loop.index - 1 }}"
+                                                data-hash="{{ item_version['button_hash'] }}">{{ item_version['content'] }}</button>
+                                    {% endfor %}
+
+                                </div>
+                            {% endif %}
+
+                            {% if game_item['question_note_txt'] %}
+                                <div class="notes">
+
+                                    {% if game_item['question_note_img'] %}
+                                        <img class="wp-post-image note-image" src="{{ game_item['question_note_img'] }}"
+                                         alt="">
+                                    {% endif %}
+
+                                    {{ game_item['question_note_txt'] }}
+                                </div>
+                            {% endif %}
+
+                        </div>
+                    {% endfor %}
+
+                    <div class="gameControls"></div>
+
+                    {% if variables['is_after_click'] %}
+                        <button class="btn btn-primary item-control btn-round-xl btn-next hide">
+                            {{ function('pll__', 'Далее') }}
+                        </button>
+                    {% endif %}
+
+                </div>
+
+                <div class="gameOutro gameCover hidden" style="{% if variables['outro_cover_bg'] %} background-color:{{ variables['outro_cover_bg'] }};{% endif %} {% if variables['outro_cover_color'] %}color:{{ variables['outro_cover_color'] }}  {% endif %}">
+                    <img class="wp-post-image gameOutro_result_image" />
+
+                    {#{% if not variables['is_no_result_img'] %}#}
+                        {#<img class="wp-post-image gameOutro_result_image" width="{{ variables['outro_img']['width'] }}"#}
+                             {#height="{{ variables['outro_img']['height'] }}" src="{{ variables['outro_img']['src'] }}"#}
+                             {#srcset="{{ variables['outro_img']['srcset'] }}"#}
+                             {#sizes="(min-width: 36em) {{ variables['outro_img']['width'] }}, 100vw"#}
+                             {#alt="{{ variables['result_img']['alt'] }}"/>#}
+                    {#{% endif %}#}
+
+                    <div class="outroMsg">
+                        <div class="result-counter"></div>
+                        <div class="h2 result-title"></div>
+
+                        <div class="gameOutro__lottery">
+                            {{ variables['get_lottery'] }}
+                        </div>
+                    </div>
+
+                    <button class="btn {{ variables['cover_buttons_shape_value'] }} {{ variables['cover_buttons_color_value'] }}"
+                                type="button">
+                            {{ variables['outro_btn_text'] }}
+                        </button>
+
+                    {% if variables['game_results'] is iterable and variables['game_results']|length > 0 %}
+                        <div hidden="hidden">
+                            <div class="gameOutro-snippets" hidden="hidden">
+
+                                {% for game_result in variables['game_results'] %}
+                                    <div data-snippets="{{ game_result['game_result_snippet'] }}"
+
+                                            {% if game_result['in_lottery'] %}
+                                                data-in="1"
+                                            {% else %}
+                                                data-in="0"
+                                            {% endif %}
+
+                                            {% if variables['is_categories'] %}
+                                                data-val="{{ game_result['game_result_quantity'] }}"
+                                            {% endif %}
+
+                                         data-num="{{ game_result['game_result_number'] }}">
+
+                                        {{ game_result['game_result_text'] }}
+
+                                    </div>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}

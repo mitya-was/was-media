@@ -1,0 +1,59 @@
+/* Header */
+.amp-wp-header {
+  position: fixed;
+  z-index: $zindex-fixed;
+  width: 100%;
+  height: 44px;
+  right: 0;
+  left: 0;
+  top: 0;
+
+  .navbar {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    fill: #FF5F2F;
+    margin: 0 auto;
+    max-width: $content_max_width;
+    padding: 1.2rem 1.2rem 0 1.2rem;
+    position: relative;
+
+    ul {
+      list-style: none;
+    }
+
+    & > div {
+      width: 50%;
+    }
+
+    & > .navbarLogo {
+      text-align: left;
+    }
+
+    & > .navbarSearch {
+      text-align: right;
+      color: $brand-primary;
+    }
+  }
+}
+
+.navbar-nav,
+.navbar {
+  list-style: none;
+}
+
+.headerLogo {
+  display: flex;
+}
+
+#social-shares {
+  amp-social-share {
+    margin-bottom: $spacer * 1.2;
+  }
+}
+
+/* Site Icon */
+/* .icon {
+	width: 1.8rem;
+	height: 1.8rem;
+} */

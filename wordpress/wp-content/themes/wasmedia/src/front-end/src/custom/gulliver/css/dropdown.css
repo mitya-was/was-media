@@ -1,0 +1,56 @@
+.dropdown {
+  position: relative;
+  width: calc(100% - 158px);
+  margin: 0 auto;
+}
+
+@media (orientation: portrait) {
+  .dropdown {
+    width: calc(100% - 2em);
+  }
+}
+
+.dropdown-body {
+  height: 0;
+  overflow: hidden;
+  transition: height .2s ease-in-out;
+}
+
+.dropdown.open > .dropdown-body {
+  /*height: auto;*/
+  /*padding: 0 0 2em 0;*/
+}
+
+.dropdown-trigger,
+.btn.dropdown-trigger {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 0 0 50% 50%;
+  text-align: center;
+  width: 46px;
+  height: 42px;
+}
+
+.btn-icon.dropdown-trigger .material-icons {
+  font-size: 58px;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+}
+
+.dropdown > .btn.dropdown-trigger .icon-close {
+  visibility: hidden;
+}
+
+.dropdown.open > .btn.dropdown-trigger .icon-open {
+  visibility: hidden;
+}
+
+.dropdown.open > .btn.dropdown-trigger .icon-close {
+  visibility: visible;
+}

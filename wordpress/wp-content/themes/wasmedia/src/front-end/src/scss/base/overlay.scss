@@ -1,0 +1,30 @@
+@include media-breakpoint-down(md) {
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: $zindex-fixed;
+    background-color: $brand-inverse;
+    overflow-x: hidden;
+    transition: 0.3s;
+
+    &._open {
+      width: 100%;
+    }
+
+    &._right {
+      left: auto;
+      right: 0;
+    }
+
+    &.z-overlay-bottom {
+      z-index: $zindex-navbar;
+    }
+  }
+}
+
+.opened-modal {
+  overflow: hidden;
+}

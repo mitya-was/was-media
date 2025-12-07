@@ -1,0 +1,54 @@
+{
+  "archive": {
+    "js": "/assets/js/archive.6c2d5676.build.js",
+    "css": "/assets/css/archive.6c2d5676.build.css"
+  },
+  "cache/2019-vote": {
+    "js": "/assets/js/cache/2019-vote.js",
+    "css": "/assets/css/cache/2019-vote.css"
+  },
+  "cache/admin": {
+    "js": "/assets/js/cache/admin.js",
+    "css": "/assets/css/cache/admin.css"
+  },
+  "cache/amp": {
+    "js": "/assets/js/cache/amp.js",
+    "css": "/assets/css/cache/amp.css"
+  },
+  "critical": {
+    "js": "/assets/js/critical.js",
+    "css": "/style.css"
+  },
+  "game": {
+    "js": "/assets/js/game.6c2d5676.build.js",
+    "css": "/assets/css/game.6c2d5676.build.css"
+  },
+  "home": {
+    "js": "/assets/js/home.6c2d5676.build.js",
+    "css": "/assets/css/home.6c2d5676.build.css"
+  },
+  "main": {
+    "js": "/assets/js/main.6c2d5676.build.js",
+    "css": "/assets/css/main.6c2d5676.build.css"
+  },
+  "microformats": {
+    "js": "/assets/js/microformats.6c2d5676.build.js",
+    "css": "/assets/css/microformats.6c2d5676.build.css"
+  },
+  "newsletter": {
+    "js": "/assets/js/newsletter.6c2d5676.build.js",
+    "css": "/assets/css/newsletter.6c2d5676.build.css"
+  },
+  "single": {
+    "js": "/assets/js/single.6c2d5676.build.js",
+    "css": "/assets/css/single.6c2d5676.build.css"
+  },
+  "": {
+    "jpg": "//assets/images/cover.jpg",
+    "eot": "/assets/fonts/3815FE_0_0.eot",
+    "ttf": "/assets/fonts/3815FE_0_0.ttf",
+    "woff": "/assets/fonts/3815FE_0_0.woff",
+    "woff2": "/assets/fonts/3815FE_0_0.woff2",
+    "svg": "/assets/images/svg-icons.inline.svg"
+  }
+}

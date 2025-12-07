@@ -1,0 +1,23 @@
+.aside {
+  &-left {
+    @include media-breakpoint-up(lg) {
+      @include make-col(3.5);
+    }
+
+    &_navigation {
+      z-index: $zindex-dropdown-backdrop - 2;
+
+      @include media-breakpoint-down(md) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &-right {
+    @include media-breakpoint-up(lg) {
+      @include make-col(5);
+      //@include make-col-pull(0.5);
+    }
+    position: relative;
+  }
+}

@@ -1,0 +1,155 @@
+.b-collapse {
+  &-off {
+    display: none !important;
+  }
+}
+
+.inner-j {
+  overflow: hidden;
+}
+
+.jewelry {
+  position: relative;
+
+  &:empty {
+    display: none;
+  }
+
+  &-head {
+    position: relative;
+    z-index: 10;
+  }
+
+  &-content {
+    overflow: hidden;
+    transition: height 0.25s cubic-bezier(0.2, 0.6, 0.4, 1),
+      margin 0.25s cubic-bezier(0.2, 0.6, 0.4, 1);
+
+    &.post-full {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &-push {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &.b-collapse {
+      &-folded {
+        .jewelry-title {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        /*& + .jewelry-content {
+          height: 0 !important;
+          min-height: 0;
+          margin-bottom: 0;
+        }*/
+
+        .jewelry-btn__close {
+          top: -3px;
+          transform: rotate(45deg);
+        }
+      }
+
+      &-unfolded {
+        .jewelry-btn__close {
+          top: 0;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+
+  &-title {
+    margin: 0 5px;
+    max-width: 55vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s cubic-bezier(0.2, 0.6, 0.4, 1),
+      visibility 0.25s cubic-bezier(0.2, 0.6, 0.4, 1);
+    user-select: none;
+  }
+
+  &-btn {
+    // font-weight: 300;
+    // display: flex;
+    // align-items: center;
+
+    &__title {
+      font-weight: 600;
+      margin-right: 8px;
+      &:empty {
+        display: none;
+      }
+    }
+
+    &__close {
+      margin-right: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 3px;
+      position: relative;
+      transition: transform 0.25s cubic-bezier(0.2, 0.6, 0.4, 1),
+        top 0.2s cubic-bezier(0.2, 0.6, 0.4, 1);
+    }
+  }
+}
+
+._jewelry-head {
+  &.navbar-top {
+    .site-logo_a {
+      small,
+      &:hover {
+        color: inherit !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .jewelry.inner-j {
+    margin-top: 60px;
+  }
+}
+
+.jewelry {
+  .post-wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+
+    a {
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .unvisible {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: -1000em;
+    width: 100%;
+  }
+
+  &.inner-j .post-wrap {
+    margin-bottom: 0;
+  }
+}

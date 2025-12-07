@@ -1,0 +1,7 @@
+{% import 'macros/was-macros.twig' as macros %}
+
+<div id="post-{{ post.ID }}" {{ function('post_class', 'post-preview col o-' ~ class_format, post.ID) }}>
+
+    {{ macros.get_podcast({'podcasts' : [function('get_field', 'sound_link', post.ID)]}) }}
+
+</div>

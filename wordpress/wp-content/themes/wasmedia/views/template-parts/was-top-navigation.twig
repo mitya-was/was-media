@@ -1,0 +1,15 @@
+<p class="headerNav-txt hidden-lg-up">
+    {{ function('pll__', 'популярные темы') }}
+</p>
+<nav class="navbar navbar-main navbar-toggleable-md">
+    <ul class="navbar-nav">
+        <li class="nav-item hidden-md-down">
+            <a href="https://www.youtube.com/c/WAS_UA" target="_blank" class="nav-link btn btn-lg btn-youtube">
+                {{ function('twentyseventeen_get_svg', {'icon' : 'youtube', 'class' : 'icon-youtube icon-sm'}) }}
+            </a>
+        </li>
+        {{ function('cloudbox', tag_cloud_tags, 5, 0) }}
+        <li data-component="modal" data-target="#all-tags" class="nav-item"><a class="nav-link" href="#"><span
+                        class="btn btn-sm-alt btn-primary">•••</span></a></li>
+    </ul>
+</nav>

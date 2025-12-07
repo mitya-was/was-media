@@ -1,0 +1,34 @@
+<div class="col headerLogo">
+
+    {% if function('is_front_page') %}
+        <h1 class="siteLogo">
+            {% include 'template-parts/was-branding.twig'
+                with {
+                "is_hidden" : true
+            } %}
+        </h1>
+    {% else %}
+        <div class="siteLogo h1">
+            {% include 'template-parts/was-branding.twig'
+                with {
+                "is_hidden" : true
+            } %}
+        </div>
+    {% endif %}
+
+    <div class="hidden-lg-up media-follow" aria-hidden="true">
+        <a href="https://www.youtube.com/c/WAS_UA" target="_blank" class="media-icons btn btn-sm btn-youtube">
+            {{ function('twentyseventeen_get_svg', {'icon' : 'youtube', 'class' : 'icon-youtube icon-md'}) }}
+        </a>
+        {% include 'template-parts/was-social-links.twig' with {'social_share_class' : 'hidden-lg-up', 'social_share_size_class' : 'icon-sm'} %}
+    </div>
+</div>
+<div class="col headerNav">
+    {% include 'template-parts/was-top-navigation.twig' %}
+</div>
+<div class="col headerTool">
+    <i class="search-i" data-component="modal" data-target="#was-search" data-theme="modal-primary">
+        {{ function('twentyseventeen_get_svg', {'icon' : 'search', 'class' : 'icon-lg icon-inter'}) }}
+    </i>
+    {{ languages_switcher }}
+</div>

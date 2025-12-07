@@ -1,0 +1,170 @@
+//0 Foundation layer
+// --Core variables and mixins
+@import 'base/variables';
+@import '~bootstrap/scss/_normalize';
+@import '~bootstrap/scss/_mixins';
+@import './mixins/index';
+//1 Base layer
+@import '~tingle.js/src/tingle.css';
+@import '../modal/style';
+@import 'base/preloader';
+
+.tingle-modal {
+  z-index: 100000;
+}
+
+.tingle-enabled {
+  position: absolute;
+  overflow: visible;
+  top: 32px !important;
+}
+
+//Admin Navi Animation
+.abcn_start_blink * {
+  background-color: #8dd0eb !important;
+  transition: background-color 0.8s ease;
+}
+
+.abcn_blink * {
+  background-color: transparent;
+}
+
+//Admin Navi Animation End
+
+//Floating Publish Block
+#submitdiv {
+  position: fixed;
+  right: 20px;
+  z-index: 1000;
+  bottom: -20px;
+  min-width: 278px;
+  background-color: #e0e0e0;
+}
+
+#major-publishing-actions {
+  background-color: #e0e0e0;
+}
+
+#content-score,
+#keyword-score {
+  display: none;
+}
+
+//Floating Publish Block End
+
+//SEO
+.was-custom-counter-invalid {
+  color: red !important;
+}
+
+#was_required_error {
+  position: relative;
+  width: 50%;
+  left: 22%;
+}
+
+//SEO End
+
+#select-post-language,
+#wp-admin-bar-delete-cache,
+#postdivrich {
+  display: none !important;
+}
+
+.reset_game_statistics {
+  padding: 10px;
+  text-align: right;
+}
+
+#was_reset_game_message {
+  display: block;
+  margin-top: 10px;
+}
+
+.allTags-modal {
+  width: 100%;
+  padding: 5rem 2rem;
+  box-sizing: border-box;
+  z-index: 99999;
+
+  @media (min-width: 960px) {
+    width: calc(100% - 480px);
+    left: 160px;
+  }
+
+  .modal-body {
+    width: 85%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .tingle-modal__close {
+    position: absolute;
+    top: 2rem;
+  }
+}
+
+.was-all-tags-list {
+  column-count: 1;
+
+  @media (min-width: 680px) {
+    column-count: 2;
+  }
+
+  @media (min-width: 1440px) {
+    column-count: 4;
+  }
+}
+
+.was-all-tags-list_item {
+  margin-bottom: 10px;
+
+  sup {
+    color: #ccc;
+  }
+
+  a {
+    color: #eee;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+//ACF Group Start
+.acf-flexible-content .layout .acf-fc-layout-handle {
+  font-weight: bold;
+  background: #363b3f;
+  font-size: 17px;
+  line-height: 1.2em;
+  color: white;
+}
+
+.acf-hide-checkbox input[type='checkbox'] {
+  visibility: hidden;
+}
+
+.acf-hide-checkbox img {
+  border: 4px solid transparent;
+  opacity: 0.7;
+}
+
+.acf-hide-checkbox img:hover {
+  opacity: 1 !important;
+}
+
+.custom-tags-helper_modal {
+  @include make-container();
+  font-size: $font-size-base;
+  max-width: 800px;
+
+  li {
+    color: $white;
+    margin-bottom: 14px;
+    padding-left: 10px;
+  }
+}
+
+//ACF Group End

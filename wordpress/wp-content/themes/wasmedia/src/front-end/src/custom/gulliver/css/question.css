@@ -1,0 +1,9 @@
+.question.text {
+  font-size: .9em;
+}
+
+@media (min-width: 1360px) {
+  .question.text {
+    font-size: 1.1em;
+  }
+}

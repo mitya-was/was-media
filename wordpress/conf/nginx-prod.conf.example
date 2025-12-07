@@ -1,0 +1,54 @@
+upstream was_php {
+    server was_wp:80; # apache in wordpress container
+}
+
+map $http_cookie $no_cache {
+    default 0;
+    "~*wordpress_logged_in" 1;
+    "~*comment_author" 1;
+}
+
+server {
+    listen 80;
+    server_name was.media www.was.media;
+
+    # Redirect HTTP to HTTPS if TLS termination happens here
+    # return 301 https://$host$request_uri;
+
+    root /var/www/html/wordpress;
+    index index.php;
+
+    # Deny PHP execution inside uploads
+    location ~* ^/wp-content/uploads/.*\.php$ {
+        deny all;
+    }
+
+    # Block access to sensitive files
+    location ~* \.(sql|bak|env|ini|log|sh|cmd)$ {
+        deny all;
+    }
+    location ~* ^/(wp-config\.php|env\.example|composer\.(json|lock))$ {
+        deny all;
+    }
+
+    # Static caching
+    location ~* \.(?:css|js|jpg|jpeg|gif|png|webp|svg|ico|woff2?)$ {
+        expires 30d;
+        add_header Cache-Control "public, max-age=2592000, immutable";
+        try_files $uri $uri/ @php;
+    }
+
+    # Fastcgi / php-fpm pass-through to apache container
+    location / {
+        try_files $uri $uri/ @php;
+    }
+
+    location @php {
+        proxy_pass http://was_php;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+

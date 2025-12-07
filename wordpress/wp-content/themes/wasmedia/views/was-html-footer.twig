@@ -1,0 +1,27 @@
+<div class="layout_main">
+
+    {% if function('is_home') %}
+        <div class="row footer_intro">
+            <div class="col footer_bio">
+                <p class="h1 mrb">
+                    {{ function('pll__', 'ЗАЧЕМ') }} WAS?
+                </p>
+                <p>
+                    {{ function('pll__', 'Можно бесконечно делать три вещи: смотреть на огонь; чесать, где чешется; читать о самых ярких персонажах и впечатляющих событиях в истории человечества') }}
+                </p>
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="row footer_main">
+        <div class="col footer_copyright">
+            {% include 'template-parts/was-footer-copyrights.twig' %}
+        </div>
+        <div class="col footer_media">
+            {% include 'template-parts/was-social-links.twig' with {'social_share_class' : '', 'social_share_size_class' : 'icon-md'} %}
+        </div>
+        <div class="col footer_tools">
+            {% include 'template-parts/was-footer-info.twig' %}
+        </div>
+    </div>
+</div>

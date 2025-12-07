@@ -1,0 +1,113 @@
+//0 Foundation layer
+// --Core variables and mixins
+@import 'base/variables';
+@import './mixins/index';
+@import 'base/order';
+
+.pro_main > .row > {
+  .o-1 {
+    @include media-breakpoint-down(md) {
+      order: 3;
+    }
+  }
+  .o-5 {
+    @include media-breakpoint-only(xl) {
+      order: 9;
+    }
+  }
+  .o-6 {
+    order: 3;
+    @include media-breakpoint-up(lg) {
+      order: 4;
+    }
+    @include media-breakpoint-up(xxl) {
+      order: 5;
+    }
+  }
+
+  .o-7 {
+    order: 3;
+    @include media-breakpoint-up(xxl) {
+      order: 8;
+    }
+  }
+
+  .o-9 {
+    @include media-breakpoint-only(xl) {
+      order: 9;
+    }
+  }
+}
+
+.format-micro {
+  @include media-breakpoint-only(lg) {
+    flex: 0 0 calc(50% - 5px);
+  }
+  @include media-breakpoint-down(sm) {
+    flex: 0 0 calc(50% - 10px);
+  }
+  flex: 0 0 calc(50% - 20px);
+  max-width: 100%;
+
+  .h-entry {
+    font-size: $font-size-h3;
+  }
+
+  &:hover {
+    .h-entry {
+      color: $brand-primary;
+    }
+  }
+}
+
+.entry-footer {
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.pro_main > .row > {
+  .format-status {
+    @extend .wp-post-image;
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(15);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include make-col(9);
+    }
+  }
+  .format-image {
+    @extend .wp-post-image;
+
+    @include media-breakpoint-down(md) {
+      &.o-7 {
+        @include make-col(15);
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(10);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include make-col(6);
+    }
+  }
+}
+
+.wp-post-image {
+  @include media-breakpoint-down(md) {
+    max-height: 510px;
+  }
+}
+
+.micro-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.jewelry {
+    &.post-preview {
+      width: 100%;
+    }
+}

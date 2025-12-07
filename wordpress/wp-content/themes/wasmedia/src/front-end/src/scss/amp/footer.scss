@@ -1,0 +1,52 @@
+/* AMP Footer */
+
+.amp-wp-footer {
+  font-weight: bold;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.amp-wp-footer .wasLogo {
+  font-size: 3rem;
+}
+
+.amp-wp-footer > div {
+  margin: 0 auto;
+  padding: 0.25rem $spacer $spacer;
+  position: relative;
+}
+
+.amp-footer-social {
+  .social-icons {
+    margin: 0 $spacer/3;
+  }
+}
+
+.amp-footer-copyright {
+  line-height: 1;
+}
+
+/*
+
+.amp-wp-footer .social-icons {
+	display: inline-block;
+}
+.amp-wp-footer .foot_tools_i {
+	padding: 0.25rem 2rem 1rem;
+}
+
+.amp-wp-footer p {
+	margin-bottom: 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.4em;
+	font-size: .8em;
+	font-weight: 600;
+	position: fixed;
+	right: 10px;
+} */

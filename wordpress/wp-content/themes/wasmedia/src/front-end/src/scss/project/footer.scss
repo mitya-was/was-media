@@ -1,0 +1,83 @@
+.siteFooter {
+  padding: $spacer * 5 0 $spacer * 2;
+  font-weight: bold;
+  text-align: center;
+
+  @include media-breakpoint-up(xl) {
+    .layout_main {
+      width: $grid-xl;
+    }
+  }
+
+  .footer_intro {
+    margin-bottom: $spacer * 3;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.5rem;
+      margin-bottom: $spacer * 2;
+    }
+  }
+
+  .footer_bio {
+    margin-bottom: $grid-gutter-width-base;
+
+    @include media-breakpoint-up(lg) {
+      @include make-col-push(3);
+      @include make-col(9);
+    }
+
+    .mrb {
+      margin-bottom: $spacer * 2;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .footer_copyright {
+      display: flex;
+      .siteLogo {
+        margin-top: -0.7rem;
+        margin-right: $spacer * 1.5;
+      }
+    }
+  }
+
+  .footer_main {
+    line-height: 1.1;
+    justify-content: flex-start;
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+    }
+    .footer_copyright {
+      @include media-breakpoint-up(lg) {
+        @include make-col(6.7);
+      }
+    }
+    .footer_media {
+      margin-bottom: $spacer * 1.5;
+      .media-icons {
+        margin: 0.3rem 0.1rem 0;
+      }
+      @include media-breakpoint-up(lg) {
+        @include make-col(3);
+      }
+    }
+    .footer_tools {
+      @include media-breakpoint-up(lg) {
+        @include make-col(5.3);
+      }
+    }
+  }
+
+  .footer_tools {
+    display: flex;
+    flex-direction: column;
+  }
+  .foot_tools_i {
+    margin-bottom: $spacer;
+    white-space: pre-wrap;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $spacer/2;
+    }
+  }
+}

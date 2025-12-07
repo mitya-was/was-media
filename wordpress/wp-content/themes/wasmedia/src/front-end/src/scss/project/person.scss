@@ -1,0 +1,25 @@
+.person {
+  margin-top: $spacer*3;
+  .person_i {
+    display: flex;
+    flex-direction: column;
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      align-items: stretch;
+    }
+  }
+  &_pic {
+    text-align: center;
+    img {
+      border-radius: $border-radius-round;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-right: 40px;
+    }
+  }
+  &_forname {
+    margin-top: -$headings-margin-top;
+    word-wrap: break-word;
+    text-align: left;
+  }
+}

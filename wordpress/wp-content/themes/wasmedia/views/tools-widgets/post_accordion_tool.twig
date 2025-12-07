@@ -1,0 +1,9 @@
+{% import 'macros/was-macros.twig' as macros %}
+
+<div class="{{ variables['tools_class'] }}">
+    <div class="{{ variables['tools_layout_class'] }}">
+        <div class="editor_default editor_offset" data-component="accordion">
+            {{ macros.get_tools_widgets(variables) }}
+        </div>
+    </div>
+</div>

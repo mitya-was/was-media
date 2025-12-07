@@ -1,0 +1,47 @@
+# OS files #
+######################
+.DS_Store
+.DS_Store?
+._*
+*-lock*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+TODOs.md
+
+
+# Project files #
+######################
+[Bb]uild/
+[Pp]ublic/
+[Dd]ist/
+[Bb]in/
+[Rr]elease/
+[Dd]ebug/
+node_modules/
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.map
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+sql/
+*.log
+*.sql
+*.sqlite
+*.versions
+*.idea
+*.lib
+*.tmp

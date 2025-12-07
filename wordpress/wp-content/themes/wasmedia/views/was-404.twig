@@ -1,0 +1,17 @@
+{% extends 'was-base.twig' %}
+
+{% block content %}
+    <section class="pro_main layout_main">
+        <div class="row">
+            <header class="col page-header">
+                <h1 class="page-title">
+                    <span class="display-3">404</span>.<br> {{ function('pll__', 'Страница не найдена') }}.
+                </h1>
+            </header>
+
+            <section class="col error-404 not-found">
+                {{ function('get_search_form') }}
+            </section>
+        </div>
+    </section>
+{% endblock %}

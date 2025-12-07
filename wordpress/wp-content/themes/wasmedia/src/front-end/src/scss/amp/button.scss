@@ -1,0 +1,106 @@
+.btn {
+  display: inline-block;
+  font-family: $headings-font-family;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+  text-transform: $btn-primary-transform;
+  border: $input-btn-border-width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
+  @include transition($btn-transition);
+
+  // Share hover and focus styles
+  @include hover-focus {
+    text-decoration: none;
+  }
+  /* &:focus,
+  &.focus {
+    outline: 0;
+    @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+  } */
+
+  // Disabled comes first so active can properly restyle
+  /* &.disabled,
+  &:disabled {
+    cursor: $cursor-disabled;
+    opacity: .65;
+    @include box-shadow(none);
+  } */
+
+  /* &:active,
+  &.active {
+    background-image: none;
+    @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+  } */
+}
+
+.btn-primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+
+/* .btn-transp {
+  @include button-variant($btn-transp-color, $btn-transp-bg, $btn-transp-border);
+} */
+.btn-secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+
+.btn-alt {
+  @include button-variant($btn-alt-color, $btn-alt-bg, $btn-alt-border);
+  @include hover {
+    background-color: $brand-primary;
+    color: black;
+  }
+}
+
+.btn-invert {
+  @include button-variant($btn-invert-color, $btn-invert-bg, $btn-invert-border);
+  @include hover {
+    background-color: $brand-primary;
+    color: black;
+  }
+}
+
+.btn-invert-alt {
+  @include button-variant($white, $brand-primary, $brand-primary);
+  @include hover {
+    background-color: $white;
+    color: $black;
+  }
+}
+
+/* .btn-facebook {
+  @include button-variant($white, $fc, $fc);
+}
+.btn-vk {
+  @include button-variant($white, $vk, $vk);
+} */
+
+.btn-xl {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($btn-padding-y-xl, $btn-padding-x-xl, $font-size-lg, $btn-border-radius-xl);
+}
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-size-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+}
+
+.btn-sm-alt {
+  // line-height: ensure proper height of button next to small input
+  @include button-size(
+      $btn-padding-y-sm-alt,
+      $btn-padding-x-sm-alt,
+      $font-size-lg,
+      $btn-border-radius-sm-alt
+  );
+}

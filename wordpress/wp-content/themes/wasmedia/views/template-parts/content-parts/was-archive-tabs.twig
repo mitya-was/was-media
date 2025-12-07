@@ -1,0 +1,113 @@
+<div class="navbar navbar-tab navbar-tab_archive">
+    <ul class="nav nav-tabs-toggle">
+
+        {% if posts is iterable and posts|length > 0 %}
+            <li>
+                <a class="tab-link {{ ((referer and 'microformats' not in referer) or not micro_posts) ? 'active' : '' }}"
+                   href="#post">{{ function('pll__', 'Статьи') }}</a></li>
+        {% endif %}
+
+        {% if micro_posts is iterable and micro_posts|length > 0 %}
+            <li><a class="tab-link {{ ((referer and 'microformats' in referer) or not posts) ? 'active' : '' }}"
+                   href="#microformats">{{ function('pll__', 'Короткие истории') }}</a></li>
+        {% endif %}
+
+    </ul>
+</div>
+<div class="tab-content">
+
+    {% if posts is iterable and posts|length > 0 %}
+        <div id="post"
+             class="tab-pane {{ ((referer and 'microformats' not in referer) or not micro_posts) ? 'active' : '' }}">
+            <div class="row">
+                {% set post_not_in = [] %}
+
+                {% for post in posts[0: (items_count - 1)] %}
+                    {% set post_not_in = post_not_in|merge([post.ID]) %}
+                    {% set post_order_count = function('make_order_counter', post_order_count) %}
+                    {% set invert_title = function('is_article_options', 'invert_text_color', post) ? 'invert_text_color' : '' %}
+                    {% set post_options = {
+                        'slug' : post.post_name,
+                        'post' : post,
+                        'post_order' : post_order_count,
+                        'content_part' : function('get_content_part_by_post_type', post),
+                        'class_format' : post_order_count ~ ' ' ~ invert_title ~ ' ' ~ 'format-standard'
+                    } %}
+
+                    {{ function('timber_content_parts_resolver', post_options) }}
+                {% endfor %}
+
+                {% if posts[items_count - 1] %}
+                    <div class="readMore col">
+                        <script>
+                            var ajaxurl = '{{ admin_ajax_url }}';
+                            var current_tag = '{{ current_tag.slug }}';
+                            var current_post_type = 'post';
+                            var post_not_in = '{{ post_not_in|join(',') }}';
+                        </script>
+                        <button class="btn btn-xl btn-primary"
+                                data-component="readmore" type="button"
+                                data-options='{"isRow":"true","isOnClick":"true"}'>
+                            <big>+</big>
+                            <span>
+                            {{ read_more }}
+                        </span>
+                        </button>
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    {% else %}
+        {{ function('timber_content_parts_resolver', {'content_part' : 'content-none'}) }}
+    {% endif %}
+
+    {% if micro_posts is iterable and micro_posts|length > 0 %}
+        <div id="microformats"
+             class="tab-pane {{ ((referer and 'microformats' in referer) or not posts) ? 'active' : '' }}">
+            <div class="row">
+                {% set micro_not_in = [] %}
+
+                {% for post in micro_posts[0: 20] %}
+                    {% set micro_not_in = micro_not_in|merge([post.ID]) %}
+                    {% set micro_order_count = function('make_order_counter', micro_order_count) %}
+                    {% set invert_title = function('is_article_options', 'invert_text_color', post) ? 'invert_text_color' : '' %}
+                    {% set post_options = {
+                        'slug' : post.post_name,
+                        'post' : post,
+                        'cover' : false,
+                        'post_order' : micro_order_count,
+                        'content_part' : 'content',
+                        'author_info' : false,
+                        'class_format' : micro_order_count ~ ' ' ~ invert_title ~ ' ' ~ 'format-micro'
+                    } %}
+
+                    {{ function('timber_content_parts_resolver', post_options) }}
+                {% endfor %}
+
+                {% if micro_posts[20] %}
+                    <div class="readMore col o-11">
+                        <script>
+                            var ajaxurl = '{{ admin_ajax_url }}';
+                            var current_tag = '{{ current_tag.slug }}';
+                            var current_post_type = 'microformats';
+                            var microformats_not_in = '{{ micro_not_in|join(',') }}';
+                        </script>
+                        <button class="btn btn-xl btn-primary"
+                                data-component="readmore" type="button"
+                                data-options='{"isRow":"true","isOnClick":"true"}'>
+                            <big>+</big>
+                            <span>
+                            {{ read_more }}
+                        </span>
+                        </button>
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    {% else %}
+        {{ function('timber_content_parts_resolver', {'content_part' : 'content-none'}) }}
+    {% endif %}
+
+</div>

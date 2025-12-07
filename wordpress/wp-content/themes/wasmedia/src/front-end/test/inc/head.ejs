@@ -1,0 +1,17 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+
+  <%- htmlWebpackPlugin.options.headHtmlSnippet %>
+
+  <% htmlWebpackPlugin.options.externalFiles.links.forEach(function(link){ %>
+    <link rel='stylesheet' href='<%= link %>'/>
+  <% }); %>
+
+</head>
+<body class="<%= htmlWebpackPlugin.options.bodyClass %>">
+<div class="wrapper">
